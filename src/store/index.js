@@ -1,4 +1,9 @@
-const store = new vuex.Store({
+import Vue from "vue"
+import  Vuex  from "vuex"
+
+Vue.use(Vuex)
+
+const store = new Vuex.Store({
   state: {
 
   },
@@ -6,3 +11,5 @@ const store = new vuex.Store({
 
   }
 })
+
+export default store
