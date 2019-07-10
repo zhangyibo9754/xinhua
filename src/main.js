@@ -18,6 +18,12 @@ import './assets/css/border.css'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 //引入swiper样式
 import 'swiper/dist/css/swiper.css'
+// 引入axios，并加到原型链中
+import axios from 'axios';
+Vue.prototype.$axios = axios;
+//axios的依赖
+import QS from 'qs'
+Vue.prototype.qs = QS;
 
 Vue.config.productionTip = false;
 Vue.use(VueAwesomeSwiper);
