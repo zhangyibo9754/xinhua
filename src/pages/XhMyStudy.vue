@@ -34,11 +34,7 @@
         };
       },
       mounted() {
-        $(document).ready(function(){
-          $(".studying").click(function(){
-            $("span").css("color","yellow");
-          });
-        });
+
       }
 
     }
