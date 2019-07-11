@@ -1,0 +1,224 @@
+/*首页整体样式*/
+.index-content{
+  background-color: #f7f7f7;
+}
+/*头部样式*/
+
+.index-content .xinhua-header{
+  height: 1.7rem;
+  width: 100%;
+  background-color:rgb(198, 47, 46);
+
+}
+.xinhua-header header{
+  padding:0.1rem 0.3rem;
+}
+.header-title{
+  justify-content: space-between;
+}
+.index-content  .header-title img{
+  width: 2.6rem;
+  height: 0.8rem;
+  vertical-align: middle;
+}
+.header-title i{
+  font-size: 0.44rem;
+  color:#fff;
+  vertical-align: middle;
+  margin-top:0.1rem;
+}
+.header-search{
+  width: 100%;
+  height: 0.7rem;
+  line-height: 0.7rem;
+  background-color: #fff;
+  border-radius:4px ;
+}
+.header-search span{
+  left:0.2rem;
+  top:0;
+  font-size:0.26rem;
+  color:rgb(153, 153, 153);
+}
+.header-search i{
+  right:0.2rem;
+  top:0;
+  font-size:0.3rem;
+}
+/*中间部分*/
+.index-content main{
+  flex:1;
+  overflow-y:auto;
+}
+/*轮播图容器*/
+.index-banner .swiper-container1{
+  width: 100%;
+  height:auto;
+}
+.swiper-container1 img{
+  width: 100%;
+  height:auto;
+}
+.swiper-pagination1{
+  width: 4rem;
+  background: #00000014;
+  border-radius:.15rem ;
+  /*margin:0 auto;*/
+  left:25%;
+}
+.index-banner .swiper-container-horizontal >.swiper-pagination-bullets .swiper-pagination-bullet{
+  width: 0.4rem ;
+  height: 0.05rem ;
+  background-color: red ;
+}
+/*导航*/
+.index-nav{
+  background-color: #fff;
+  padding:0.4rem 0 0.2rem;
+}
+.index-nav ul{
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+.index-nav ul a{
+  width: 100%;
+}
+.index-nav ul a img{
+  width: 1rem ;
+}
+.index-nav ul a p{
+  margin-top:0.1rem;
+  color:#000;
+  font-size: 0.24rem;
+}
+/*主题*/
+.theme-content{
+  margin-top:0.01rem;
+  width: 100%;
+  justify-content: space-between;
+}
+.theme-content>div{
+  width: 50%;
+}
+.theme-content>div:last-child{
+  display: none;
+}
+.theme-list a{
+  display: block;
+  width: 100%;
+  height: 2.4rem;
+}
+.theme-content a img{
+  width:100%;
+  height:100%;
+}
+/*主要列表*/
+.index-list{
+  margin-top:0.1rem;
+  background-color: #fff;
+  width: 100%;
+}
+.index-list-title{
+  justify-content: space-between;
+}
+.index-list-title h3{
+  font-size:0.32rem;
+  color: rgb(54, 52, 51);
+  margin-top:0.2rem;
+  margin-left:0.2rem;
+}
+.index-list-title span{
+  font-size: 0.26rem;
+  color: rgb(153, 153, 153);
+  margin-top:0.2rem;
+  margin-right:0.2rem;
+}
+.index-list-box{
+  overflow-x:auto;
+  text-align: left;
+}
+.index-list-each{
+  width: 2rem;
+  flex-shrink: 0;
+  margin-left:0.2rem;
+  padding:0.1rem 0 0.2rem;
+}
+.index-list-each img{
+  width: 1.6rem;
+  height: 1.6rem;
+  margin:0 auto;
+}
+.index-list-each p{
+  overflow:hidden;
+  text-overflow:ellipsis;
+  display:-webkit-box;
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:2;
+  color:#000;
+  margin-top:0.1rem;
+  width: 1.8rem;
+}
+.index-list-each span{
+  display: block;
+  color:rgb(181, 13, 13);
+  margin-top:0.1rem;
+}
+/*新华优选*/
+.xh-banner img{
+  width: 100%;
+}
+.select-banner a img{
+  width: 100%;
+  /*height: 2rem;*/
+  height:auto;
+}
+.xh-select .index-list{
+  margin-top:0.3rem;
+}
+/*作者轮播图*/
+.author-banner .swiper-pagination1{
+  width: 2rem;
+  left:38%;
+  bottom:14px;
+}
+/*图书列表*/
+.book-classify{
+  background-color: #fff;
+}
+.book-classify>div section:nth-of-type(1) .index-list-box{
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding:0 0.3rem;
+}
+.book-classify>div section:nth-of-type(1) .index-list-box li{
+  width: 30%;
+}
+.book-classify>div section:nth-of-type(2) .index-list-box{
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding:0 0.3rem;
+}
+.book-classify>div section:nth-of-type(2) .index-list-box li{
+  width: 30%;
+}
+/*底部样式*/
+.footer-box{
+  height: 1.1rem;
+  background-color:  rgb(243, 243, 239);;
+  border-top:1px solid rgba(0, 0, 0, 0.3);
+}
+.footer-box ul{
+  width: 100%;
+  height: 100%;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+.footer-box ul li a i{
+  font-size:0.4rem;
+  font-weight: 700;
+}
+.footer-box ul li p{
+  font-size: 0.26rem;
+}
