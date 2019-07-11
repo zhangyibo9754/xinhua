@@ -18,6 +18,9 @@ import './assets/css/border.css'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 //引入swiper样式
 import 'swiper/dist/css/swiper.css'
+//引入vant
+import Vant from 'vant';
+import 'vant/lib/index.css';
 // 引入axios，并加到原型链中
 import axios from 'axios';
 Vue.prototype.$axios = axios;
@@ -27,6 +30,7 @@ Vue.prototype.qs = QS;
 
 Vue.config.productionTip = false;
 Vue.use(VueAwesomeSwiper);
+Vue.use(Vant);
 Vue.use(vuex);
 //使用300ms模块
 fastClick.attach(document.body);
