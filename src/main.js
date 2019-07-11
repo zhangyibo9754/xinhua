@@ -25,6 +25,16 @@ Vue.prototype.$axios = axios;
 import QS from 'qs'
 Vue.prototype.qs = QS;
 
+import Vant from 'vant';
+import '../node_modules/vant/lib/index.css';
+
+import { Checkbox, CheckboxGroup } from 'vant';
+
+Vue.use(Checkbox).use(CheckboxGroup);
+
+import { Icon } from 'vant';
+
+Vue.use(Icon);
 Vue.config.productionTip = false;
 Vue.use(VueAwesomeSwiper);
 Vue.use(vuex);
