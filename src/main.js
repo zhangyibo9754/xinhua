@@ -23,14 +23,39 @@ import axios from 'axios';
 Vue.prototype.$axios = axios;
 //axios的依赖
 import QS from 'qs'
+//vant引入-cs
+
+import Vant from 'vant';
+import 'vant/lib/index.css';
+Vue.use(Vant);
 Vue.prototype.qs = QS;
+//引入vant
+import Vant from 'vant';
+import 'vant/lib/index.css';
+<<<<<<< HEAD
+=======
+Vue.use(Vant);
+
+import Vant from 'vant';
+import 'vant/lib/index.css';
+>>>>>>> c043263754feda22a7a87da6e5e50709dfc6164d
+
+Vue.use(Vant);
 
 Vue.config.productionTip = false;
+
 Vue.use(VueAwesomeSwiper);
+
 Vue.use(vuex);
+
 //使用300ms模块
 fastClick.attach(document.body);
 /* eslint-disable no-new */
+import Vant from 'vant';
+import 'vant/lib/index.css';
+Vue.use(Vant);
+
+
 new Vue({
   el: '#app',
   router,
