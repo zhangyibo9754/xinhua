@@ -23,6 +23,11 @@ import axios from 'axios';
 Vue.prototype.$axios = axios;
 //axios的依赖
 import QS from 'qs'
+//vant引入-cs
+
+import Vant from 'vant';
+import 'vant/lib/index.css';
+Vue.use(Vant);
 Vue.prototype.qs = QS;
 
 Vue.config.productionTip = false;
