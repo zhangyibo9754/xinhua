@@ -25,6 +25,11 @@ Vue.prototype.$axios = axios;
 import QS from 'qs'
 Vue.prototype.qs = QS;
 
+import Vant from 'vant';
+import 'vant/lib/index.css';
+
+Vue.use(Vant);
+
 Vue.config.productionTip = false;
 Vue.use(VueAwesomeSwiper);
 Vue.use(vuex);
