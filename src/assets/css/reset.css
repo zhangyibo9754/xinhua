@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*
 html5doctor.com Reset Stylesheet
 v1.4.1
@@ -23,35 +24,88 @@ border:0;
 outline:0;
 vertical-align:baseline;
 background:transparent;
+=======
+@charset "utf-8";
+/* CSS Document */
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 3be3d853084f86518c3740ddd88292796299802d
+>>>>>>> 77089dcf554e9f93ce213e94e9d1ac5af4b94b64
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend,a, img,figure { 
+    margin:0; padding:0;
+>>>>>>> 6c245f1274868d18239ae13ab311ce25136036a6
 }
 
+fieldset, c{
+    border:none; 
+}
+
+address, caption, cite, code, dfn, th, var {
+     font-style:normal; font-weight:normal; 
+}
+
+ul, ol ,li{ 
+    list-style:none; 
+}
+
+.flex {
+	display:-webkit-flex;
+}
+.inline-flex {
+	display:inline-flex;
+}
 body {
-line-height:1;
+    color:#333; 
+<<<<<<< HEAD
+    font:12px "΢���ź�","SimSun","����","Arial Narrow",HELVETICA; 
+    }
+.pageBody{
+=======
+    font:12px "微软雅黑","SimSun","宋体","Arial Narrow",HELVETICA; 
+    }
+.pageBody{
+<<<<<<< HEAD
+=======
+
+>>>>>>> 3be3d853084f86518c3740ddd88292796299802d
+>>>>>>> 77089dcf554e9f93ce213e94e9d1ac5af4b94b64
+    height:100%;
+    display: flex;
+    flex-direction: column;
+}
+#app{
+    height: 100%;
+<<<<<<< HEAD
+}
+i {
+    font-style: normal;
+}
+a { 
+    color:#666; text-decoration:none; 
+}
+/*��������*/
+.clearfix {
+	*zoom:1;
+}
+.clearfix:after {
+	content:"";
+	clear:both;
+	display: block;
+	height:0;
+	overflow:hidden;
+	visibility:hidden;
+}
+*{
+    box-sizing:border-box
+}
+body,html{
+    height: 100%;
 }
 
-:focus {
-outline: 1;
-}
-
-article,aside,canvas,details,figcaption,figure,
-footer,header,hgroup,menu,nav,section,summary {
-display:block;
-}
-
-nav ul {
-list-style:none;
-}
-
-blockquote, q {
-quotes:none;
-}
-
-blockquote:before, blockquote:after,
-q:before, q:after {
-content:'';
-content:none;
-}
-
+<<<<<<< HEAD
 a {
 margin:0;
 padding:0;
@@ -59,47 +113,184 @@ border:0;
 vertical-align:baseline;
 background:transparent;
 text-decoration: none;
+=======
+.fl {
+	float:left;
+}
+.fr {
+	float:right;
+}
+.rel{
+    position:relative;
+}
+.abs{
+    position:absolute;
+}
+.fix{
+    position:fixed;
+=======
+}
+i {
+    font-style: normal;
+<<<<<<< HEAD
+}
+a { 
+    color:#666; text-decoration:none; 
+}
+/*清除浮动*/
+.clearfix {
+	*zoom:1;
+}
+.clearfix:after {
+	content:"";
+	clear:both;
+	display: block;
+	height:0;
+	overflow:hidden;
+	visibility:hidden;
+}
+*{
+    box-sizing:border-box
+}
+body,html{
+    height: 100%;
+>>>>>>> 6c245f1274868d18239ae13ab311ce25136036a6
 }
 
-ins {
-background-color:#ff9;
-color:#000;
-text-decoration:none;
+.fl {
+	float:left;
+}
+.fr {
+	float:right;
+}
+.rel{
+    position:relative;
+}
+.abs{
+    position:absolute;
+}
+.fix{
+    position:fixed;
+=======
+}
+a { 
+    color:#666; text-decoration:none; 
+}
+/*清除浮动*/
+.clearfix {
+	*zoom:1;
+}
+.clearfix:after {
+	content:"";
+	clear:both;
+	display: block;
+	height:0;
+	overflow:hidden;
+	visibility:hidden;
+}
+*{
+    box-sizing:border-box
+}
+body,html{
+    height: 100%;
 }
 
-mark {
-background-color:#ff9;
-color:#000;
-font-style:italic;
-font-weight:bold;
+.fl {
+	float:left;
+}
+.fr {
+	float:right;
+}
+.rel{
+    position:relative;
+}
+.abs{
+    position:absolute;
+}
+.fix{
+    position:fixed;
+=======
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend,a, img,figure {
+  margin:0; padding:0;
 }
 
-del {
-text-decoration: line-through;
+fieldset, c{
+  border:none;
 }
 
-abbr[title], dfn[title] {
-border-bottom:1px dotted #000;
-cursor:help;
+address, caption, cite, code, dfn, th, var {
+  font-style:normal; font-weight:normal;
 }
 
-table {
-border-collapse:collapse;
-border-spacing:0;
+ul, ol ,li{
+  list-style:none;
 }
 
-hr {
-display:block;
-height:1px;
-border:0;
-border-top:1px solid #cccccc;
-margin:1em 0;
-padding:0;
+.flex {
+  display:-webkit-flex;
+}
+.inline-flex {
+  display:inline-flex;
+}
+body {
+  color:#333;
+  font:12px "微软雅黑","SimSun","宋体","Arial Narrow",HELVETICA;
+}
+.pageBody{
+  height:100%;
+  display: flex;
+  flex-direction: column;
+}
+#app{
+  height: 100%;
+}
+i {
+  font-style: normal;
+}
+a {
+  color:#666; text-decoration:none;
+}
+/*清除浮动*/
+.clearfix {
+  *zoom:1;
+}
+.clearfix:after {
+  content:"";
+  clear:both;
+  display: block;
+  height:0;
+  overflow:hidden;
+  visibility:hidden;
+}
+*{
+  box-sizing:border-box
+}
+body,html{
+  height: 100%;
 }
 
-input, select {
-vertical-align:middle;
+.fl {
+  float:left;
 }
+.fr {
+  float:right;
+}
+.rel{
+  position:relative;
+}
+.abs{
+  position:absolute;
+}
+.fix{
+  position:fixed;
+}
+.sti{
+  position:sticky;
+>>>>>>> 057482b11e1de3a2d194c8a101f03ff660f80343
+>>>>>>> 3be3d853084f86518c3740ddd88292796299802d
+>>>>>>> 77089dcf554e9f93ce213e94e9d1ac5af4b94b64
+}
+<<<<<<< HEAD
 
 
 @charset "utf-8";
@@ -182,3 +373,8 @@ body,html{
 .sti{
   position:sticky;
 }
+=======
+.sti{
+    position:sticky;
+}
+>>>>>>> 6c245f1274868d18239ae13ab311ce25136036a6
