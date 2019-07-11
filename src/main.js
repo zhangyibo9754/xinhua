@@ -24,6 +24,13 @@ Vue.prototype.$axios = axios;
 //axios的依赖
 import QS from 'qs'
 Vue.prototype.qs = QS;
+//引入vant
+import Vant from 'vant';
+import 'vant/lib/index.css';
+Vue.use(Vant);
+
+import  {Icon} from 'vant';
+Vue.use(Icon)
 
 Vue.config.productionTip = false;
 Vue.use(VueAwesomeSwiper);
@@ -31,6 +38,8 @@ Vue.use(vuex);
 //使用300ms模块
 fastClick.attach(document.body);
 /* eslint-disable no-new */
+
+
 new Vue({
   el: '#app',
   router,
