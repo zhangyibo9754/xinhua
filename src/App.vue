@@ -5,8 +5,9 @@
 </template>
 
 <script>
+
 export default {
-  name: 'App'
+  name: 'App',
 }
 </script>
 
@@ -16,6 +17,10 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
+<<<<<<< HEAD
   height: 100%;
+=======
+  color: #2c3e50;
+>>>>>>> d591c469fcfc898425834267c69a84e461229ad6
 }
 </style>
