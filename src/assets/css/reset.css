@@ -1,5 +1,6 @@
 @charset "utf-8";
 /* CSS Document */
+<<<<<<< HEAD
 html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend,a, img,figure { 
     margin:0; padding:0;
 }
@@ -74,6 +75,84 @@ body,html{
 }
 .fix{
     position:fixed;
+=======
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend,a, img,figure {
+  margin:0; padding:0;
+}
+
+fieldset, c{
+  border:none;
+}
+
+address, caption, cite, code, dfn, th, var {
+  font-style:normal; font-weight:normal;
+}
+
+ul, ol ,li{
+  list-style:none;
+}
+
+.flex {
+  display:-webkit-flex;
+}
+.inline-flex {
+  display:inline-flex;
+}
+body {
+  color:#333;
+  font:12px "微软雅黑","SimSun","宋体","Arial Narrow",HELVETICA;
+}
+.pageBody{
+  height:100%;
+  display: flex;
+  flex-direction: column;
+}
+#app{
+  height: 100%;
+}
+i {
+  font-style: normal;
+}
+a {
+  color:#666; text-decoration:none;
+}
+/*清除浮动*/
+.clearfix {
+  *zoom:1;
+}
+.clearfix:after {
+  content:"";
+  clear:both;
+  display: block;
+  height:0;
+  overflow:hidden;
+  visibility:hidden;
+}
+*{
+  box-sizing:border-box
+}
+body,html{
+  height: 100%;
+}
+
+.fl {
+  float:left;
+}
+.fr {
+  float:right;
+}
+.rel{
+  position:relative;
+}
+.abs{
+  position:absolute;
+}
+.fix{
+  position:fixed;
+}
+.sti{
+  position:sticky;
+>>>>>>> 057482b11e1de3a2d194c8a101f03ff660f80343
 }
 .sti{
     position:sticky;
