@@ -1,0 +1,111 @@
+.XhProductDetail{
+  background-color: #f7f7f7;
+  height: .2rem;
+}
+
+
+.CollectionProductDetail{
+  background-color: #fff;
+
+  display: flex;
+  justify-content: space-around;
+  padding-top: .4rem;
+}
+.Collection-box{
+  border-right: 1px solid #ccc;
+  padding-right: 4.72rem;
+
+}
+.Collection-box p{
+  display:  block;
+  font-size: .44rem;
+  color: #c62f2e;
+}
+.Discount{
+  color: #c62f2e;
+  margin-left: .2rem;
+}
+.line-through{
+  text-decoration: line-through;
+  color: #ccc;
+}
+.TitleProductDetail{
+  padding-left: .2rem;
+  background-color: #fff;
+  height: 2.5rem;
+}
+.TitleProductDetail p{
+  text-align: left;
+  font-size: .34rem;
+  padding: .3rem 0;
+  font-weight: 400;
+}
+.TitleProductDetail span{
+  text-align: left;
+  font-size: .28rem;
+  color: #ccc;
+  padding-bottom: .5rem;
+}
+.CouponProductDetail{
+  background-color: #f7f7f7;
+}
+.CouponProductDetail li{
+  display: flex;
+  background-color: #fff;
+  height: 1rem;
+  line-height: 1rem;
+  justify-content: space-between;
+  padding-left: .3rem;
+  padding-right: .3rem;
+  font-size: .28rem;
+  margin: .2rem 0;
+}
+.detailsProductDetail{
+  padding-top: 1rem  ;
+}
+.detailsProductDetail h2{
+  text-align: center;
+  margin-top: .8rem;
+  margin-bottom: .2rem;
+}
+.card_box{
+  height: 14rem;
+ padding: 0 .7rem;
+  font-size: .28rem;
+  background-color: #fff;
+}
+.table_box{
+  border: 1px solid #eeeeee;
+  height: 3.1rem;
+  width: 5.82rem;
+  /*margin: 0 auto;*/
+  margin-top: .89rem;
+  text-align: center;
+}
+.table_box th:nth-of-type(1){
+  color: #999999;
+}
+.table_box tr{
+  border: 1px solid #eeeeee;
+  height: .84rem;
+  width: 2rem;
+}
+.table_box th{
+  border: 1px solid #eeeeee;
+line-height: .84rem;
+}
+.colspan{
+  background-color: #f7f7f7;
+}
+
+
+.shoppProductDetail{
+  background-color: #feb13b;
+  margin: 0 .1rem;
+  width: 2.05rem;
+}
+.shoppingProductDetail{
+  background-color: #e61818;
+  width: 2.05rem;
+
+}

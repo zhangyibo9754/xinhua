@@ -26,15 +26,63 @@ import axios from 'axios';
 Vue.prototype.$axios = axios;
 //axios的依赖
 import QS from 'qs'
-Vue.prototype.qs = QS;
+//vant引入-cs
 
-Vue.config.productionTip = false;
-Vue.use(VueAwesomeSwiper);
+import Vant from 'vant';
+import 'vant/lib/index.css';
 Vue.use(Vant);
+Vue.prototype.qs = QS;
+//引入vant
+import Vant from 'vant';
+import 'vant/lib/index.css';
+<<<<<<< HEAD
+Vue.use(Vant);
+
+import  {Icon} from 'vant';
+Vue.use(Icon)
+=======
+<<<<<<< HEAD
+=======
+Vue.use(Vant);
+
+import Vant from 'vant';
+import 'vant/lib/index.css';
+>>>>>>> c043263754feda22a7a87da6e5e50709dfc6164d
+
+Vue.use(Vant);
+
+import Vant from 'vant';
+import '../node_modules/vant/lib/index.css';
+
+import { Checkbox, CheckboxGroup } from 'vant';
+
+Vue.use(Checkbox).use(CheckboxGroup);
+>>>>>>> 6c245f1274868d18239ae13ab311ce25136036a6
+
+import { Icon } from 'vant';
+
+Vue.use(Icon);
+Vue.config.productionTip = false;
+
+Vue.use(VueAwesomeSwiper);
+<<<<<<< HEAD
+Vue.use(Vant);
+=======
+
+>>>>>>> 56aa9a37d9ebd96da8146eb39e0c5e07782ff533
 Vue.use(vuex);
+
 //使用300ms模块
 fastClick.attach(document.body);
 /* eslint-disable no-new */
+<<<<<<< HEAD
+=======
+import Vant from 'vant';
+import 'vant/lib/index.css';
+Vue.use(Vant);
+>>>>>>> 6c245f1274868d18239ae13ab311ce25136036a6
+
+
 new Vue({
   el: '#app',
   router,
