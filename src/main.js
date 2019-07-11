@@ -28,6 +28,13 @@ Vue.prototype.qs = QS;
 Vue.config.productionTip = false;
 Vue.use(VueAwesomeSwiper);
 Vue.use(vuex);
+
+//vant插件
+import Vant from 'vant';
+import 'vant/lib/index.css';
+Vue.use(Vant);
+//JQ
+import 'jquery/dist/jquery'
 //使用300ms模块
 fastClick.attach(document.body);
 /* eslint-disable no-new */
