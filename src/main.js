@@ -29,10 +29,20 @@ import Vant from 'vant';
 import 'vant/lib/index.css';
 Vue.use(Vant);
 Vue.prototype.qs = QS;
+//引入vant
+import Vant from 'vant';
+import 'vant/lib/index.css';
+Vue.use(Vant);
+
+import Vant from 'vant';
+import 'vant/lib/index.css';
+
+Vue.use(Vant);
 
 Vue.config.productionTip = false;
 Vue.use(VueAwesomeSwiper);
 Vue.use(vuex);
+
 //使用300ms模块
 fastClick.attach(document.body);
 /* eslint-disable no-new */

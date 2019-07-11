@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+<<<<<<< HEAD
 import XhCountSetting from "../pages/XhCountSetting"
 import XhPersonalMessage from "../pages/XhPersonalMessage"
 import XhUpdatePassword from "../pages/XhUpdatePassword"
@@ -14,11 +15,28 @@ import XhSetting from "../pages/XhSetting"
 import XhComplaintFeedback from "../pages/XhComplaintFeedback"
 import XhCollection from "../pages/XhCollection"
 
+=======
+import XhIndex from "../pages/XhIndex"
+import XhMessage from '../pages/XhMessage'
+import XhMessagePages from '../pages/XhMessagePages'
+import XhGiftCards from '../pages/XhGiftCards'
+import XhMyStudy from '../pages/XhMyStudy'
+
+<<<<<<< HEAD
+// 引入页面组件
+import XhClassify from '.././pages/XhClassify'
+>>>>>>> 9a943b91756653f18d42cf8415b01a2b1dc9e94b
 
 Vue.use(Router)
+=======
+>>>>>>> d591c469fcfc898425834267c69a84e461229ad6
 
+Vue.use(Router)
 export default new Router({
+  mode: 'history',
+  base: process.env.BASE_URL,
   routes: [
+<<<<<<< HEAD
     {path:"/XhCountSetting",component:XhCountSetting},
     {path:"/XhPersonalMessage",component:XhPersonalMessage},
     {path:"/XhUpdatePassword",component:XhUpdatePassword},
@@ -33,5 +51,38 @@ export default new Router({
     {path:"/XhComplaintFeedback",component:XhComplaintFeedback},
     {path:"/XhCollection",component:XhCollection},
 
+=======
+    {
+<<<<<<< HEAD
+      path:'/XhClassify',
+      name:'XhClassify',
+      component: XhClassify
+=======
+      path: '/',
+      name: 'XhIndex',
+      component: XhIndex
+    },
+    {
+      path: '/XhMessage',
+      name: 'XhMessage',
+      component: XhMessage
+    },
+    {
+      path: '/XhMessagePages',
+      name: 'XhMessagePages',
+      component: XhMessagePages
+    },
+    {
+      path: '/XhGiftCards',
+      name: 'XhGiftCards',
+      component: XhGiftCards
+    },
+    {
+      path:'/XhMyStudy',
+      name:'XhMyStudy',
+      component:XhMyStudy
+>>>>>>> d591c469fcfc898425834267c69a84e461229ad6
+    }
+>>>>>>> 9a943b91756653f18d42cf8415b01a2b1dc9e94b
   ]
 })
