@@ -3,9 +3,10 @@
     <div class="swiper-container swiper-container1">
       <div class="swiper-wrapper">
         <div class="swiper-slide" v-for="(item,index) in indexSwiper" :key="index">
-          <a href="##">
+          <router-link to="/XhBannerPages">
             <img :src=item.src alt="图片加载失败">
-          </a>
+          </router-link>
+
         </div>
       </div>
       <!-- 分页器 -->

@@ -18,23 +18,23 @@
          return{
            footerNav:[
              {
-               "path":"/",
-               "icon":"iconfont icon-shouye",
-               "title":"首页"},
+               path:"/",
+               icon:"iconfont icon-shouye",
+               title:"首页"},
              {
-               "path":"/classify",
-               "icon":"iconfont icon-fenlei",
-               "title":"分类"
+               path:"/XhClassify",
+               icon:"iconfont icon-fenlei",
+               title:"分类"
              },
              {
-               "path":"/shoppingCart",
-               "icon":"iconfont icon-gouwuchekong",
-               "title":"购物车"
+               path:"/XhShoppingCart",
+               icon:"iconfont icon-gouwuchekong",
+               title:"购物车"
              },
              {
-               "path":"/mine",
-               "icon":"iconfont icon-yuanquanquan",
-               "title":"我"
+               path:"/XhMine",
+               icon:"iconfont icon-yuanquanquan",
+               title:"我"
              }
            ]
          }

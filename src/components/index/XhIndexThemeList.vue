@@ -1,8 +1,8 @@
 <template>
   <div class="theme-list">
-    <a v-for="(p,index) in item.images" :key="index" href="">
+    <router-link to="/XhThemePages" v-for="(p,index) in item.images" :key="index" href="">
       <img :src="p.src" alt="">
-    </a>
+    </router-link>
   </div>
 
 </template>

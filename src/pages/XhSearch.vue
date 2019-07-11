@@ -4,7 +4,10 @@
 			<div class="SearchHeaderCenter">
 				<input v-model="title"  style="display: block;width: 5.5rem;height:.56rem ; background: #FFFFFF;border: 0 !important;padding-left: .2rem;" type="text" placeholder="应物兄">
 				<p><van-icon name="search" v-if="!title" /><van-icon name="cross" v-if="title" /></p>
-				<span>取消</span>
+				<router-link to="/">
+          <span>取消</span>
+        </router-link>
+
 			</div>	
 		</div>
 		<div class="XhSearchFooter" v-if="!title">

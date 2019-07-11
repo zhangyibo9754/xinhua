@@ -27,15 +27,15 @@
 				</div>
 				<div class="FooterBoxThird">
 					<div class="one">
-						<img src="../../../newimg/wx.png" style="width: .5rem;height:.5rem ;" alt="">
+<!--						<img src="../../../newimg/wx.png" style="width: .5rem;height:.5rem ;" alt="">-->
 						<span style="font-size: .33rem;color: #9e9e9e;">微信</span>
 					</div>
 					<div class="one">
-						<img src="../../../newimg/qq.png" style="width: .5rem;height:.5rem ;" alt="">
+<!--						<img src="../../../newimg/qq.png" style="width: .5rem;height:.5rem ;" alt="">-->
 						<span style="font-size: .33rem;color: #9e9e9e;">qq</span>
 					</div>
 					<div class="one">
-						<img src="../../../newimg/weiBo.png" style="width: .5rem;height:.5rem ;" alt="">
+<!--						<img src="../../../newimg/weiBo.png" style="width: .5rem;height:.5rem ;" alt="">-->
 						<span style="font-size: .33rem;color: #9e9e9e;">微博</span>
 					</div>
 				</div>
@@ -54,15 +54,15 @@
 				</div>
 				<div class="FooterBoxThird">
 					<div class="one">
-						<img src="../../../newimg/wx.png" style="width: .5rem;height:.5rem ;" alt="">
+<!--						<img src="../../../newimg/wx.png" style="width: .5rem;height:.5rem ;" alt="">-->
 						<span style="font-size: .33rem;color: #9e9e9e;">微信</span>
 					</div>
 					<div class="one">
-						<img src="../../../newimg/qq.png" style="width: .5rem;height:.5rem ;" alt="">
+<!--						<img src="../../../newimg/qq.png" style="width: .5rem;height:.5rem ;" alt="">-->
 						<span style="font-size: .33rem;color: #9e9e9e;">qq</span>
 					</div>
 					<div class="one">
-						<img src="../../../newimg/weiBo.png" style="width: .5rem;height:.5rem ;" alt="">
+<!--						<img src="../../../newimg/weiBo.png" style="width: .5rem;height:.5rem ;" alt="">-->
 						<span style="font-size: .33rem;color: #9e9e9e;">微博</span>
 					</div>
 				</div>

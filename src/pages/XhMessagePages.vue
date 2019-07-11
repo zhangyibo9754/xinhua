@@ -1,7 +1,7 @@
 <template>
     <div class="XhMessagePages">
       <div class="xinhua_header">
-        <router-link to="">
+        <router-link to="/XhMessage">
           <i class="iconfont icon-fanhui"></i>
         </router-link>
         <span>消息中心</span>

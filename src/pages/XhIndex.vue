@@ -48,10 +48,6 @@
 </template>
 
 <script>
-  // import Vue from 'vue';
-  // import { PullRefresh } from 'vant';
-  // Vue.use(PullRefresh);
-
   import api from '../XinHuaApi'
   import XhHeader from '../components/commons/XhHeader'
   import XhFooter from '../components/commons/XhFooter'

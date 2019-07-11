@@ -1,8 +1,8 @@
 <template>
-  <a href="">
+  <router-link to="/XhNavPages">
     <img :src="item.src" alt="">
     <p>{{item.title}}</p>
-  </a>
+  </router-link>
 </template>
 
 <script>
