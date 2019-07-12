@@ -70,9 +70,17 @@
         name: "XhMessagePages",
       data() {
         return {
-          active: 2
+          active: 0
         };
+    },
+      watch:{
+          $route:{
+            immediate:true,
+            handler:function(to,from){
+      this.active=parseInt(to.params.id)
     }
+          }
+      }
     }
 </script>
 
