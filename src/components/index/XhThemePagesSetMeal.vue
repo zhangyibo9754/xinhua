@@ -68,6 +68,8 @@ export default {
   .XhThemePagesSetMeal {
     padding-bottom: 0.3rem;
     padding-top: 0.3rem;
+    background: #fff;
+    text-align: left;
   }
   .XhThemePagesSetMeal-title-wrapper {
     margin: .12rem .3rem; 

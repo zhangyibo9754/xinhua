@@ -2,41 +2,41 @@
     <div class="pageBody">
 		<div class="XhMyOrder-header">
 			<img src="../../static/images/mine/xhimg/jtz.png" @click="$router.back(-1)">
-			<a href=""><span>我的订单</span></a>
-			<a href=""><span class="icon iconfont XhMyOrder-header-span" >&#xe634;</span></a>
+			<span>我的订单</span>
+			<router-link to="/XhSearch"><span class="icon iconfont XhMyOrder-header-span" >&#xe634;</span></router-link>
 		</div>
 
 		<div class="mine-content">
 		<van-tabs background="#f7f7f7"  v-model="active">
-		  <van-tab  title="全部" name="a">
+		  <van-tab  title="全部">
 			  <div class="XhMyOrder-Bigbox">
 			  	<img src="../../static/images/mine/xhimg/xz.png">
 			  	<h6>暂无相关订单</h6>
 			  	<a href=""><span>随便逛逛</span></a>
 			  </div>
 		  </van-tab>
-		  <van-tab title="待付款" name="b">
+		  <van-tab title="待付款">
 			  <div class="XhMyOrder-Bigbox">
 			  	<img src="../../static/images/mine/xhimg/xz.png">
 			  	<h6>暂无相关订单</h6>
 			  	<a href=""><span>随便逛逛</span></a>
 			  </div>
 		  </van-tab>
-		  <van-tab title="待发货" name="c">
+		  <van-tab title="待发货">
 			  <div class="XhMyOrder-Bigbox">
 			  	<img src="../../static/images/mine/xhimg/xz.png">
 			  	<h6>暂无相关订单</h6>
 			  	<a href=""><span>随便逛逛</span></a>
 			  </div>
 		  </van-tab>
-		  <van-tab title="待收货" name="d">
+		  <van-tab title="待收货">
 			  <div class="XhMyOrder-Bigbox">
 			  	<img src="../../static/images/mine/xhimg/xz.png">
 			  	<h6>暂无相关订单</h6>
 			  	<a href=""><span>随便逛逛</span></a>
 			  </div>
 		  </van-tab>
-		  <van-tab title="已完成" name="e">
+		  <van-tab title="已完成">
 			  <div class="XhMyOrder-Bigbox">
 			  	<img src="../../static/images/mine/xhimg/xz.png">
 			  	<h6>暂无相关订单</h6>
@@ -56,9 +56,17 @@
 		data() {
 
     return {
-      active: 0,
-    };
-  }
+      active:0,
+    }
+  },
+      watch:{
+        $route:{
+          immediate:true,
+          handler:function (to) {
+            this.active=parseInt(to.params.id)
+          }
+        }
+      }
     }
 </script>
 
@@ -91,7 +99,8 @@
 	font-size: 22px !important;
 	color: red !important;
 	float: right;
-	margin-right: .2rem;
+	margin-right: .35rem;
+	line-height: 1.31rem;
 }
 
 .XhMyOrder-Bigbox{
@@ -108,7 +117,7 @@
 	display: block;
 	width: 3rem;
 	height: 1rem;
-	background: red;
+	background: #c62f2e;
 	margin-left: 2.4rem;
 	margin-top: .3rem;
 }
