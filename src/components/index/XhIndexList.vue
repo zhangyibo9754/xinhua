@@ -1,6 +1,6 @@
 <template>
   <div>
-    <section class="index-list" v-for="(item,index) in listData" :key="index">
+    <section class="index-list" v-if="item.indexListBrach.length"  v-for="(item,index) in listData" :key="index">
       <xh-index-list-header :title="item"></xh-index-list-header>
       <xh-index-selectBanner :listTitle="item"></xh-index-selectBanner>
       <xh-index-list-each :each="item"></xh-index-list-each>

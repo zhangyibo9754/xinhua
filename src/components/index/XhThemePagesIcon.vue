@@ -1,17 +1,17 @@
 <template>
   <div class="XhThemePagesIcon">
-    <div class="icons">
+    <div class="XhThemePagesIcon-icons">
       <swiper>
         <swiper-slide>
           <div
-            class="icon" 
+            class="XhThemePagesIcon-icon" 
             v-for="item of iconList"
             :key="item.id"
           >
-            <div class="icon-img">
-              <img class="icon-img-content" :src="item.imgUrl">
+            <div class="XhThemePagesIcon-icon-img">
+              <img class="XhThemePagesIcon-icon-img-content" :src="item.imgUrl">
             </div>
-            <p class="icon-desc">{{item.desc}}</p>
+            <p class="XhThemePagesIcon-icon-desc">{{item.desc}}</p>
           </div>
         </swiper-slide>
         <div class="swiper-pagination"  slot="pagination"></div>
@@ -75,16 +75,18 @@ export default {
 </script>
 
 <style scoped>
- .icons .swiper-container{
+ .XhThemePagesIcon-icons .swiper-container{
     height: 0;
     padding-bottom: 50%;
   }
-    
-  .icons {
+  .XhThemePagesIcon {
+    background: #fff;
+  }
+  .XhThemePagesIcon-icons {
     padding-top: .05rem;
     border-bottom: 1px solid #eee;
   }
-  .icon {
+  .XhThemePagesIcon-icon {
     position: relative;
     overflow: hidden;
     float: left;
@@ -92,7 +94,7 @@ export default {
     height: 0;
     padding-bottom: 25%;
   }
-  .icon-img {
+  .XhThemePagesIcon-icon-img {
     position: absolute;
     top: 0;
     left: 0;
@@ -102,12 +104,12 @@ export default {
     bottom: .44rem;
   }
   
-  .icon-img-content {
+  .XhThemePagesIcon-icon-img-content {
     display: block;
     margin: 0 auto;
     height: 100%;
   }
-  .icon-desc {
+  .XhThemePagesIcon-icon-desc {
     position: absolute;
     left: 0;
     right: 0;

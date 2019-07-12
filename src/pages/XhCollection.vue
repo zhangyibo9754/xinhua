@@ -3,7 +3,11 @@
       <div class="header-cs">
         <span class="iconfont icon-fanhui" @click="$router.back()"></span>
         <span class="set-cs">我的收藏</span>
-        <span>清空</span>
+        <div class="XhMyOrder-header-one" @click="exitCs" >
+        	 <span>
+        	 清空
+        	</span>
+        </div>
       </div>
       <van-tabs v-model="active" class="collect-cs" type="card">
         <van-tab title="商品收藏" class="collect-product">
@@ -24,17 +28,50 @@
 </template>
 
 <script>
+	import { Dialog } from 'vant';
+	import { Toast } from 'vant';
     export default {
         name: "XhCollection",
       data() {
         return {
           active: 0
         }
-        }
+        },
+				methods:{
+				    exitCs(){
+				      Dialog.confirm({
+				        title: '提示',
+				        message: '确定要删除所以商品收藏?',
+				        confirmButtonColor:"#c72f2e",
+								
+				      }).then(() => {
+				        // on confirm
+								this.$toast('删除成功');
+				      }).catch(() => {
+				        // on cancel
+									
+				      });
+				    }
+					
+				},
+				components: {
+				  [Dialog.Component.name]: Dialog.Component
+				},
+			
     }
 </script>
 
 <style scoped>
+	.XhMyOrder-header-one{
+		float: right;
+		width: 1rem;
+		height: 1rem ;
+		margin-right: .2rem;
+	}
+	.XhMyOrder-header-one span{
+		font-size: 18px !important;
+		line-height: 1rem;
+	}
   .XhCollection-cs{
     background-color: #f7f7f7;
     height: 100%;
