@@ -3,9 +3,9 @@
     <!--  头部-->
     <div class="banner-head">
       <router-link to="/">
-        <i class="iconfont icon-fanhui"></i>
+        <i class="iconfont icon-fanhui" @click="$router.back()"></i>
       </router-link>
-      <span class="head-name">{{headName}}</span>
+      <span class="head-name">新华书店网上商城...</span>
       <i class="iconfont icon-fenxiang"></i>
     </div>
     <!-- 头部结束-->
@@ -20,7 +20,7 @@
         <div class="title-wrap">
           <img class="popular-titlePic" :src="item.titlePic" alt="">
         </div>
-        <div class="swiper-container" :options="item.swiperOption">
+        <div class="swiper-container intoBannerSwiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide" v-for="(v,vId) in item.swiperSlide">
               <div class="itemList" v-for="(l,lID) in v.itemList">
@@ -33,7 +33,7 @@
             </div>
           </div>
           <!-- 如果需要分页器 -->
-          <div class="swiper-pagination"></div>
+          <div class="swiper-pagination intoBanner-pagination"></div>
         </div>
       </div>
       <!-- 主体内容结束-->
@@ -43,22 +43,11 @@
 </template>
 
 <script>
-  // import swiper from "../../node_modules/swiper/dist/js/swiper.js"
   import Swiper from "swiper/dist/js/swiper";
-
   export default {
     name: "XhBannerPages",
     data() {
       return {
-        // swiperOption: {
-        //     loop: true, // 循环模式选项
-        //
-        //     // 如果需要分页器
-        //     pagination: {
-        //       el: '.swiper-pagination',
-        //     }
-        // },
-        headName: '新华书店网上商城...',
         pic: 'https://img1.xinhuashudian.com/images/2018/12/17/336e6e6b-f011-42dd-8f90-724b3d4edff0.jpg?x-oss-process=image/resize,m_lfit,limit_0,h_300',
         popularInfo: [
           {
@@ -279,33 +268,26 @@
         ]
       }
     },
-    updated() {
+    mounted() {
+      //在获取完数据后，将swiper放在$nextTick下一个UI帧再初始化。
       this.$nextTick(() => { // 下一个UI帧再初始化swiper
         this._initSwiper();
       });
     },
     methods: {
       _initSwiper() {
-        new Swiper('.swiper-container', {
-          direction: "horizontal",
-          loop: true, // 循环模式选项
-          autoplay: {
-            autoplayDisableOnInteraction: false,
-            delay: 3000,
-            // 如果设置为true，当切换到最后一个slide时停止自动切换
-            stopOnLastSlide: false,
-            disableOnInteraction: false,//如果设置为false，用户操作swiper之后自动切换不会停止，每次都会重新启动autoplay。
-          },
-          // 启动动态检查器(OB/观众/观看者)，
-          // 当改变swiper的样式（例如隐藏/显示）或者修改swiper的子元素时，
-          // 自动初始化swiper
-          observer: true,
+        // banner部分的轮播图
+        new Swiper(".intoBannerSwiper", {
+          direction: "horizontal",//水平
+          loop: true, //循环
+          observer: true, //动态获取资源时，需要加上这一句
           observeParents: true,
-          // 如果需要分页器
+          // 分页器
           pagination: {
-            el: '.swiper-pagination',
+            el: ".intoBanner-pagination",
+            // type: 'custom', //自定义分页样式
           },
-        })
+        });
       }
     }
 
@@ -405,9 +387,7 @@
     color: #363433;
     margin: 0.04rem;
   }
-
   .book-price {
     color: #c62f2e;
   }
-
 </style>
