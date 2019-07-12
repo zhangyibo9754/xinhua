@@ -4,8 +4,8 @@
       <!-- XHheader -->
       <div class="XHheader">
         <div class="XHheader-one">
-          <span class="icon iconfont">&#xe68d;</span>
-          <span class="icon iconfont">&#xe633;</span>
+          <span class="icon iconfont" @click="$router.push('/XhCountSetting')">&#xe68d;</span>
+          <span class="icon iconfont" @click="$router.push('/XhMessage')">&#xe633;</span>
         </div>
         <div class="XHheader-tow">
           <div class="XHheader-tow-one">
@@ -61,15 +61,15 @@
           <h5>优惠卷</h5>
         </router-link>
         <img src="../../static/images/mine/xhimg/s.png" />
-        <a href="">
+        <router-link to="/XhGiftCards">
           <h6>0</h6>
           <h5>礼品卡</h5>
-        </a>
+        </router-link>
         <img src="../../static/images/mine/xhimg/s.png" />
-        <a href="">
+        <router-link to="/XhCollection">
           <h6>0</h6>
           <h5>我的收藏</h5>
-        </a>
+        </router-link>
         <img src="../../static/images/mine/xhimg/s.png" />
         <a href="">
           <h6>6</h6>
@@ -77,7 +77,7 @@
         </a>
       </div>
       <!-- XHseacter -->
-      <a href="">
+      <router-link to="/XhMyStudy">
         <div class="XHseacter">
           <div class="XHseacter-tree">
             <span class="icon iconfont">&#xe678;</span>
@@ -89,7 +89,7 @@
             <span class="icon iconfont " >&#xe62d;</span>
           </div>
         </div>
-      </a>
+      </router-link>
 
       <router-link to="/XhLibrary">
         <div class="XHseacter">
