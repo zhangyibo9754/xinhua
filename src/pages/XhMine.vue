@@ -29,15 +29,15 @@
         </div>
         <div class="XHheader-tree">
           <div class="XHheader-tree-one">
-            <router-link to="/XhMyOrder">
+            <router-link to="/XhMyOrder/1">
               <span class="icon iconfont">&#xe607;</span>
               <span>待付款</span>
             </router-link>
-            <router-link to="/XhMyOrder">
+            <router-link to="/XhMyOrder/2">
               <span class="icon iconfont">&#xe615;</span>
               <span>待发货</span>
             </router-link>
-            <router-link to="/XhMyOrder">
+            <router-link to="/XhMyOrder/3">
               <span class="icon iconfont">&#xe620;</span>
               <span>待收货</span>
             </router-link>
@@ -53,7 +53,7 @@
 							<van-icon name="refund-o" class="Xheader-treen-one-one"/>
               <span style="margin-right: .4rem;">售    后</span>
             </router-link>
-            <router-link to="/XhMyOrder">
+            <router-link to="/XhMyOrder/0">
               <span>全部订单</span>
               <span class="icon iconfont">&#xe62d;</span>
             </router-link>

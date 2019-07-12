@@ -6,36 +6,36 @@
 			<router-link to="/XhSearch"><span class="icon iconfont XhMyOrder-header-span" >&#xe634;</span></router-link>
 		</div>
 		<div class="mine-content">
-		<van-tabs background="#f7f7f7"  v-model="activeName">
-		  <van-tab  title="全部" name="a">
+		<van-tabs background="#f7f7f7"  v-model="active">
+		  <van-tab  title="全部">
 			  <div class="XhMyOrder-Bigbox">
 			  	<img src="../../static/images/mine/xhimg/xz.png">
 			  	<h6>暂无相关订单</h6>
 			  	<a href=""><span>随便逛逛</span></a>
 			  </div>
 		  </van-tab>
-		  <van-tab title="待付款" name="b">
+		  <van-tab title="待付款">
 			  <div class="XhMyOrder-Bigbox">
 			  	<img src="../../static/images/mine/xhimg/xz.png">
 			  	<h6>暂无相关订单</h6>
 			  	<a href=""><span>随便逛逛</span></a>
 			  </div>
 		  </van-tab>
-		  <van-tab title="待发货" name="c">
+		  <van-tab title="待发货">
 			  <div class="XhMyOrder-Bigbox">
 			  	<img src="../../static/images/mine/xhimg/xz.png">
 			  	<h6>暂无相关订单</h6>
 			  	<a href=""><span>随便逛逛</span></a>
 			  </div>
 		  </van-tab>
-		  <van-tab title="待收货" name="d">
+		  <van-tab title="待收货">
 			  <div class="XhMyOrder-Bigbox">
 			  	<img src="../../static/images/mine/xhimg/xz.png">
 			  	<h6>暂无相关订单</h6>
 			  	<a href=""><span>随便逛逛</span></a>
 			  </div>
 		  </van-tab>
-		  <van-tab title="已完成" name="e">
+		  <van-tab title="已完成">
 			  <div class="XhMyOrder-Bigbox">
 			  	<img src="../../static/images/mine/xhimg/xz.png">
 			  	<h6>暂无相关订单</h6>
@@ -53,17 +53,19 @@
     export default {
         name: "XhMyOrder",
 		data() {
-			
-
     return {
-		
-      active: 2,
-	  
-    };
-	
+      active:0,
+    }
   },
-		components:{
-		}
+      watch:{
+        $route:{
+          immediate:true,
+          handler:function (to) {
+            this.active=parseInt(to.params.id)
+          }
+        }
+      }
+
     }
 </script>
 
