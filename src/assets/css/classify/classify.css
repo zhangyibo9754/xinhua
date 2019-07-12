@@ -1,12 +1,56 @@
 .classify{
   background-color: #f7f7f7;
 }
-/*头部搜索框*/
-.classify header {
+
+/*头部样式*/
+.classify .xinhua-header{
   height: 0.9rem;
-  border: 0.01rem solid red;
-  line-height: 0.9rem;
+  width: 100%;
+  background-color:#f7f7f7;
 }
+.classify  .xinhua-header header{
+  padding:0.1rem 0.3rem;
+}
+.classify .header-title{
+  justify-content: space-between;
+}
+.classify .header-title>a{
+  margin-top:0.1rem;
+}
+.classify .header-title i{
+  font-size: 0.44rem;
+  vertical-align: middle;
+  margin-top:0.1rem;
+  color:rgb(198, 47, 46)
+}
+/*搜索框*/
+.classify .search{
+  width: 74%;
+  top:0.1rem;
+  left: 1rem;
+}
+.classify .header-search{
+  width: 100%;
+  height: 0.7rem;
+  line-height: 0.7rem;
+  background-color: #fff;
+  border-radius:4px ;
+}
+.classify .header-search span{
+  left:0.2rem;
+  top:0;
+  font-size:0.26rem;
+  color:rgb(153, 153, 153);
+}
+.classify .header-search i{
+  right:0.2rem;
+  top:0;
+  font-size:0.3rem;
+}
+
+
+
+
 /*主体部分*/
 .classify main {
   overflow-y: auto;
@@ -83,10 +127,4 @@
   height: 0.6rem;
   line-height:0.6rem;
   text-align: center;
-}
-/*尾部导航栏*/
-.classify footer {
-  height: 1rem;
-  line-height: 1rem;
-  border: 0.01rem solid red;
 }
