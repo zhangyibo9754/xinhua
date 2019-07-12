@@ -2,17 +2,21 @@
 	<div class="LoginForget">
 		<div class="LoginHeader">
 			<div class="LoginHeaderCenter">
-				<router-link to="/Login"><van-icon  name="arrow-left" /></router-link>
+				<router-link to="/XhLogin"><van-icon  name="arrow-left" /></router-link>
 				<p>忘记密码</p>
 			</div>
 		</div>
 		<div class="LoginForgetFooter">
 			<div class="LoginFooterBox">
 				<div  class="FooterBoxInput">
-					
-				</div>
-				<div class="FooterBoxSign">
-					下一步
+					<form style="" action="">
+						<div></div>
+						<div></div>
+						<input ref="Account" type="text" placeholder="请输入手机号">
+						<input ref="Pass" type="text" placeholder="图片验证码">
+						<input ref="Account" type="text" placeholder="短信验证码">
+						<input class="FooterBoxSign" type="submit" value="下一步">
+					</form>
 				</div>
 			</div>
 		</div>
@@ -65,13 +69,42 @@
 	}
 	.LoginForgetFooter .LoginFooterBox .FooterBoxInput{
 		width: 100%;
-		background: #FFFFFF;
-		height: 2.24rem;
 		float: left;
 		margin-top:.6rem ;
 		border-radius: .1rem;
 	}
-	.LoginForgetFooter .LoginFooterBox .FooterBoxSign{
+	.LoginForgetFooter .LoginFooterBox .FooterBoxInput form{
+		width: 100%;
+		float: left;
+		position: relative;
+	}
+	.LoginForgetFooter .LoginFooterBox .FooterBoxInput form div{
+		position: absolute;
+		width: 6.66rem;
+		height: 2px;
+		background: #dddddd;
+		right: 0;
+	}
+	.LoginForgetFooter .LoginFooterBox .FooterBoxInput form div:nth-child(1){
+		top: 1rem;
+	}
+	.LoginForgetFooter .LoginFooterBox .FooterBoxInput form div:nth-child(2){
+		top: 2.2rem;
+	}
+	.LoginForgetFooter .LoginFooterBox .FooterBoxInput form div:nth-child(3){
+		top: 3.3rem;
+	}
+	.LoginForgetFooter .LoginFooterBox .FooterBoxInput form input{
+		display: block;
+		width: 100%;
+		height:1.1rem ;
+		border: 0 !important;
+		font-size: .35rem;
+		z-index: 2;
+		padding: 0 .24rem 0 .24rem;
+		background: #FFFFFF;
+	}
+	.LoginForgetFooter .LoginFooterBox .FooterBoxInput form .FooterBoxSign{
 		width: 100%;
 		float: left;
 		height: .77rem;

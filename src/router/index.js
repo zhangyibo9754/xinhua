@@ -8,6 +8,7 @@ import XhRegisterProtocol from "../pages/XhRegisterProtocol"
 import XhLogin from "../pages/XhLogin.vue"
 import XhLoginForget from "../pages/XhLoginForget"
 import XhRegister from "../pages/XhRegister"
+import XhLoginTreaty from "../pages/XhLoginTreaty"
 import XhSearch from "../pages/XhSearch.vue"
 import XhThemePages from '../pages/XhThemePages'
 import XhMine from '../pages/XhMine'
@@ -88,6 +89,11 @@ export default new Router({
       path: "/XhRegister",
       name: "XhRegister",
       component: XhRegister
+    },
+    {
+      path: "/XhLoginTreaty",
+      name: "XhLoginTreaty",
+      component: XhLoginTreaty
     },
     {
       path: "/XhSearch",
