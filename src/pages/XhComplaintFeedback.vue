@@ -7,8 +7,8 @@
       </div>
       <div class="type-cs">
         <div>
-          <span style="color: red">*</span>
-          <span style="color: #79797b">反馈问题类型:</span>
+          <span class="type-cs-a">*</span>
+          <span class="type-cs-b">反馈问题类型:</span>
         </div>
         <div>
           <span @click="flag=1" :class="{'change-cs':flag==1}">新功能建议</span>
@@ -18,20 +18,20 @@
       </div>
       <div class="describe-cs">
         <div>
-          <span style="color: red">*</span>
-          <span style="color: #79797b">反馈描述:</span>
+          <span  class="describe-cs-1">*</span>
+          <span  class="describe-cs-2">反馈描述:</span>
         </div>
        <div>
-         <textarea style="width: 100%;" rows="10" placeholder="请输入您反馈的具体问题"></textarea>
+         <textarea class="textarea-cs" rows="10" placeholder="请输入您反馈的具体问题"></textarea>
        </div>
       </div>
       <div class="upload-pic">
-        <p style="margin-bottom: 0.14rem">上传图片(最多5张)</p>
+        <p class="upload-pic-a">上传图片(最多5张)</p>
         <van-uploader :after-read="afterRead" />
       </div>
       <div class="contact-way">
         <div>
-          <span style="color: red">*</span>
+          <span class="contact-way-a">*</span>
           <span>联系方式:</span>
         </div>
         <input type="text">
@@ -57,6 +57,21 @@
 </script>
 
 <style scoped>
+  .XhComplaintFeedback-cs .textarea-cs{
+    width: 100%;
+  }
+  .contact-way-a{
+    color: red
+  }
+  .upload-pic-a{
+    margin-bottom: 0.14rem
+  }
+  .describe-cs-1{
+    color: red
+  }
+  .describe-cs-2{
+    color: #79797b
+  }
   .XhComplaintFeedback-cs{
     background-color: #f7f7f7;
     height: 100%;
@@ -96,6 +111,12 @@
     width: 100%;
     justify-content: space-between;
     margin-top: 0.14rem;
+  }
+  .XhComplaintFeedback-cs .type-cs .type-cs-a{
+    color: red
+  }
+  .XhComplaintFeedback-cs .type-cs .type-cs-b{
+    color: #79797b
   }
   .XhComplaintFeedback-cs .type-cs div:nth-child(2) span{
     display: inline-block;

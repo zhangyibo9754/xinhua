@@ -7,8 +7,8 @@
               </router-link>
               <van-tab title="学习中">
                 <div class="studying">
-                  <span>最近学习</span>
-                  <span>最近购买</span>
+                  <span :class="{'XhMyStudy_red':flag==1}" @click="flag=1">最近学习</span>
+                  <span :class="{'XhMyStudy_red':flag==2}" @click="flag=2">最近购买</span>
                 </div>
               </van-tab>
 
@@ -16,8 +16,8 @@
 
               <van-tab title="离线">
                 <div class="studying">
-                  <span>已下载</span>
-                  <span>下载中</span>
+                  <span :class="{'XhMyStudy_red':flag1==1}" @click="flag1=1">已下载</span>
+                  <span :class="{'XhMyStudy_red':flag1==2}" @click="flag1=2">下载中</span>
                 </div>
               </van-tab>
             </van-tabs>
@@ -30,7 +30,10 @@
         name: "XhMyStudy",
       data() {
         return {
-          active: 2
+          active: 0,
+          active1:0,
+          flag:1,
+          flag1:1
         };
       },
 
@@ -65,9 +68,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #999999;
   }
   .studying span:nth-child(1){
     border-right: 1px solid #dddddd;
+  }
+  .XhMyStudy_red{
+    color: red;
   }
 </style>

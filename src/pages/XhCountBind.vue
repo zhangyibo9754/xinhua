@@ -10,7 +10,7 @@
             <img src="../../static/cs/账号绑定_03.png" >
             <span>QQ</span>
           </div>
-          <span style="width: 1.45rem;border:1px #cccccc solid;">✓已绑定</span>
+          <span >✓已绑定</span>
         </div>
         <div>
           <div>
@@ -19,7 +19,7 @@
           </div>
           <span>+绑定</span>
         </div>
-        <div style="border: none">
+        <div >
           <div>
             <img src="../../static/cs/账号绑定_08.png" >
             <span>新浪微博</span>
@@ -75,6 +75,12 @@
     align-items: center;
     margin: 0 auto;
     border-bottom: 1px solid #cccccc;
+  }
+  .XhCountBind-cs .main-cs >div:last-child{
+    border: none
+  }
+  .XhCountBind-cs .main-cs>div:nth-child(1)>span{
+    width: 1.45rem;border:1px #cccccc solid;
   }
   .XhCountBind-cs .main-cs img{
     width: 0.5rem;

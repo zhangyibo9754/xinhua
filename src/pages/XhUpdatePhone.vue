@@ -6,8 +6,8 @@
       </div>
       <div class="main-cs">
         <input type="text"  placeholder="186****1471">
-        <input type="text"  placeholder="图片验证码">
-        <input type="text"  placeholder="短信验证码" style="border: none">
+        <input type="text"  placeholder="图片验证码" @focus="focusChange" @blur="blurChange">
+        <input type="text"  placeholder="短信验证码" @focus="focusChange" @blur="blurChange">
         <button>发送验证码</button>
       </div>
       <button>下一步</button>
@@ -16,7 +16,18 @@
 
 <script>
     export default {
-        name: "XhUpdatePhone"
+        name: "XhUpdatePhone",
+      methods:{
+        focusChange(e){
+          e.target.style.transition="all 0.4s"
+          e.target.style.fontSize="12px"
+          // e.target.style.lineHeight ="10px"
+        },
+        blurChange(e){
+          e.target.style.fontSize="20px"
+          // e.target.style.lineHeight ="40px"
+        }
+      }
     }
 </script>
 
@@ -57,6 +68,11 @@
     padding-left: 0.26rem;
     margin: 0 auto;
     display: block;
+    font-size: 25px;
+    line-height:1.2rem ;
+  }
+  .XhUpdatePhone-cs .main-cs input:nth-child(3){
+    border: none
   }
   .XhUpdatePhone-cs .main-cs button{
     width: 1.9rem;
