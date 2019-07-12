@@ -21,7 +21,7 @@
   .XhNavPagesHeader {
       display: flex;
       z-index: 9;
-      background: #fff;
+      background: #f7f7f7;
       font-size: .35rem;
       line-height: .86rem;
       width: 100%;

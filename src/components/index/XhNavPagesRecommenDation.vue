@@ -62,6 +62,7 @@
   .XhNavPagesRecommenDation {
     margin-top: .2rem;
     background: #fff;
+    text-align: left;
   }
   .XhNavPagesRecommenDation-title-warpper {
     padding: .12rem .3rem;
