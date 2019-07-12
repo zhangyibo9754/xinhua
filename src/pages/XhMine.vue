@@ -27,18 +27,22 @@
         </div>
         <div class="XHheader-tree">
           <div class="XHheader-tree-one">
+
             <router-link to="/XhMyOrder">
               <span class="icon iconfont">&#xe607;</span>
               <span>待付款</span>
             </router-link>
+
             <router-link to="/XhMyOrder">
               <span class="icon iconfont">&#xe615;</span>
               <span>待发货</span>
             </router-link>
+
             <router-link to="/XhMyOrder">
               <span class="icon iconfont">&#xe620;</span>
               <span>待收货</span>
             </router-link>
+
           </div>
           <img src="../assets/xhimg/h.png" />
           <div class="XHheader-tree-one">

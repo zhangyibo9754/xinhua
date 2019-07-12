@@ -5,6 +5,7 @@
 			<a href=""><span>我的订单</span></a>
 			<a href=""><span class="icon iconfont XhMyOrder-header-span" >&#xe634;</span></a>
 		</div>
+
 		<div class="mine-content">
 		<van-tabs background="#f7f7f7"  v-model="active">
 		  <van-tab  title="全部" name="a">
@@ -53,17 +54,11 @@
     export default {
         name: "XhMyOrder",
 		data() {
-			
 
     return {
-		
-      active: 2,
-	  
+      active: 0,
     };
-	
-  },
-		components:{
-		}
+  }
     }
 </script>
 

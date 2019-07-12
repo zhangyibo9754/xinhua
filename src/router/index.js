@@ -261,5 +261,4 @@ export default new Router({
       component: XhMorePage
     }
   ]
-
 })

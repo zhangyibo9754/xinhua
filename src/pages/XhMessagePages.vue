@@ -77,8 +77,8 @@
           $route:{
             immediate:true,
             handler:function(to,from){
-      this.active=parseInt(to.params.id)
-    }
+            this.active=parseInt(to.params.id)
+            }
           }
       }
     }
@@ -106,9 +106,8 @@
     line-height: 0.9rem;
     font-size: 0.1rem;
     color: red;
-
   }
-  .XhMessagePages .xinhua_header span:nth-child(2){
+  .XhMessagePages .xinhua_header span{
     display: inline-block;
     width: 70%;
     height: 100%;

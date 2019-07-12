@@ -23,7 +23,7 @@
           </li>
 
           <li>
-          <router-link to="./XhMessagePages/1">
+            <router-link to="./XhMessagePages/1">
             <div class="xinhua_div">
               <img src="../../static/images/mine/message2.png" alt="">
               <div>  <p>售后退换</p>
@@ -32,7 +32,7 @@
             </div>
             <i class="iconfont icon-jiantouyou"></i>
           </router-link>
-        </li>
+          </li>
 
           <li>
             <router-link to="./XhMessagePages/2">
