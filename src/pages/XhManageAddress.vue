@@ -1,7 +1,4 @@
 <template>
-<<<<<<< HEAD
-
-=======
     <div class="XhManageAddress">
         <div class="XhManageAddress_header">
           <router-link to="">
@@ -42,7 +39,6 @@
             </router-link>
         </div>
     </div>
->>>>>>> f857735511eacb393df55b99835f2858bd5c3953
 </template>
 
 <script>

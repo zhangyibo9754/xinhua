@@ -1,5 +1,4 @@
 <template>
-<<<<<<< HEAD
   <div class="xhSelectAddress">
     <!--  头部-->
     <div class="bannered-head">
@@ -93,15 +92,6 @@
       }
     },
   }
-=======
-
-</template>
-
-<script>
-    export default {
-        name: "XhSelectAddress"
-    }
->>>>>>> 3955c93910b6e3e03474909d73eaf0dbce3a87de
 </script>
 
 <style scoped>
