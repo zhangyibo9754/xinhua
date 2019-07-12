@@ -1,7 +1,7 @@
 <template>
     <div class="XhCountSetting-cs">
       <div class="header-cs">
-        <span class="iconfont icon-fanhui"></span>
+        <span class="iconfont icon-fanhui" @click="$router.back()"></span>
         <span class="set-cs">账户设置</span>
       </div>
       <div class="main-bottol-cs">
