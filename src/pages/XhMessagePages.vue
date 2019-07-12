@@ -90,8 +90,6 @@
     height: 13.34rem;
     background-color: #f7f7f7;
     text-align: left;
-
-
   }
   .XhMessagePages .xinhua_header{
     width:100%;

@@ -126,7 +126,7 @@ export default new Router({
       component: XhNavPages
     },
     {
-      path: '/XhMyOrder',
+      path: '/XhMyOrder/:id',
       name: 'XhMyOrder',
       component: XhMyOrder
     },
@@ -241,7 +241,7 @@ export default new Router({
       component: XhMessage
     },
     {
-      path: '/XhMessagePages',
+      path: '/XhMessagePages/:id',
       name: 'XhMessagePages',
       component: XhMessagePages
     },
