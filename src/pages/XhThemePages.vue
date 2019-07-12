@@ -13,6 +13,8 @@
             <Xh-theme-pages-img></Xh-theme-pages-img>
             <!-- 超值套餐组件 -->
             <Xh-theme-pages-set-meal></Xh-theme-pages-set-meal>
+            <!-- 启蒙益智 -->
+            <Xh-theme-pages-initiation></Xh-theme-pages-initiation>
         </div>
     </div>
 </template>
@@ -24,6 +26,7 @@ import XhThemePagesSwiper from '../components/index/XhThemePagesSwiper';
 import XhThemePagesImg from '../components/index/XhThemePagesImg';
 import XhThemePagesIcon from '../components/index/XhThemePagesIcon';
 import XhThemePagesSetMeal from '../components/index/XhThemePagesSetMeal';
+import XhThemePagesInitiation from '../components/index/XhThemePagesInitiation';
     export default {
         name: "XhThemePages",
         // 注册组件
@@ -32,13 +35,15 @@ import XhThemePagesSetMeal from '../components/index/XhThemePagesSetMeal';
             XhThemePagesSwiper,
             XhThemePagesImg,
             XhThemePagesIcon,
-            XhThemePagesSetMeal
+            XhThemePagesSetMeal,
+            XhThemePagesInitiation
         }
     }
 </script>
 
 <style scoped>
     .XhThemePages-main{
-        margin-top: .86rem 
+        margin-top: .86rem;
+        background: #f7f7f7;
     }         
 </style>
