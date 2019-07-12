@@ -1,0 +1,92 @@
+.classify{
+  background-color: #f7f7f7;
+}
+/*头部搜索框*/
+.classify header {
+  height: 0.9rem;
+  border: 0.01rem solid red;
+  line-height: 0.9rem;
+}
+/*主体部分*/
+.classify main {
+  overflow-y: auto;
+  flex: 1;
+  background-color: #fff;
+}
+/*主题左侧导航栏*/
+.classify .nav-left{
+  width: 25%;
+  background-color: #f7f7f7;
+  overflow-y: auto;
+}
+/*左侧导航栏li样式*/
+.classify .nav-left li{
+  width: 100%;
+  height: 1rem;
+  line-height: 1rem;
+  color:rgb(116, 120, 122);
+  font-size: 0.28rem;
+}
+/*点击切换样式*/
+.classify .tabColor{
+  background-color: #fff;
+  color:rgb(198, 47, 46) !important;
+}
+/*原始样式*/
+.classify .beforeColor{
+  background-color: #f7f7f7;
+  color:rgb(116, 120, 122);
+}
+/*右侧详细分类列表*/
+.classify .nav-right {
+  overflow-y: auto;
+  width: 75%;
+}
+.classify .nav-right .allList{
+  padding:0.24rem 0.24rem 1rem 0.24rem;
+}
+/*右侧列表标题*/
+.classify .nav-right h4{
+  height: 0.4rem;
+  width: 100%;
+  line-height: 0.4rem;
+  margin-bottom:0.2rem;
+}
+/*右侧列表ul样式*/
+.classify .list{
+  justify-content: start;
+  width: 100%;
+  flex-wrap: wrap;
+  margin-bottom:0.2rem;
+}
+/*右侧列表li样式*/
+.classify .list li{
+  width: 33.33%;
+  height: 2rem;
+  text-align: center;
+}
+.classify .list li a{
+   display: inline-block;
+   width: 100%;
+   height: 2rem;
+   text-align: center;
+ }
+/*右侧列表图片样式*/
+.classify .list img{
+  width: 1.4rem;
+  height: auto;
+}
+/*右侧列表图片名称样式*/
+.classify .list p{
+  color: rgb(153, 153, 153);
+  width: 100%;
+  height: 0.6rem;
+  line-height:0.6rem;
+  text-align: center;
+}
+/*尾部导航栏*/
+.classify footer {
+  height: 1rem;
+  line-height: 1rem;
+  border: 0.01rem solid red;
+}
