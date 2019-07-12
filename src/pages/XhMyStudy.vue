@@ -3,7 +3,7 @@
         <div class="XhMyStudy_header">
             <van-tabs background="#f7f7f7" v-model="active">
               <router-link to="">
-                <i class="iconfont icon-fanhui"></i>
+                <i @click="$router.back()" class="iconfont icon-fanhui"></i>
               </router-link>
               <van-tab title="学习中">
                 <div class="studying">
@@ -33,20 +33,21 @@
           active: 2
         };
       },
-      mounted() {
-
-      }
 
     }
 </script>
 
 <style scoped>
+  .XhMyStudy{
+    text-align: left;
+
+  }
   .XhMyStudy_header i{
-    position: absolute;
+    position: fixed;
     font-size: 14px;
     color: #c62f2e;
     font-weight: bold;
-    top: 20%;
+    top: 2.5%;
     left: 2%;
     z-index: 999;
   }

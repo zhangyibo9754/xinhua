@@ -2,7 +2,7 @@
     <div class="XhMessagePages">
       <div class="xinhua_header">
         <router-link to="/XhMessage">
-          <i class="iconfont icon-fanhui"></i>
+          <i @click="$router.back()" class="iconfont icon-fanhui"></i>
         </router-link>
         <span>消息中心</span>
       </div>
@@ -81,6 +81,8 @@
     width: 100%;
     height: 13.34rem;
     background-color: #f7f7f7;
+    text-align: left;
+
 
   }
   .XhMessagePages .xinhua_header{
