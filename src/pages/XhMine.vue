@@ -4,14 +4,11 @@
       <!-- XHheader -->
       <div class="XHheader">
         <div class="XHheader-one">
-<<<<<<< HEAD
-					<van-icon name="setting-o"  class="XHheader-one-one"/>
-          
-					<van-icon name="comment-o" class="XHheader-one-one"/>
-=======
-          <span class="icon iconfont" @click="$router.push('/XhCountSetting')">&#xe68d;</span>
-          <span class="icon iconfont" @click="$router.push('/XhMessage')">&#xe633;</span>
->>>>>>> 718996a89894df5a9a453445d771df83e9218cd4
+
+					<van-icon name="setting-o"  @click="$router.push('/XhCountSetting')"  class="XHheader-one-one"/>
+       
+					<van-icon name="comment-o" @click="$router.push('/XhMessage')" class="XHheader-one-one"/>
+
         </div>
         <div class="XHheader-tow">
           <div class="XHheader-tow-one">
