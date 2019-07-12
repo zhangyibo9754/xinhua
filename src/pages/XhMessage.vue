@@ -48,7 +48,7 @@
           </li>
 
           <li>
-            <router-link to="./youhui">
+            <router-link to="./XhMessagePages">
               <div class="xinhua_div">
                 <img src="../../static/images/mine/message4.png" alt="">
                 <div>

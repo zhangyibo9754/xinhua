@@ -1,8 +1,8 @@
 <template>
     <div class="pageBody">
 		<div class="XhMyOrder-header">
-				<a href=""><img src="../../static/images/mine/xhimg/jtz.png"></a>
-			<a href=""><span>家庭图书馆</span></a>
+			<img src="../../static/images/mine/xhimg/jtz.png" @click="$router.back(-1)">
+			<span>家庭图书馆</span>
 		</div>
 		<div class="mine-content">
 		<div class="XhMyOrder-Bigbox">
@@ -39,6 +39,7 @@
 .XhMyOrder-header{
 	width: 100%;
 	height: 1.31rem;
+	background: #f7f7f7;
 }
 .XhMyOrder-header img{
 	float: left;
