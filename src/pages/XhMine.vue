@@ -4,8 +4,9 @@
       <!-- XHheader -->
       <div class="XHheader">
         <div class="XHheader-one">
-          <span class="icon iconfont">&#xe68d;</span>
-          <span class="icon iconfont">&#xe633;</span>
+					<van-icon name="setting-o"  class="XHheader-one-one"/>
+          
+					<van-icon name="comment-o" class="XHheader-one-one"/>
         </div>
         <div class="XHheader-tow">
           <div class="XHheader-tow-one">
@@ -44,8 +45,9 @@
               <span>待评价</span>
             </router-link>
             <router-link to="/XhAfterSale">
-              <span class="icon iconfont">&#xe615;</span>
-              <span>售后</span>
+           
+							<van-icon name="refund-o" class="Xheader-treen-one-one"/>
+              <span style="margin-right: .4rem;">售    后</span>
             </router-link>
             <router-link to="/XhMyOrder">
               <span>全部订单</span>
@@ -140,15 +142,15 @@
     border-top:1px solid darkblue
   }
   .XHheader-one{
-    width: 2rem;
+    width: 1.5rem;
     height: .72rem;
     float: right;
     margin-top: .2rem;
-    margin-right: .1rem;
     display: flex;
+		margin-right: .3rem;
   }
-  .XHheader-one span{
-    font-size: 30px;
+  .XHheader-one-one{
+    font-size: 25px;
     color: white;
     margin-left: .25rem;
 
@@ -229,7 +231,15 @@
     line-height: 1.2rem;
     margin-right: .05rem;
     font-weight: 100;
+		vertical-align: middle;
   }
+	.Xheader-treen-one-one{
+		font-size: 20px;
+		color: #999999;
+		line-height: 1.2rem;
+		margin-right: .05rem;
+		vertical-align: middle;
+	}
   .XHheader-tree img{
     width: 6.5rem;
     height: .1rem;

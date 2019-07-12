@@ -1,11 +1,11 @@
 <template>
-    <div class="XhMyOrder">
+    <div class="pageBody">
 		<div class="XhMyOrder-header">
-			<a href=""><img src="../../static/images/mine/xhimg/jtz.png"></a>
+			<img src="../../static/images/mine/xhimg/jtz.png" @click="$router.back(-1)">
 			<a href=""><span>我的订单</span></a>
 			<a href=""><span class="icon iconfont XhMyOrder-header-span" >&#xe634;</span></a>
 		</div>
-		
+		<div class="mine-content">
 		<van-tabs background="#f7f7f7"  v-model="active">
 		  <van-tab  title="全部" name="a">
 			  <div class="XhMyOrder-Bigbox">
@@ -43,15 +43,8 @@
 			  </div>
 		  </van-tab>
 		</van-tabs>
-		<!-- <div class="XhMyOrder-nav">
-			<a href=""><span>全部</span></a>
-			<a href=""><span>待付款</span></a>
-			<a href=""><span>待发货</span></a>
-			<a href=""><span>待收货</span></a>
-			<a href=""><span>已完成</span></a>
-		</div> -->
 		
-	
+	</div>
 	</div>
 </template>
 
@@ -75,12 +68,15 @@
 </script>
 
 <style scoped>
-	.XhMyOrder{
-		background: #f7f7f7;
-	}
+	.mine-content{
+			flex:1;
+			overflow-y:auto;
+			background: #f7f7f7;
+		}
 .XhMyOrder-header{
 	width: 100%;
 	height: 1.31rem;
+	background: #f7f7f7;
 }
 .XhMyOrder-header img{
 	float: left;
@@ -102,17 +98,7 @@
 	float: right;
 	margin-right: .2rem;
 }
-/* .XhMyOrder-nav{
-	width: 100%;
-	height: 1.3rem;
-	display: flex;
-}
-.XhMyOrder-nav a{
-	display: block;
-	flex: 1;
-	font-size: 18px;
-	line-height: 1.3rem;
-	} */
+
 .XhMyOrder-Bigbox{
 	width: 100%;
 }
