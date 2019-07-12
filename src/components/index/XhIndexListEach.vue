@@ -2,7 +2,7 @@
     <ul class="index-list-box flex">
       <li class="index-list-each" v-for="(item,index) in each.indexListBrach" :key="index">
         <a href="">
-          <img :src="item.src" alt="">
+          <img :src="item.src" alt="图片加载失败">
           <p>{{item.tltle}}</p>
           <span>￥{{item.price1}}</span>
           <s v-if="item.price2">￥{{item.price2}}</s>
