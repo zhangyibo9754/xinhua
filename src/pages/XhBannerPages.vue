@@ -2,7 +2,9 @@
   <div>
     <!--  头部-->
     <div class="banner-head">
-      <i class="iconfont icon-fanhui"></i>
+      <router-link to="/">
+        <i class="iconfont icon-fanhui"></i>
+      </router-link>
       <span class="head-name">{{headName}}</span>
       <i class="iconfont icon-fenxiang"></i>
     </div>

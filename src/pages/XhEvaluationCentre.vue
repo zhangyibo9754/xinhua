@@ -1,13 +1,109 @@
 <template>
-    
+    <div class="XhMyOrder">
+		<div class="XhMyOrder-header">
+			<a href=""><img src="../../static/images/mine/xhimg/jtz.png"></a>
+			<a href=""><span>评价中心</span></a>
+			
+		</div>
+	<van-tabs v-model="activeName"  background="#f7f7f7">
+  <van-tab title="待评价" name="a">
+	  <div class="XhMyOrder-Bigbox">
+	  	<img src="../../static/images/mine/xhimg/xz.png">
+	  	<h6>暂无相关订单</h6>
+	  	<a href=""><span>随便逛逛</span></a>
+	  </div> -->
+  </van-tab>
+  <van-tab title="已评价" name="b">
+	  <div class="XhMyOrder-Bigbox">
+	  	<img src="../../static/images/mine/xhimg/comment-empty.9577180f12b0d799.png">
+	  	<h6>暂无评价</h6>
+	  	<a href=""><span>随便逛逛</span></a>
+	  </div> -->
+  </van-tab>
+  
+</van-tabs>
+		<!-- <div class="XhMyOrder-nav">
+			<a href=""><span>待评价</span></a>
+			<a href=""><span>已评价</span></a>
+		</div>
+		<div class="XhMyOrder-Bigbox">
+			<img src="../../static/images/mine/xhimg/xz.png">
+			<h6>暂无相关订单</h6>
+			<a href=""><span>随便逛逛</span></a>
+		</div> -->
+	</div>
 </template>
 
 <script>
     export default {
-        name: "XhEvaluationCentre"
+        name: "XhEvaluationCentre",
+		data() {
+					
+		
+		  return {
+				
+		    active: 2,
+			  
+		  };
+		},
     }
 </script>
 
 <style scoped>
-
+.XhMyOrder{
+		background: #f7f7f7;
+	}
+.XhMyOrder-header{
+	width: 100%;
+	height: 1.31rem;
+}
+.XhMyOrder-header img{
+	float: left;
+	width: .5rem;
+	height: .7rem;
+	margin-top: .3rem;
+	margin-left: .2rem;
+}
+.XhMyOrder-header span{
+	font-size: 20px;
+	line-height: 1.31rem;
+	color: #717171;
+	text-align: center;
+	
+}
+.XhMyOrder-nav{
+	width: 100%;
+	height: 1.3rem;
+	display: flex;
+}
+.XhMyOrder-nav a{
+	display: block;
+	flex: 1;
+	font-size: 18px;
+	line-height: 1.3rem;
+	}
+	.XhMyOrder-Bigbox{
+		width: 100%;
+	}
+	.XhMyOrder-Bigbox img{
+		height: 4rem;
+	}
+	.XhMyOrder-Bigbox h6{
+		font-size: 16px;
+		color: #999999;
+	}
+	.XhMyOrder-Bigbox a{
+		display: block;
+		width: 3rem;
+		height: 1rem;
+		background: red;
+		margin-left: 2.4rem;
+		margin-top: .3rem;
+	}
+	.XhMyOrder-Bigbox span{
+		display: block;
+		font-size: 20px;
+		color: white;
+		line-height: 1rem;
+	}
 </style>

@@ -1,0 +1,110 @@
+.XhProductsList{
+background-color: #f7f7f7;
+}
+
+.list_topProductsList{
+  display: flex;
+  line-height: 1rem;
+  justify-content: space-around;
+}
+.gridProductsList{
+  font-size: .28rem;
+}
+.gridProductsList p{
+  margin-top: .3rem;
+  text-align: left;
+}
+.grid_box{
+  margin-top: .5rem;
+  /*width: 2rem;*/
+  border-radius: .1rem;
+
+}
+.dropdownProductsList{
+  display: flex;
+  justify-content: space-around;
+  background-color: #fff;
+line-height: 1rem;
+  color: #ccc;
+}
+.SalesProductsList{
+  display: flex;
+}
+.volumeProductsList{
+  display: flex;
+flex-direction: column;
+  line-height: .2rem;
+padding-top: .28rem;
+}
+.volumeProductsList span{
+  display: inline-block;
+  line-height: .2rem;
+  height: .2rem;
+  font-size: .01rem;
+  }
+.popup{
+  /*background-color: #ee9900;*/
+  width: 6.7rem;
+  height: 14rem;
+  color: #000;
+}
+.popup_box{
+  display: flex;
+
+}
+.buttonProductsList{
+  color: #000;
+  border: 0;
+  background-color: #fff;
+}
+.popup_box input{
+  display: flex;
+  border: 0;
+  outline: none;
+  text-align: center;
+  background-color: #cccccc;
+  width: 2.78rem;
+  height: .57rem;
+  line-height: .57rem;
+}
+.popup_box p{
+  width: 2rem;
+  background-color: #cccccc;
+}
+.screen li h2{
+  margin-top: .48rem;
+  margin-bottom: .3rem;
+}
+.screen li {
+  margin-left: .26rem;
+  /*background-color: #795da3;*/
+}
+.screen li p{
+  text-align: center;
+  background-color: #cccccc;
+  width: 2.78rem;
+  height: .57rem;
+  line-height: .57rem;
+  border-radius: .1rem;
+  margin: .26rem;
+}
+.time{
+  display: flex;
+
+}
+.onlyProductsList{
+  display: flex;
+  justify-content: space-around;
+padding-top: .2rem;
+}
+.onlyProductsList p{
+  border-radius: .1rem;
+  display: inline-block;
+  width: 1.5rem;
+  height: .5rem;
+  color: #ccc;
+  line-height: .5rem;
+  text-align: center;
+  background-color: #fff;
+  font-size: .28rem;
+}

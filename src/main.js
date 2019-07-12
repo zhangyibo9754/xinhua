@@ -26,15 +26,20 @@ import axios from 'axios';
 Vue.prototype.$axios = axios;
 //axios的依赖
 import QS from 'qs'
+
+Vue.use(Vant);
 Vue.prototype.qs = QS;
 
 Vue.config.productionTip = false;
+
 Vue.use(VueAwesomeSwiper);
-Vue.use(Vant);
+
 Vue.use(vuex);
+
 //使用300ms模块
 fastClick.attach(document.body);
-/* eslint-disable no-new */
+
+
 new Vue({
   el: '#app',
   router,
