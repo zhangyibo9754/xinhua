@@ -1,45 +1,45 @@
 <template>
     <div class="index-content pageBody">
       <!--头部-->
-      <xh-header></xh-header>
+      <xh-header :defaultKey="defaultKey"></xh-header>
       <!--中间内容-->
-      <main>
+      <main class="index-main">
         <!--下拉刷新-->
-        <van-pull-refresh v-model="isLoading" @refresh="onRefresh">
-      <!--轮播图-->
-        <xh-index-swiper :indexSwiper="indexSwipers"></xh-index-swiper>
-      <!--导航-->
-        <div class="index-nav">
-          <ul class="flex">
-            <li v-for="(item,index) in indexNav" :key="index">
-              <xh-index-nav :item="item"></xh-index-nav>
-            </li>
-          </ul>
-        </div>
-      <!--主题-->
-        <xh-index-theme :themeData="indexTheme"></xh-index-theme>
-      <!--主要列表-->
-        <xh-index-list :listData="indexList"></xh-index-list>
-      <!--新华优选-->
-        <!--banner图-->
-        <div class="xh-banner">
-          <a href="">
-            <img :src="indexBanner" alt="">
-          </a>
-        </div>
-        <!--新华优选内容-->
-        <div class="xh-select">
-          <xh-index-list :listData="indexSelect"></xh-index-list>
-        </div>
-        <!--作者轮播图-->
-        <div class="author-banner">
-          <xh-index-swiper :indexSwiper="indexAuthor"></xh-index-swiper>
-        </div>
-        <!--图书分类-->
-        <div class="book-classify">
-          <xh-index-list :listData="indexBookList"></xh-index-list>
-        </div>
-      </van-pull-refresh>
+        <van-pull-refresh @refresh="onRefresh" v-model="isLoading">
+          <!--轮播图-->
+          <xh-index-swiper :indexSwiper="indexSwipers"></xh-index-swiper>
+          <!--导航-->
+          <div class="index-nav">
+            <ul class="flex">
+              <li :key="index" v-for="(item,index) in indexNav">
+                <xh-index-nav :item="item"></xh-index-nav>
+              </li>
+            </ul>
+          </div>
+          <!--主题-->
+          <xh-index-theme :themeData="indexTheme"></xh-index-theme>
+          <!--主要列表-->
+          <xh-index-list :listData="indexListTheme"></xh-index-list>
+          <!--新华优选-->
+          <!--banner图-->
+          <div class="xh-banner">
+            <a href="">
+              <img :src="indexBanner" alt="">
+            </a>
+          </div>
+          <!--新华优选内容-->
+          <div class="xh-select">
+            <xh-index-list :listData="indexSelect"></xh-index-list>
+          </div>
+          <!--作者轮播图-->
+          <div class="author-banner">
+            <xh-index-swiper :indexSwiper="indexAuthor"></xh-index-swiper>
+          </div>
+          <!--图书分类-->
+          <div class="book-classify">
+            <xh-index-list :listData="indexBookList"></xh-index-list>
+          </div>
+        </van-pull-refresh>
       </main>
 
       <!--底部-->
@@ -75,6 +75,8 @@
           indexNav:[],
           indexTheme:[],
           indexBanner:[],
+          indexListTheme:[],
+          defaultKey:"",
           indexList:[
             { tlt:"党政精选",
               moreLink:"更多 >>",
@@ -871,12 +873,11 @@
               ]
             }
           ],
-
         }
       },
       created(){
         this.loadingIndexData();
-
+        this.SearchBefore();
       },
       methods:{
         loadingIndexData(){
@@ -886,7 +887,46 @@
               // 判断接口请求是否成功 0为成功
               if (data.data.status === 0) {
                 // 成功时接收首页的数据
-               this.indexData=JSON.parse(data.data.datas.designData.body)
+               this.indexData=JSON.parse(data.data.datas.designData.body);
+                //获取首页列表数据
+               for(var i=0;i<this.indexData.length;i++){
+                 if(this.indexData[i].config){
+                   if(this.indexData[i].config.titleText){
+                     var serviceData,listid;
+                     listid=this.indexData[i].id
+                     serviceData=data.data.datas.serviceData[listid]._DATA_;
+                     var array=[];
+                     var array1=[];
+                     for(var k=0;k<serviceData.length;k++){
+                       if(serviceData[k].name){
+                         array.push({
+                           "goodsId":serviceData[k].id,
+                           // "src":serviceData[k].mainImage,
+                           "src":"https://img1.xinhuashudian.com/images/2019/06/10/e6ea99dc-8b4c-48ea-834b-ae48e26e054b.jpg?x-oss-process=image/resize,m_lfit,limit_0,w_200,h_200",
+                           "tltle":serviceData[k].name,
+                           "price1":serviceData[k].lowPrice/100,
+                           "price2":serviceData[k].highPrice/100
+                         })
+                       }else{
+                         array1.push({
+                           "goodsId":serviceData[k].itemId,
+                           "src":serviceData[k].mainImage,
+                           "tltle":serviceData[k].itemName,
+                           "price1":serviceData[k].lowPrice/100,
+                           "price2":serviceData[k].highPrice/100
+                         })
+                       }
+                     }
+                     this.indexListTheme.push({
+                       "tlt":this.indexData[i].config.titleText,
+                       "Tid":this.indexData[i].id,
+                       "moreLink":this.indexData[i].config.moreLink,
+                       "indexListBrach":array
+                     })
+                   }
+                 }
+               }
+                console.log(this.indexListTheme);
                 //轮播图
                 this.indexSwipers=this.indexData[6].config.carousel.carouselItems
                 // console.log(this.indexSwipers);
@@ -896,9 +936,10 @@
                 //主题
                 this.indexTheme=this.indexData[3].config.data.children
                 // console.log(this.indexTheme);
+
                 //新华优选banner图
                 this.indexBanner=this.indexData[19].config.image.src
-                console.log(this.indexBanner);
+                // console.log(this.indexBanner);
               } else {
                 // 失败时打印错误信息
                 console.log(data.data.err);
@@ -914,7 +955,26 @@
           setTimeout(() => {
             this.isLoading = false;
           }, 500);
-        }
+        },
+        SearchBefore(){
+          api.get('/api/xinhua/search/find/words').then(data=>{
+            // 判断http请求状态码,200为请求成功
+            if(data.status===200){
+              // 判断接口请求是否成功 0为成功
+              if(data.data.status===0){
+                // 成功时接收数据
+                this.defaultKey=data.data.datas.defaultWord
+              }else{
+                // 失败时打印错误信息
+                console.log(data.data.err)
+              }
+            }
+          }).catch(err=>{
+            // 请求错误返回错误信息
+            console.log(err)
+          })
+        },
+
       }
     }
 </script>
