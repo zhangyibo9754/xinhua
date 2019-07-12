@@ -2,7 +2,7 @@
   <div class="XhGiftCards">
     <div class="xinhua_header">
       <router-link to="">
-        <i class="iconfont icon-fanhui"></i>
+        <i @click="$router.back()" class="iconfont icon-fanhui"></i>
       </router-link>
       <span>我的礼品卡</span>
     </div>
@@ -53,6 +53,8 @@
     width: 100%;
     height: 13.34rem;
     background-color: #f7f7f7;
+    text-align: left;
+
 
   }
   .XhGiftCards .xinhua_header{

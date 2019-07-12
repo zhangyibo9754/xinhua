@@ -1,0 +1,115 @@
+.XhManageAddress{
+  text-align: left;
+  background-color: #f7f7f7;
+  height: 13.34rem;
+}
+.XhManageAddress_header{
+  width: 100%;
+  height: 1.05rem;
+
+}
+.XhManageAddress_header a {
+  width: 100%;
+  height: 1.05rem;
+  display: flex;
+  justify-content: space-around;
+}
+.XhManageAddress_header a i{
+  width: 15%;
+  height: 100%;
+  text-align: center;
+  line-height: 1.05rem;
+  font-size: 16px ;
+  color: #c62f2e;
+  font-weight: bold;
+}
+.XhManageAddress_header a span:nth-of-type(2){
+  display: block;
+  width: 15%;
+  height: 100%;
+  text-align: center;
+  line-height: 1.05rem;
+  font-size: 16px;
+  color: #000000;
+}
+.XhManageAddress_header a span:nth-of-type(1){
+  display: block;
+  width: 70%;
+  height: 100%;
+  text-align: center;
+  line-height: 1.05rem;
+  font-size: 18px;
+  color: #000000;
+}
+.XhManageAddress_main{
+  width: 94%;
+  height: 2.8rem;
+  background-color: #FFFFFF;
+  margin: 0.2rem auto;
+  border-radius: 0.1rem;
+}
+.XhManageAddress_main ul{
+  width: 100%;
+  height: 100%;
+}
+.XhManageAddress_main ul li:nth-of-type(1){
+  width: 90%;
+  margin: 0 auto;
+  height: 85%;
+
+}
+.XhManageAddress_main_name{
+  height: 0.5rem;
+  padding-top: 0.6rem;
+}
+.XhManageAddress_main_name span{
+  font-size: 16px;
+  padding-right: 0.4rem;
+  margin-top: 0.4rem;
+}
+.XhManageAddress_main_name .XhManageAddress_main_name_dizhi{
+  font-size: 15px;
+  margin-top: 0.2rem;
+  border-bottom: 1px solid #eeeeee;
+}
+.XhManageAddress_main_name .XhManageAddress_main_name_dizhi p{
+  padding-bottom: 0.4rem;
+  font-size: 15px;
+}
+.XhManageAddress_main ul li:nth-of-type(2){
+  width: 90%;
+  margin: 0 auto;
+  height: 15%;
+}
+.XhManageAddress_main_name_li span{
+  color: #999999;
+}
+.XhManageAddress_main_name_li a{
+  display:block ;float: right;
+  color: #999999;
+}
+.XhManageAddress_main_name_li i{
+
+  font-size: 14px;
+}
+.XhManageAddress_main_name_li .edit{
+  float: left;
+}
+.XhManageAddress_footer{
+  width: 95%;
+  height: 0.8rem;
+  position: fixed;
+  bottom: 0;
+  left: 2.5%;
+}
+.XhManageAddress_footer button{
+  width: 100%;
+  height: 100%;
+  border: none;
+  background-color: #e61818;
+  text-align: center;
+  line-height: 0.8rem;
+  color: #FFFFFF;
+  font-size: 16px;
+  border-radius: .1rem;
+}

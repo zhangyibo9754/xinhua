@@ -14,11 +14,7 @@
           <p class="ProductPrice">￥45.60</p>
           <van-stepper class="AddReduce" :value="value" async-change @change="onChange"/>
         </div>
-
-
-
       </div>
-
     </div>
 </template>
 
