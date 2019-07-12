@@ -43,12 +43,9 @@
     export default {
         name: "XhDiscounts",
 		data() {
-					
-		
 		  return {
-				
 		    active: 2,
-			  
+        activeName:"a"
 		  };
 		},
     }
