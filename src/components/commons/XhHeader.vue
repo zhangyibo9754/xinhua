@@ -8,9 +8,9 @@
             <i class="iconfont icon-tushuguan"></i>
           </router-link>
         </div>
-        <router-link to="/XhSearch">
+        <router-link class="search-box" to="/XhSearch">
           <div class="header-search rel">
-            <span class="abs">应物兄</span>
+            <span class="abs">{{defaultKey}}</span>
             <i class="iconfont icon-sousuo abs" ></i>
           </div>
         </router-link>
@@ -20,8 +20,25 @@
 </template>
 
 <script>
+    import $ from 'jquery'
     export default {
-        name: "XhHeader"
+      name: "XhHeader",
+      props:["defaultKey"],
+      mounted(){
+        window.addEventListener('scroll', this.changeHeader, true)
+      },
+      methods:{
+        changeHeader(){
+          let scrollTop =$('main').scrollTop();
+          if(scrollTop>200){
+            $('.header-search').css({"top":"-0.8rem","width":"5.6rem" });
+            $('.xinhua-header').height("0.9rem");
+          }else if(scrollTop==0){
+            $('.header-search').css({"top":"0","width":"100%" });
+            $('.xinhua-header').height("1.7rem");
+          }
+        }
+      }
     }
 </script>
 

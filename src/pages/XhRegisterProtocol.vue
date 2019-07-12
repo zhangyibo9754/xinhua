@@ -2,7 +2,7 @@
 	<div class="LoginPost">
 		<div class="LoginHeader">
 			<div class="LoginHeaderCenter">
-				<router-link to="/Login"><van-icon  name="arrow-left" /></router-link>
+				<router-link to="/XhLogin"><van-icon  name="arrow-left" /></router-link>
 				<p>注册协议</p>
 			</div>
 		</div>
@@ -24,8 +24,8 @@
 			<p><br></p>
 		</div>
 		<div class="LoginPostFooter">
-			<router-link tag="p" to="/Login" style="background: #FFFFFF;color: #999999;">不同意</router-link>
-			<router-link tag="p" to="/logon" style="background: #c62f2e;color: #FFFFFF;">同意</router-link>
+			<router-link tag="p" to="/XhLogin" style="background: #FFFFFF;color: #999999;">不同意</router-link>
+			<router-link tag="p" to="/XhRegister" style="background: #c62f2e;color: #FFFFFF;">同意</router-link>
 		</div>
 	</div>
 </template>
@@ -43,6 +43,7 @@
 		background: #f7f7f7;
 		display: flex;
 		flex-direction: column;
+		text-align: left !important; 
 	}
 	.LoginPost .LoginHeader{
 		width: 100%;

@@ -62,7 +62,6 @@
   .XhShoppingCartIntroduce {
     margin-top: .2rem;
     background: #f7f7f7;
-    margin-bottom: 2rem;
   }
   .XhShoppingCartIntroduce-title-warpper {
     padding: .12rem .3rem;

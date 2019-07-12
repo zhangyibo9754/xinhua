@@ -1,10 +1,12 @@
 <template>
-    <div>
+    <div class="pageBody">
+		
 		<div class="XhMyOrder-header">
-			<a href=""><img src="../../static/images/mine/xhimg/jtz.png"></a>
+			<img src="../../static/images/mine/xhimg/jtz.png" @click="$router.back(-1)">
 			<a href=""><span>我的优惠卷</span></a>
 		</div>
-	<van-tabs v-model="active" background="#f7f7f7">
+<div class="mine-content">
+	<van-tabs background="#f7f7f7" v-model="activeName">
      <van-tab title="已领取" name="a">
 		 <div class="XhMyOrder-Bigbox">
 			 <input type="text" value="   请输入优惠卷兑换码" >
@@ -34,18 +36,16 @@
 	 </van-tab>
 </van-tabs>
 	</div>
+	</div>
 </template>
 
 <script>
     export default {
         name: "XhDiscounts",
 		data() {
-					
-		
 		  return {
-				
 		    active: 2,
-			  
+        activeName:"a"
 		  };
 		},
     }
@@ -55,7 +55,14 @@
 .XhMyOrder-header{
 	width: 100%;
 	height: 1.31rem;
+     background: #f7f7f7;
+	
 }
+.mine-content{
+			flex:1;
+			overflow-y:auto;
+			background: #f7f7f7;
+		}
 .XhMyOrder-header img{
 	float: left;
 	width: .5rem;
@@ -106,7 +113,7 @@
 		display: block;
 		width: 3rem;
 		height: 1rem;
-		background: red;
+		background: #c62f2e;
 		margin-left: 2.4rem;
 		margin-top: .3rem;
 	}

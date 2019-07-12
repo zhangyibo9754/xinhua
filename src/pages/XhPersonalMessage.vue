@@ -5,32 +5,32 @@
         <span class="set-cs">个人资料</span>
       </div>
       <div class="main-cs">
-        <div class="pic-cs" style=" height: 1.96rem;">
+        <div class="pic-cs">
           <span>头像</span>
-          <div style="display: flex;align-items: center">
-            <img src="../../static/cs/个人资料_03.png" style="width: 1.1rem;height: 1.1rem">
-            <i class="iconfont icon-jiantouyou" style="margin-left: 0.26rem"></i>
+          <div>
+            <img src="../../static/cs/个人资料_03.png">
+            <i class="iconfont icon-jiantouyou"></i>
           </div>
         </div>
-        <div class="name-cs" style=" height: 1.18rem;">
+        <div class="name-cs">
           <span>昵称</span>
-          <div style="display: flex;align-items: center">
+          <div>
             <span>孔式</span>
-            <i class="iconfont icon-jiantouyou" style="margin-left: 0.26rem"></i>
+            <i class="iconfont icon-jiantouyou"></i>
           </div>
         </div>
-        <div class="birthday-cs" style=" height: 1.18rem;">
+        <div class="birthday-cs">
           <span>生日</span>
-          <div style="display: flex;align-items: center">
+          <div>
             <span>1994-08-06</span>
-            <i class="iconfont icon-jiantouyou" style="margin-left: 0.26rem"></i>
+            <i class="iconfont icon-jiantouyou"></i>
           </div>
         </div>
-        <div class="sex-cs" style=" height: 1.18rem;border: none">
+        <div class="sex-cs" >
           <span>性别</span>
-          <div style="display: flex;align-items: center">
+          <div>
             <span>保密</span>
-            <i class="iconfont icon-jiantouyou" style="margin-left: 0.26rem"></i>
+            <i class="iconfont icon-jiantouyou"></i>
           </div>
         </div>
       </div>
@@ -80,5 +80,44 @@
     border-bottom: 1px solid #cccccc;
     margin: 0 auto;
   }
+  .XhPersonalMessage-cs .main-cs .birthday-cs{
+    height: 1.18rem;
+  }
+  .XhPersonalMessage-cs .main-cs .birthday-cs>div{
+    display: flex;align-items: center
+  }
+  .XhPersonalMessage-cs .main-cs .birthday-cs i{
+    margin-left: 0.26rem
+  }
 
+  .XhPersonalMessage-cs .main-cs .name-cs{
+    height: 1.18rem;
+  }
+  .XhPersonalMessage-cs .main-cs .name-cs>div{
+    display: flex;align-items: center
+  }
+  .XhPersonalMessage-cs .main-cs .name-cs i{
+    margin-left: 0.26rem
+  }
+  .XhPersonalMessage-cs .main-cs .pic-cs{
+    height: 1.96rem;
+  }
+  .XhPersonalMessage-cs .main-cs .pic-cs>div{
+    display: flex;align-items: center
+  }
+  .XhPersonalMessage-cs .main-cs .pic-cs img{
+    width: 1.1rem;height: 1.1rem
+  }
+  .XhPersonalMessage-cs .main-cs .pic-cs i {
+    margin-left: 0.26rem
+  }
+.XhPersonalMessage-cs .main-cs .sex-cs{
+  height: 1.18rem;border: none
+}
+  .XhPersonalMessage-cs .main-cs .sex-cs>div{
+    display: flex;align-items: center
+  }
+  .XhPersonalMessage-cs .main-cs .sex-cs>div>i{
+    margin-left: 0.26rem
+  }
 </style>
