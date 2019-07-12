@@ -6,7 +6,6 @@
           <router-link to="/XhBannerPages">
             <img :src=item.src alt="图片加载失败">
           </router-link>
-
         </div>
       </div>
       <!-- 分页器 -->

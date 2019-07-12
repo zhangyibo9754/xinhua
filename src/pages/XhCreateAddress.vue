@@ -15,12 +15,13 @@
 </template>
 
 <script>
+  import areaList from "../assets/js/三级联动"
     export default {
 
       name: "XhCreateAddress",
       data() {
         return {
-          areaList:{},
+          areaList,
           searchResult: []
         }
       },

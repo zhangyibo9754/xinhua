@@ -1,41 +1,41 @@
 <template>
-    <div class="XhMyOrder">
+    <div class="pageBody">
 		<div class="XhMyOrder-header">
-			<a href=""><img src="../../static/images/mine/xhimg/jtz.png"></a>
-			<a href=""><span>我的订单</span></a>
-			<a href=""><span class="icon iconfont XhMyOrder-header-span" >&#xe634;</span></a>
+			<img src="../../static/images/mine/xhimg/jtz.png" @click="$router.back(-1)">
+			<span>我的订单</span>
+			<router-link to="/XhSearch"><span class="icon iconfont XhMyOrder-header-span" >&#xe634;</span></router-link>
 		</div>
-		
+		<div class="mine-content">
 		<van-tabs background="#f7f7f7"  v-model="active">
-		  <van-tab  title="全部" name="a">
+		  <van-tab  title="全部">
 			  <div class="XhMyOrder-Bigbox">
 			  	<img src="../../static/images/mine/xhimg/xz.png">
 			  	<h6>暂无相关订单</h6>
 			  	<a href=""><span>随便逛逛</span></a>
 			  </div>
 		  </van-tab>
-		  <van-tab title="待付款" name="b">
+		  <van-tab title="待付款">
 			  <div class="XhMyOrder-Bigbox">
 			  	<img src="../../static/images/mine/xhimg/xz.png">
 			  	<h6>暂无相关订单</h6>
 			  	<a href=""><span>随便逛逛</span></a>
 			  </div>
 		  </van-tab>
-		  <van-tab title="待发货" name="c">
+		  <van-tab title="待发货">
 			  <div class="XhMyOrder-Bigbox">
 			  	<img src="../../static/images/mine/xhimg/xz.png">
 			  	<h6>暂无相关订单</h6>
 			  	<a href=""><span>随便逛逛</span></a>
 			  </div>
 		  </van-tab>
-		  <van-tab title="待收货" name="d">
+		  <van-tab title="待收货">
 			  <div class="XhMyOrder-Bigbox">
 			  	<img src="../../static/images/mine/xhimg/xz.png">
 			  	<h6>暂无相关订单</h6>
 			  	<a href=""><span>随便逛逛</span></a>
 			  </div>
 		  </van-tab>
-		  <van-tab title="已完成" name="e">
+		  <van-tab title="已完成">
 			  <div class="XhMyOrder-Bigbox">
 			  	<img src="../../static/images/mine/xhimg/xz.png">
 			  	<h6>暂无相关订单</h6>
@@ -43,15 +43,8 @@
 			  </div>
 		  </van-tab>
 		</van-tabs>
-		<!-- <div class="XhMyOrder-nav">
-			<a href=""><span>全部</span></a>
-			<a href=""><span>待付款</span></a>
-			<a href=""><span>待发货</span></a>
-			<a href=""><span>待收货</span></a>
-			<a href=""><span>已完成</span></a>
-		</div> -->
 		
-	
+	</div>
 	</div>
 </template>
 
@@ -60,27 +53,32 @@
     export default {
         name: "XhMyOrder",
 		data() {
-			
-
     return {
-		
-      active: 2,
-	  
-    };
-	
+      active:0,
+    }
   },
-		components:{
-		}
+      watch:{
+        $route:{
+          immediate:true,
+          handler:function (to) {
+            this.active=parseInt(to.params.id)
+          }
+        }
+      }
+
     }
 </script>
 
 <style scoped>
-	.XhMyOrder{
-		background: #f7f7f7;
-	}
+	.mine-content{
+			flex:1;
+			overflow-y:auto;
+			background: #f7f7f7;
+		}
 .XhMyOrder-header{
 	width: 100%;
 	height: 1.31rem;
+	background: #f7f7f7;
 }
 .XhMyOrder-header img{
 	float: left;
@@ -100,19 +98,10 @@
 	font-size: 22px !important;
 	color: red !important;
 	float: right;
-	margin-right: .2rem;
+	margin-right: .35rem;
+	line-height: 1.31rem;
 }
-/* .XhMyOrder-nav{
-	width: 100%;
-	height: 1.3rem;
-	display: flex;
-}
-.XhMyOrder-nav a{
-	display: block;
-	flex: 1;
-	font-size: 18px;
-	line-height: 1.3rem;
-	} */
+
 .XhMyOrder-Bigbox{
 	width: 100%;
 }
@@ -127,7 +116,7 @@
 	display: block;
 	width: 3rem;
 	height: 1rem;
-	background: red;
+	background: #c62f2e;
 	margin-left: 2.4rem;
 	margin-top: .3rem;
 }

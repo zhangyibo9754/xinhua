@@ -4,35 +4,40 @@
       <!-- XHheader -->
       <div class="XHheader">
         <div class="XHheader-one">
-          <span class="icon iconfont">&#xe68d;</span>
-          <span class="icon iconfont">&#xe633;</span>
+
+					<van-icon name="setting-o"  @click="$router.push('/XhCountSetting')"  class="XHheader-one-one"/>
+       
+					<van-icon name="comment-o" @click="$router.push('/XhMessage')" class="XHheader-one-one"/>
+
         </div>
         <div class="XHheader-tow">
           <div class="XHheader-tow-one">
-            <a href="">
+            <router-link to="/XhPersonalMessage">
               <img src="../assets/xhimg/error.ed5b6e5df12b3313.png">
-            </a>
+            </router-link>
           </div>
           <div class="XHheader-tow-tow">
-            <div class="XHheader-tow-tow-one"><a href=""><span>17398681195</span></a></div>
-            <div class="XHheader-tow-tow-tow">
-              <a href=""><img src="../../static/images/mine/xhimg/da93ada5-803a-48ab-9fd5-f7b0ad0c7108.png">
+          <router-link to="/XhPersonalMessage"> <div class="XHheader-tow-tow-one"><span>17398681195</span></div></router-link>
+            
+						<router-link to="/XhMember">
+						<div class="XHheader-tow-tow-tow">
+              <img src="../../static/images/mine/xhimg/da93ada5-803a-48ab-9fd5-f7b0ad0c7108.png">
                 <span>普通会员  0积分</span>
-              </a>
             </div>
+						</router-link>
           </div>
         </div>
         <div class="XHheader-tree">
           <div class="XHheader-tree-one">
-            <router-link to="/XhMyOrder">
+            <router-link to="/XhMyOrder/1">
               <span class="icon iconfont">&#xe607;</span>
               <span>待付款</span>
             </router-link>
-            <router-link to="/XhMyOrder">
+            <router-link to="/XhMyOrder/2">
               <span class="icon iconfont">&#xe615;</span>
               <span>待发货</span>
             </router-link>
-            <router-link to="/XhMyOrder">
+            <router-link to="/XhMyOrder/3">
               <span class="icon iconfont">&#xe620;</span>
               <span>待收货</span>
             </router-link>
@@ -44,10 +49,11 @@
               <span>待评价</span>
             </router-link>
             <router-link to="/XhAfterSale">
-              <span class="icon iconfont">&#xe615;</span>
-              <span>售后</span>
+           
+							<van-icon name="refund-o" class="Xheader-treen-one-one"/>
+              <span style="margin-right: .4rem;">售    后</span>
             </router-link>
-            <router-link to="/XhMyOrder">
+            <router-link to="/XhMyOrder/0">
               <span>全部订单</span>
               <span class="icon iconfont">&#xe62d;</span>
             </router-link>
@@ -61,23 +67,23 @@
           <h5>优惠卷</h5>
         </router-link>
         <img src="../../static/images/mine/xhimg/s.png" />
-        <a href="">
+        <router-link to="/XhGiftCards">
           <h6>0</h6>
           <h5>礼品卡</h5>
-        </a>
+        </router-link>
         <img src="../../static/images/mine/xhimg/s.png" />
-        <a href="">
+        <router-link to="/XhCollection">
           <h6>0</h6>
           <h5>我的收藏</h5>
-        </a>
+        </router-link>
         <img src="../../static/images/mine/xhimg/s.png" />
-        <a href="">
-          <h6>6</h6>
+        <router-link to="/XhHistory">
+          <h6>0</h6>
           <h5>浏览历史</h5>
-        </a>
+        </router-link>
       </div>
       <!-- XHseacter -->
-      <a href="">
+      <router-link to="/XhMyStudy">
         <div class="XHseacter">
           <div class="XHseacter-tree">
             <span class="icon iconfont">&#xe678;</span>
@@ -89,7 +95,7 @@
             <span class="icon iconfont " >&#xe62d;</span>
           </div>
         </div>
-      </a>
+      </router-link>
 
       <router-link to="/XhLibrary">
         <div class="XHseacter">
@@ -105,7 +111,6 @@
 
         </div>
       </router-link>
-
 
     </div>
 
@@ -140,15 +145,15 @@
     border-top:1px solid darkblue
   }
   .XHheader-one{
-    width: 2rem;
+    width: 1.5rem;
     height: .72rem;
     float: right;
     margin-top: .2rem;
-    margin-right: .1rem;
     display: flex;
+		margin-right: .3rem;
   }
-  .XHheader-one span{
-    font-size: 30px;
+  .XHheader-one-one{
+    font-size: 25px;
     color: white;
     margin-left: .25rem;
 
@@ -165,46 +170,49 @@
     float: left;
   }
   .XHheader-tow-one img{
-    width: 1.68rem;
-    height: 1.68rem;
+    width: 1.6rem;
+    height: 1.6rem;
   }
   .XHheader-tow-tow{
     width: 3rem;
     height: 1.68rem;
     float: right;
+		margin-top: .15rem;
   }
   .XHheader-tow-tow-one{
     width: 3rem;
     height: .6rem;
-    margin-top: .15rem;
+		margin-top: .05rem;
+		text-align: left;
   }
   .XHheader-tow-tow-one span{
     font-size: 20px;
     line-height: .6rem;
     letter-spacing: .02rem;
     color: white;
+		
   }
   .XHheader-tow-tow-tow{
-    width: 3rem;
-    height: .5rem;
+    width: 2.5rem;
+    height: .4rem;
     background: #771b26;
     margin-top: .2rem;
     border-radius: 25px;
     display: flex;
   }
   .XHheader-tow-tow-tow img{
-    width: .45rem;
-    height: .45rem;
+    width: .3rem;
+    height: .3rem;
     margin-left: .1rem;
     vertical-align: middle;
   }
   .XHheader-tow-tow-tow span{
-    font-size: 16px;
+    font-size: 12px;
     color: white;
-    line-height: .1rem;
     vertical-align: middle;
-    margin-left:.05rem;
-    line-height: .5rem;
+    margin-left:.15rem;
+    line-height: .4rem;
+		font-weight: 100;
   }
   .XHheader-tree{
     width: 7rem;
@@ -224,12 +232,20 @@
     flex: 1;
   }
   .XHheader-tree-one span{
-    font-size: 17px;
+    font-size: 15px;
     color: #999999;
     line-height: 1.2rem;
     margin-right: .05rem;
     font-weight: 100;
+		vertical-align: middle;
   }
+	.Xheader-treen-one-one{
+		font-size: 20px;
+		color: #999999;
+		line-height: 1.2rem;
+		margin-left: .15rem;
+		vertical-align: middle;
+	}
   .XHheader-tree img{
     width: 6.5rem;
     height: .1rem;
@@ -253,12 +269,12 @@
     color: #c93434;
     font-size: 16px;
     line-height: .8rem;
-    font-weight: 100;
+    font-weight: 300;
   }
   .XHnav h5{
     color: #747879;
-    font-size: 16px;
-    font-weight: 100;
+    font-size: 15px;
+    font-weight: 300;
   }
   .XHnav img{
     height: 1rem;
@@ -275,10 +291,10 @@
     display: flex;
   }
   .XHseacter span{
-    font-size: 19px;
+    font-size: 15px;
     line-height: 1.4rem;
-    color: #1e1e1e;
-    font-weight: 100;
+    color: #000;
+    font-weight: 500;
   }
 
   .XHseacter-one{

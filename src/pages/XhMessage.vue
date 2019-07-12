@@ -1,8 +1,8 @@
 <template>
     <div class="XhMessage">
       <div class="xinhua_header">
-        <router-link to="/">
-          <i class="iconfont icon-fanhui"></i>
+        <router-link to="">
+          <i @click="$router.back()" class="iconfont icon-fanhui"></i>
         </router-link>
         <span>消息中心</span>
       </div>
@@ -10,7 +10,7 @@
       <div class="xinhua_main">
         <ul>
           <li>
-            <router-link to="./XhMessagePages">
+            <router-link to="./XhMessagePages/0">
               <div class="xinhua_div">
                 <img src="../../static/images/mine/message1.png" alt="">
                 <div>
@@ -23,7 +23,7 @@
           </li>
 
           <li>
-          <router-link to="./XhMessagePages">
+          <router-link to="./XhMessagePages/1">
             <div class="xinhua_div">
               <img src="../../static/images/mine/message2.png" alt="">
               <div>  <p>售后退换</p>
@@ -35,7 +35,7 @@
         </li>
 
           <li>
-            <router-link to="./XhMessagePages">
+            <router-link to="./XhMessagePages/2">
               <div class="xinhua_div">
                 <img src="../../static/images/mine/message3.png" alt="">
                 <div>
@@ -48,7 +48,7 @@
           </li>
 
           <li>
-            <router-link to="./youhui">
+            <router-link to="./XhMessagePages/3">
               <div class="xinhua_div">
                 <img src="../../static/images/mine/message4.png" alt="">
                 <div>
@@ -93,6 +93,7 @@
 .XhMessage{
   background-color: #f7f7f7;
   height: 13.34rem;
+  text-align: left;
 }
 .XhMessage .xinhua_header{
   width:100%;
