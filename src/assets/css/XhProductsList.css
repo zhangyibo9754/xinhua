@@ -1,7 +1,40 @@
 .XhProductsList{
 background-color: #f7f7f7;
+  height: 100%;
 }
-
+/*首部*/
+.XhProductDetailtop{
+  display: flex;
+  justify-content: space-around;
+  height: 1rem;
+  width: 100%;
+  background-color: #f7f7f7;
+  font-size: .32rem;
+  line-height: 1rem ;
+  z-index: 999;
+  position: fixed;
+  top: 0;
+}
+.topicon{
+  line-height: 1rem ;
+  font-size: .5rem;
+  color: #c62f2e;
+}
+.XhProductDetailtop input{
+  border:0;
+  outline: none;
+  width: 5rem;
+  height: .6rem;
+  margin-top: .2rem;
+  background-color: #efeff4;
+}
+.fangdajing{
+  border: 0;
+  position: relative;
+  left: -.6rem;
+  top: .1rem;
+}
+/*首部*/
 .list_topProductsList{
   display: flex;
   line-height: 1rem;
@@ -14,18 +47,23 @@ background-color: #f7f7f7;
   margin-top: .3rem;
   text-align: left;
 }
-.grid_box{
-  margin-top: .5rem;
+.gridProductsListbox{
+  margin-top: .5rem!important;
+  margin-right: .3rem;
   /*width: 2rem;*/
   border-radius: .1rem;
-
+text-align: left;
 }
+/*綜合*/
 .dropdownProductsList{
+  margin-top: 1rem;
   display: flex;
   justify-content: space-around;
-  background-color: #fff;
-line-height: 1rem;
-  color: #ccc;
+  background-color: #f7f7f7;
+/*line-height: 1rem;*/
+  color: rgb(153, 153, 153);
+  font-size: .3rem;
+  text-align: left;
 }
 .SalesProductsList{
   display: flex;
@@ -40,22 +78,47 @@ padding-top: .28rem;
   display: inline-block;
   line-height: .2rem;
   height: .2rem;
-  font-size: .01rem;
+  width: .2rem;
+  font-size: .01rem!important;
   }
+/*仅看有货*/
+.onlyProductsList{
+  display: flex;
+  justify-content: space-around;
+  /*padding-top: .2rem;*/
+  margin-bottom: .5rem;
+text-align: left;
+}
+.onlyProductsList p{
+  border-radius: .1rem;
+  display: inline-block;
+  width: 1.5rem;
+  height: .5rem;
+  color: rgb(153, 153, 153);
+  line-height: .5rem;
+  text-align: center;
+  background-color: #fff;
+  font-size: .28rem;
+}
+/*銷量*/
 .popup{
   /*background-color: #ee9900;*/
   width: 6.7rem;
   height: 14rem;
-  color: #000;
+  color:#6b6b6b;
+}
+.popup h2{
+  color: #74787a;
 }
 .popup_box{
   display: flex;
-
 }
 .buttonProductsList{
-  color: #000;
+  color: rgb(153, 153, 153);
   border: 0;
-  background-color: #fff;
+  background-color: #F7F7F7;
+  /*padding-top: .1rem;*/
+  font-size: .3rem;
 }
 .popup_box input{
   display: flex;
@@ -69,11 +132,13 @@ padding-top: .28rem;
 }
 .popup_box p{
   width: 2rem;
-  background-color: #cccccc;
+  background-color: #74787a;
 }
 .screen li h2{
   margin-top: .48rem;
   margin-bottom: .3rem;
+  /*text-align: left;*/
+  /*color: #74787a;*/
 }
 .screen li {
   margin-left: .26rem;
@@ -87,24 +152,87 @@ padding-top: .28rem;
   line-height: .57rem;
   border-radius: .1rem;
   margin: .26rem;
+  font-size: .25rem;
 }
 .time{
   display: flex;
+}
+/*列表小*/
+.gridproductsListsmall{
+  display: flex;
+  margin-left: .3rem;
+  margin-top: .2rem;
+  /*height: 4rem;*/
+}
+.pri_boxs{
+  width: 2rem;
+  height: 2rem;
+}
+img{
+  width: 100%;
+  height: 100%;
+}
+.gridsmall_box{
+  width: 5rem;
+  background-color: #fff;
+}
+.gridsmall_box{
+  padding-left: .1rem;
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+  text-align: left;
+}
+.aaa{
+  background-color: #f7f7f7;
+}
+.Reset{
+  width: 3rem;
+  border-color: #c62f2e;
+  background-color: #c62f2e;
+  margin: .2rem 0;
+}
+.Resets{
+  width: 3rem;
+  border-color: #ccc;
+  background-color: #fff;
+  color: #000;
+  margin: .2rem 0;
 
 }
-.onlyProductsList{
-  display: flex;
-  justify-content: space-around;
-padding-top: .2rem;
-}
-.onlyProductsList p{
-  border-radius: .1rem;
-  display: inline-block;
-  width: 1.5rem;
-  height: .5rem;
-  color: #ccc;
-  line-height: .5rem;
-  text-align: center;
+.Instock{
+  /*height: 1rem;*/
+  /*line-height: 0;*/
+  font-size: .1rem;
   background-color: #fff;
-  font-size: .28rem;
+}
+.Instocks{
+  font-size: .2rem;
+color: rgb(153, 153, 153);
+  height: .5rem;
+  width: 1.4rem;
+  /*margin-bottom: .3rem;*/
+  border-radius: .1rem;
+  background-color: #fff;
+}
+.Instockss{
+  color: rgb(153, 153, 153);
+  height: .5rem;
+  width: 1.8rem;
+  /*margin-bottom: .3rem;*/
+  border-radius: .1rem;
+  background-color: #fff;
+}
+.van-dropdown-menu{
+  height: .5rem;
+}
+
+.dropdown-menu{
+  padding-top: .15rem;
+  display: flex;
+  width: 5rem;
+  justify-content: space-around;
+}
+.van-grid-item{
+  margin-bottom: .2rem;
 }
