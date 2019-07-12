@@ -241,7 +241,7 @@ export default new Router({
       component: XhMessage
     },
     {
-      path: '/XhMessagePages',
+      path: '/XhMessagePages/:id',
       name: 'XhMessagePages',
       component: XhMessagePages
     },

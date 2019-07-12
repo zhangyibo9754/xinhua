@@ -1,7 +1,7 @@
 <template>
     <div class="XhMessagePages">
       <div class="xinhua_header">
-        <router-link to="/XhMessage">
+        <router-link to="">
           <i @click="$router.back()" class="iconfont icon-fanhui"></i>
         </router-link>
         <span>消息中心</span>
@@ -70,9 +70,17 @@
         name: "XhMessagePages",
       data() {
         return {
-          active: 2
+          active: 0
         };
+    },
+      watch:{
+          $route:{
+            immediate:true,
+            handler:function(to,from){
+      this.active=parseInt(to.params.id)
     }
+          }
+      }
     }
 </script>
 
