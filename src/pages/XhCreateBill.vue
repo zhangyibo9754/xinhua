@@ -31,7 +31,7 @@
                 <input type="text" placeholder="注册地址">
                 <input type="text" placeholder="注册电话">
                 <input type="text" placeholder="开户银行">
-                <input type="text" placeholder="开户账号" style="border: none">
+                <input type="text" placeholder="开户账号">
               </div>
             </div>
             <button class="next-step">下一步</button>
@@ -134,6 +134,9 @@
     border: none;
     border-bottom:1px solid #cccccc;
     padding-left: 0.3rem;
+  }
+  .XhCreateBill-cs .check-cs .vat-cs .main-list input:last-child{
+    border: none
   }
   .XhCreateBill-cs .check-cs .next-step{
     width: 100%;
