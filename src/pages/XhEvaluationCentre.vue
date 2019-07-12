@@ -3,10 +3,9 @@
 		<div class="XhMyOrder-header">
 			<img src="../../static/images/mine/xhimg/jtz.png" @click="$router.back(-1)">
 			<a href=""><span>评价中心</span></a>
-			
 		</div>
-		<div class="mine-content">
-	<van-tabs v-model="activeName"  background="#f7f7f7">
+<div class="mine-content">
+	<van-tabs v-model="activeName" background="#f7f7f7">
   <van-tab title="待评价" name="a">
 	  <div class="XhMyOrder-Bigbox">
 	  	<img src="../../static/images/mine/xhimg/xz.png">
@@ -21,7 +20,6 @@
 	  	<a href=""><span>随便逛逛</span></a>
 	  </div> 
   </van-tab>
-  
 </van-tabs>
 	</div>
 	</div>
@@ -48,7 +46,7 @@
 			flex:1;
 			overflow-y:auto;
 			background: #f7f7f7;
-		}
+		}		
 .XhMyOrder-header{
 	width: 100%;
 	height: 1.31rem;
@@ -93,7 +91,7 @@
 		display: block;
 		width: 3rem;
 		height: 1rem;
-		background: red;
+		background: #c62f2e;
 		margin-left: 2.4rem;
 		margin-top: .3rem;
 	}

@@ -1,11 +1,12 @@
 <template>
     <div class="pageBody">
+		
 		<div class="XhMyOrder-header">
 			<img src="../../static/images/mine/xhimg/jtz.png" @click="$router.back(-1)">
 			<a href=""><span>我的优惠卷</span></a>
 		</div>
-		<div class="mine-content">
-	<van-tabs v-model="active" background="#f7f7f7">
+<div class="mine-content">
+	<van-tabs background="#f7f7f7" v-model="activeName">
      <van-tab title="已领取" name="a">
 		 <div class="XhMyOrder-Bigbox">
 			 <input type="text" value="   请输入优惠卷兑换码" >
@@ -115,7 +116,7 @@
 		display: block;
 		width: 3rem;
 		height: 1rem;
-		background: red;
+		background: #c62f2e;
 		margin-left: 2.4rem;
 		margin-top: .3rem;
 	}

@@ -2,11 +2,11 @@
     <div class="pageBody">
 		<div class="XhMyOrder-header">
 			<img src="../../static/images/mine/xhimg/jtz.png" @click="$router.back(-1)">
-			<a href=""><span>我的订单</span></a>
-			<a href=""><span class="icon iconfont XhMyOrder-header-span" >&#xe634;</span></a>
+			<span>我的订单</span>
+			<router-link to="/XhSearch"><span class="icon iconfont XhMyOrder-header-span" >&#xe634;</span></router-link>
 		</div>
 		<div class="mine-content">
-		<van-tabs background="#f7f7f7"  v-model="active">
+		<van-tabs background="#f7f7f7"  v-model="activeName">
 		  <van-tab  title="全部" name="a">
 			  <div class="XhMyOrder-Bigbox">
 			  	<img src="../../static/images/mine/xhimg/xz.png">
@@ -96,7 +96,8 @@
 	font-size: 22px !important;
 	color: red !important;
 	float: right;
-	margin-right: .2rem;
+	margin-right: .35rem;
+	line-height: 1.31rem;
 }
 
 .XhMyOrder-Bigbox{
@@ -113,7 +114,7 @@
 	display: block;
 	width: 3rem;
 	height: 1rem;
-	background: red;
+	background: #c62f2e;
 	margin-left: 2.4rem;
 	margin-top: .3rem;
 }
