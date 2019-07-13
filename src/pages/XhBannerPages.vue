@@ -16,9 +16,12 @@
         <img class="titleBg" :src="pic" alt="">
       </div>
       <!-- 具体分类-->
-      <div class="popular" v-for="(item,index) in popularInfo" :key="index">
-        <xh-into-banner-swiper :item="item"></xh-into-banner-swiper>
+      <div class="popular" v-if="popularInfo">
+        <xh-into-banner-swiper :item="popularInfo[0]"></xh-into-banner-swiper>
+        <xh-into-banner-swiper :item="popularInfo[1]"></xh-into-banner-swiper>
+        <xh-into-banner-swiper :item="popularInfo[2]"></xh-into-banner-swiper>
       </div>
+
       <!-- 主体内容结束-->
     </div>
   </div>
@@ -138,6 +141,113 @@
                   {
                     img: "https://img3.xinhuashudian.com/bookbasepic/C/01682/2691429-fm.jpg?x-oss-process=image/resize,m_lfit,limit_0,w_200,h_200",
                     name: "干在实处走在前列(推进浙江新发展的思考与实践)",
+                    price: "￥62.70"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            titlePic: "https://img1.xinhuashudian.com/images/2018/11/08/165b0422-6df7-4be9-8e37-0d2433dd9702.jpg?x-oss-process=image/resize,m_lfit,limit_0,w_136,h_34",
+            swiperSlide: [
+              {
+                itemList: [
+                  {
+                    img: "https://img1.xinhuashudian.com/bookbasepic/C/02542/3995872-fm.jpg?x-oss-process=image/resize,m_lfit,limit_0,w_200,h_200",
+                    name: "中国共产党章程",
+                    price: "￥3.80"
+                  },
+                  {
+                    img: "https://img1.xinhuashudian.com/bookbasepic/C/02542/3995872-fm.jpg?x-oss-process=image/resize,m_lfit,limit_0,w_200,h_200",
+                    name: "习近平新时代中国特色社会主义思想",
+                    price: "￥15.00"
+                  },
+                  {
+                    img: "https://img1.xinhuashudian.com/bookbasepic/C/02542/3995872-fm.jpg?x-oss-process=image/resize,m_lfit,limit_0,w_200,h_200",
+                    name: "习近平新时代中国特色社会主义思想",
+                    price: "￥28.00"
+                  },
+                  {
+                    img: "https://img1.xinhuashudian.com/bookbasepic/C/02542/3995872-fm.jpg?x-oss-process=image/resize,m_lfit,limit_0,w_200,h_200",
+                    name: "习近平谈治国理政第一卷(2018再)",
+                    price: "￥76.00"
+                  },
+                  {
+                    img: "https://img1.xinhuashudian.com/bookbasepic/C/02542/3995872-fm.jpg?x-oss-process=image/resize,m_lfit,limit_0,w_200,h_200",
+                    name: "习近平谈治国理政(第2卷)",
+                    price: "￥76.00"
+                  },
+                  {
+                    img: "https://img3.xinhuashudian.com/bookbasepic/C/01682/2691429-fm.jpg?x-oss-process=image/resize,m_lfit,limit_0,w_200,h_200",
+                    name: "干在实处走在前列(推进浙江新发展的)",
+                    price: "￥62.70"
+                  }
+                ]
+              },
+              {
+                itemList: [
+                  {
+                    img: "https://img1.xinhuashudian.com/bookbasepic/C/02542/3995872-fm.jpg?x-oss-process=image/resize,m_lfit,limit_0,w_200,h_200",
+                    name: "中国共产党章程",
+                    price: "￥3.80"
+                  },
+                  {
+                    img: "https://img1.xinhuashudian.com/bookbasepic/C/02542/3995872-fm.jpg?x-oss-process=image/resize,m_lfit,limit_0,w_200,h_200",
+                    name: "习近平新时代中国特色社会主义思想",
+                    price: "￥15.00"
+                  },
+                  {
+                    img: "https://img1.xinhuashudian.com/bookbasepic/C/02542/3995872-fm.jpg?x-oss-process=image/resize,m_lfit,limit_0,w_200,h_200",
+                    name: "习近平新时代中国特色社会主义思想",
+                    price: "￥28.00"
+                  },
+                  {
+                    img: "https://img1.xinhuashudian.com/bookbasepic/C/02542/3995872-fm.jpg?x-oss-process=image/resize,m_lfit,limit_0,w_200,h_200",
+                    name: "习近平谈治国理政第一卷(2018再)",
+                    price: "￥76.00"
+                  },
+                  {
+                    img: "https://img1.xinhuashudian.com/bookbasepic/C/02542/3995872-fm.jpg?x-oss-process=image/resize,m_lfit,limit_0,w_200,h_200",
+                    name: "习近平谈治国理政(第2卷)",
+                    price: "￥76.00"
+                  },
+                  {
+                    img: "https://img3.xinhuashudian.com/bookbasepic/C/01682/2691429-fm.jpg?x-oss-process=image/resize,m_lfit,limit_0,w_200,h_200",
+                    name: "干在实处走在前列(推进浙江新发展的)",
+                    price: "￥62.70"
+                  }
+                ]
+              },
+              {
+                itemList: [
+                  {
+                    img: "https://img1.xinhuashudian.com/bookbasepic/C/02542/3995872-fm.jpg?x-oss-process=image/resize,m_lfit,limit_0,w_200,h_200",
+                    name: "中国共产党章程",
+                    price: "￥3.80"
+                  },
+                  {
+                    img: "https://img1.xinhuashudian.com/bookbasepic/C/02542/3995872-fm.jpg?x-oss-process=image/resize,m_lfit,limit_0,w_200,h_200",
+                    name: "习近平新时代中国特色社会主义思想",
+                    price: "￥15.00"
+                  },
+                  {
+                    img: "https://img1.xinhuashudian.com/bookbasepic/C/02542/3995872-fm.jpg?x-oss-process=image/resize,m_lfit,limit_0,w_200,h_200",
+                    name: "习近平新时代中国特色社会主义思想",
+                    price: "￥28.00"
+                  },
+                  {
+                    img: "https://img1.xinhuashudian.com/bookbasepic/C/02542/3995872-fm.jpg?x-oss-process=image/resize,m_lfit,limit_0,w_200,h_200",
+                    name: "习近平谈治国理政第一卷(2018再)",
+                    price: "￥76.00"
+                  },
+                  {
+                    img: "https://img1.xinhuashudian.com/bookbasepic/C/02542/3995872-fm.jpg?x-oss-process=image/resize,m_lfit,limit_0,w_200,h_200",
+                    name: "习近平谈治国理政(第2卷)",
+                    price: "￥76.00"
+                  },
+                  {
+                    img: "https://img3.xinhuashudian.com/bookbasepic/C/01682/2691429-fm.jpg?x-oss-process=image/resize,m_lfit,limit_0,w_200,h_200",
+                    name: "干在实处走在前列(推进浙江新发展的)",
                     price: "￥62.70"
                   }
                 ]

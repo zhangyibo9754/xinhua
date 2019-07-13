@@ -35,14 +35,15 @@
     methods: {
       _initSwiper() {
         // banner部分的轮播图
-        new Swiper("#intoBannerSwiper", {
+        new Swiper(".swiper-container", {
           direction: "horizontal",//水平
-          // loop: true, //循环
+          loop: true, //循环
+          // autoplay: true,
           // observer: true, //动态获取资源时，需要加上这一句
           // observeParents: true,
           // 分页器
           pagination: {
-            el: "#intoBanner-pagination",
+            el: ".swiper-pagination",
             bulletClass: "my-bullet",
             bulletActiveClass: "my-bullet-active"
           },
@@ -55,34 +56,5 @@
 
 <style>
   @import "../../assets/css/XhBannerPages.css";
-  #intoBannerSwiper{
-    padding-bottom: 0.5rem;
-  }
 
-  #intoBanner-pagination{
-    /*width: 1.5rem;*/
-    padding: 0.03rem 0.05rem;
-    background-color: rgba(241, 241, 241, 0.52);
-    border-radius: 1rem;
-    margin: 0 3px;
-  }
-  #intoBanner-pagination .my-bullet  {
-    display: inline-block;
-    width: 0.15rem;
-    height: 0.05rem;
-    opacity: 1;
-    border-radius: 10px;
-    background: rgba(0, 0, 0, 0.08);
-    margin: 0 3px;
-    cursor: pointer;
-    transition: width 0.3s ease-in-out;
-  }
-
-  #intoBanner-pagination .my-bullet-active {
-    width: 0.3rem;
-    height: 0.05rem;
-    background: #c62f2e!important;
-    opacity: 1;
-    border-radius: 10px;
-  }
 </style>
