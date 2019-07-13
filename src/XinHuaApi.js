@@ -8,6 +8,12 @@ axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded
 axios.defaults.baseURL = 'http://10.35.161.99:7777';   //配置接口地址
 // 允许携带cookie
 axios.defaults.withCredentials=true
+<<<<<<< HEAD
+=======
+
+// 允许携带cookie
+// axios.defaults.withCredentials=true
+>>>>>>> b4d2ca8c917ba2aaac4711b5234c6ec31e63e02a
 
 //返回状态判断(添加响应拦截器)
 axios.interceptors.response.use((res) =>{

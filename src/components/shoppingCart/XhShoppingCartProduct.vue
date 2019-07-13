@@ -4,7 +4,9 @@
         <van-checkbox v-model="checked" checked-color="#c72f2e" class="XhShoppingCartShopChecked"></van-checkbox>
         <van-icon name="shop-o" class="XhShoppingCartShopIcon"/>
         <h4 class="XhShoppingCartShopTitle">新华书店网上商城自营图书</h4>
-        <van-icon name="coupon-o" class="XhShoppingCartShopCoupon"/>
+        <van-button type="primary" @click="showPopup" class="XhShoppingCartDiscountsBox">
+          <van-icon name="coupon-o" class="XhShoppingCartShopCoupon"/>
+        </van-button>
       </div>
       <div class="XhShoppingCartProductInfo">
         <van-checkbox v-model="checked" checked-color="#c72f2e" class="XhShoppingCartShopChecked"></van-checkbox>
@@ -15,6 +17,81 @@
           <van-stepper class="AddReduce" :value="value" async-change @change="onChange"/>
         </div>
       </div>
+      <div class="XhShoppingCartProductInfo">
+        <van-checkbox v-model="checked" checked-color="#c72f2e" class="XhShoppingCartShopChecked"></van-checkbox>
+        <div class="Product">
+          <img src="https://img2.xinhuashudian.com/bookbasepic/C/02448/3858400-fm.jpg?x-oss-process=image/resize,m_lfit,limit_0,w_200,h_200" alt="" class="ProductImg">
+          <h5 class="ProductH5">习近平讲故事</h5>
+          <p class="ProductPrice">￥45.60</p>
+          <van-stepper class="AddReduce" :value="value" async-change @change="onChange"/>
+        </div>
+      </div>
+      <div class="XhShoppingCartProductInfo">
+        <van-checkbox v-model="checked" checked-color="#c72f2e" class="XhShoppingCartShopChecked"></van-checkbox>
+        <div class="Product">
+          <img src="https://img2.xinhuashudian.com/bookbasepic/C/02448/3858400-fm.jpg?x-oss-process=image/resize,m_lfit,limit_0,w_200,h_200" alt="" class="ProductImg">
+          <h5 class="ProductH5">习近平讲故事</h5>
+          <p class="ProductPrice">￥45.60</p>
+          <van-stepper class="AddReduce" :value="value" async-change @change="onChange"/>
+        </div>
+      </div>
+      <div class="XhShoppingCartProductInfo">
+        <van-checkbox v-model="checked" checked-color="#c72f2e" class="XhShoppingCartShopChecked"></van-checkbox>
+        <div class="Product">
+          <img src="https://img2.xinhuashudian.com/bookbasepic/C/02448/3858400-fm.jpg?x-oss-process=image/resize,m_lfit,limit_0,w_200,h_200" alt="" class="ProductImg">
+          <h5 class="ProductH5">习近平讲故事</h5>
+          <p class="ProductPrice">￥45.60</p>
+          <van-stepper class="AddReduce" :value="value" async-change @change="onChange"/>
+        </div>
+      </div>
+      <van-popup v-model="show" round position="bottom" :style="{ height: '20%', height: '10rem' }">
+        <div class="PopupDiscounts">
+          <div class="PopupDiscountsHeader">
+            <span class="DiscountTitle">优惠卷</span>
+            <van-icon name="cross"  class="IconsCross"/>
+          </div>
+          <div class="PopupDiscountsBox">
+            <div class="PopupDiscountsMain">
+              <span class="SaveMoney">￥5.00</span>
+              <span class="ProductDemand">仅限部分图书商品使用</span>
+              <span class="PriceDemand">满60.00元可以使用</span>
+              <span class="PeriodOfValidity">2019.07.01-2021.01.01</span>
+              <button class="ImmediatelyReceive">立即领取</button>
+            </div>
+            <div class="PopupDiscountsMain">
+              <span class="SaveMoney">￥5.00</span>
+              <span class="ProductDemand">仅限部分图书商品使用</span>
+              <span class="PriceDemand">满60.00元可以使用</span>
+              <span class="PeriodOfValidity">2019.07.01-2021.01.01</span>
+              <button class="ImmediatelyReceive">立即领取</button>
+            </div>
+            <div class="PopupDiscountsMain">
+              <span class="SaveMoney">￥5.00</span>
+              <span class="ProductDemand">仅限部分图书商品使用</span>
+              <span class="PriceDemand">满60.00元可以使用</span>
+              <span class="PeriodOfValidity">2019.07.01-2021.01.01</span>
+              <button class="ImmediatelyReceive">立即领取</button>
+            </div>
+            <div class="PopupDiscountsMain">
+              <span class="SaveMoney">￥5.00</span>
+              <span class="ProductDemand">仅限部分图书商品使用</span>
+              <span class="PriceDemand">满60.00元可以使用</span>
+              <span class="PeriodOfValidity">2019.07.01-2021.01.01</span>
+              <button class="ImmediatelyReceive">立即领取</button>
+            </div>
+            <div class="PopupDiscountsMain">
+              <span class="SaveMoney">￥5.00</span>
+              <span class="ProductDemand">仅限部分图书商品使用</span>
+              <span class="PriceDemand">满60.00元可以使用</span>
+              <span class="PeriodOfValidity">2019.07.01-2021.01.01</span>
+              <button class="ImmediatelyReceive">立即领取</button>
+            </div>
+          </div>
+          <div class="PopupDiscountsBottom">
+            完成
+          </div>
+        </div>
+      </van-popup>
     </div>
 </template>
 
@@ -25,7 +102,8 @@
         data() {
           return {
             checked: true,
-            value: 1
+            value: 1,
+            show: false
           }
         },
         methods: {
@@ -36,6 +114,9 @@
               this.$toast.clear();
               this.value = value;
             }, 500);
+          },
+          showPopup() {
+            this.show = true;
           }
         }
     }
@@ -68,16 +149,18 @@
     margin-top: 0.3rem;
     margin-left: 0.3rem;
   }
-  .XhShoppingCartShopCoupon{
+  .XhShoppingCartDiscountsBox{
     font-size: 0.34rem;
     float: right;
-    margin-top: 0.3rem;
-    margin-right: 0.3rem;
+    margin-top: 0.1rem;
+    margin-right: 0.1rem;
     color: #bf2e2d;
+    background-color: transparent;
+    border: none;
   }
   .XhShoppingCartProductInfo{
     width: 100%;
-    height: 2.87rem;
+    min-height: 2.87rem;
     background-color: #ffffff;
   }
   .ProductImg{
@@ -107,5 +190,87 @@
     margin-top: 1.60rem;
     margin-right: 0.04rem;
     float: right;
+  }
+  .PopupDiscountsHeader{
+    width: 100%;
+    height: 1.1rem;
+    overflow: hidden;
+    display: flex;
+  }
+  .PopupDiscountsHeader .DiscountTitle{
+    height: 0.35rem;
+    line-height: 0.35rem;
+    padding-top: 0.4rem;
+    font-size: 0.35rem;
+    color:#0d0d0d;
+    margin-left: 3.2rem;
+  }
+  .PopupDiscountsHeader .IconsCross{
+    margin-top: 0.3rem;
+    margin-left: 2.5rem;
+    font-size: 0.4rem;
+    color:#000000;
+  }
+  .PopupDiscountsBox{
+    height: 8rem;
+    overflow-y: scroll;
+  }
+  .PopupDiscountsMain{
+    margin-left: 0.25rem;
+    margin-bottom: 0.25rem;
+    width: 7rem;
+    height: 2.1rem;
+    background: url("//assets-m.xinhuashudian.com/assets/files/normal.322f4f66744fa967.png");
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .SaveMoney{
+    height: 0.34rem;
+    margin-top: 0.3rem;
+    margin-left: 0.6rem;
+    font-size: 0.34rem;
+    font-weight: 900;
+    color: #fff;
+  }
+  .ProductDemand{
+    height: 0.34rem;
+    margin-top: 0.3rem;
+    margin-right: 1.5rem;
+    font-size: 0.3rem;
+    color: #070707;
+  }
+  .PriceDemand{
+    height: 0.34rem;
+    margin-top: 0.6rem;
+    margin-left: 0.1rem;
+    font-size: 0.24rem;
+    color: #fff;
+  }
+  .PeriodOfValidity{
+    height: 0.34rem;
+    margin-top: 0.65rem;
+    font-size: 0.24rem;
+    color: #717577;
+  }
+  .ImmediatelyReceive{
+    margin-top: 0.55rem;
+    margin-right: 0.1rem;
+    width: 1.54rem;
+    height: 0.58rem;
+    background-color: #fff;
+    border:2px solid #f0f0f0;
+  }
+  .PopupDiscountsBottom{
+    width: 7rem;
+    height: 0.9rem;
+    margin-left: 0.25rem;
+    color: #fff;
+    background-color: #c72f2e;
+    line-height: 0.9rem;
+    text-align: center;
+    font-size: 0.34rem;
+    font-weight: 800;
   }
 </style>

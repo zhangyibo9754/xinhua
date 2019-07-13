@@ -137,8 +137,10 @@
 .index-content .index-list-title a{
   font-size: 0.26rem;
   color: rgb(153, 153, 153);
-  margin-top:0.2rem;
   margin-right:0.2rem;
+}
+.index-content .more-page{
+  margin-top:0.2rem;
 }
 .index-content .index-list-box{
   overflow-x:auto;

@@ -4,7 +4,7 @@
       <div class="swiper-wrapper">
         <div class="swiper-slide" v-for="(item,index) in indexSwiper" :key="index">
           <router-link to="/XhBannerPages">
-            <img :src=item.src alt="图片加载失败">
+            <img :src=item.url alt="图片加载失败">
           </router-link>
         </div>
       </div>

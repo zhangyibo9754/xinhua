@@ -31,11 +31,11 @@
         changeHeader(){
           let scrollTop =$('main').scrollTop();
           if(scrollTop>200){
-            $('.header-search').css({"top":"-0.8rem","width":"5.6rem" });
-            $('.xinhua-header').height("0.9rem");
+            $('.index-content .header-search').css({"top":"-0.8rem","width":"5.6rem" });
+            $('.index-content .xinhua-header').height("0.9rem");
           }else if(scrollTop==0){
-            $('.header-search').css({"top":"0","width":"100%" });
-            $('.xinhua-header').height("1.7rem");
+            $('.index-content .header-search').css({"top":"0","width":"100%" });
+            $('.index-content .xinhua-header').height("1.7rem");
           }
         }
       }

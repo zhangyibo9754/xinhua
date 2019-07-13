@@ -1,7 +1,7 @@
 <template>
     <div class="index-list-title flex">
       <h3 v-if="title.tlt">{{title.tlt}}</h3>
-      <router-link to="/XhMorePage">
+      <router-link class="more-page" to="/XhMorePage">
         <span v-if="title.moreLink">更多 >></span>
       </router-link>
     </div>

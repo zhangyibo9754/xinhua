@@ -49,7 +49,9 @@
             // 判断接口请求是否成功 0为成功
             if (data.data.status === 0) {
               // 成功时接收数据
-                  this.navList=data.data.datas.serviceData.body_2._DATA_;
+              console.log(data.data.datas);
+              this.navList=data.data.datas.serviceData.body_2._DATA_;
+                  //默认请求第一个
                   this.changeList('0')
             } else {
               // 失败时打印错误信息
