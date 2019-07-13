@@ -1,8 +1,8 @@
-<template>
+	<template>
   <div class="XhSearch">
     <div class="XhSearchHeader">
       <div class="SearchHeaderCenter">
-        <input v-model="title"  style="display: block;width: 5.5rem;height:.56rem ; background: #FFFFFF;border: 0 !important;padding-left: .2rem;" type="text" placeholder="应物兄">
+        <input v-model="title" class="SearchHeaderCenter-input"    type="text" placeholder="应物兄">
         <p>
           <van-icon name="search" v-if="!title" @click="search"/>
           <van-icon name="cross" v-if="title" @click="delKey"/>
@@ -21,7 +21,7 @@
     <div class="XhSearchFooter" v-if="!title">
       <div class="SearchFooterFooter">
         <div class="XhSearchLately" v-show="history">
-          <p><span style="font-size:.3rem ;font-weight:800 ;color: #74787a;">最近搜索</span>
+          <p><span class="XhSearchLately-span" >最近搜索</span>
             <van-icon name="delete" @click="delHistory"/>
           </p>
           <ul>
@@ -29,7 +29,7 @@
           </ul>
         </div>
         <div class="XhSearchLately">
-          <p><span style="font-size:.3rem ;font-weight:800 ;color: #74787a;">热门搜索</span></p>
+          <p><span class="XhSearchLately-span">热门搜索</span></p>
           <ul>
             <li v-for="(before,index) in searchBefore" :key="index">
               <a href="">{{before}}</a>
@@ -75,6 +75,8 @@
               //     console.log(data.data.datas)
               this.defaultKey=data.data.datas.defaultWord
               this.searchBefore=data.data.datas.hotWords
+							console.log(data.data.datas.hotWords)
+							console.log(data.data.datas.defaultWord)
             }else{
               // 失败时打印错误信息
               console.log(data.data.err)
@@ -129,11 +131,24 @@
     display: flex;
     flex-direction: column;
   }
+	.SearchHeaderCenter-input{
+		display: block;
+		width: 5.5rem;
+		height:.56rem ; 
+		background: #FFFFFF;
+		border: 0 !important;
+		padding-left: .2rem;
+	}
   .XhSearch .XhSearchHeader{
     width: 100%;
     height: .88rem;
     float: left;
   }
+	.XhSearchLately-span{
+		font-size:.3rem ;
+		font-weight:800 ;
+		color: #74787a;
+	}
   .XhSearch .XhSearchHeader .SearchHeaderCenter{
     width: 7.09rem;
     height: 100%;

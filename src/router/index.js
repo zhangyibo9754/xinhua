@@ -43,6 +43,7 @@ import XhMyStudy from '../pages/XhMyStudy'
 import XhClassify from '.././pages/XhClassify'
 import XhMorePage from '../pages/XhMorePage'
 import XhNavPages from '../pages/XhNavPages'
+import XhMyEvaluation from '../pages/XhMyEvaluation'
 
 Vue.use(Router)
 
@@ -259,6 +260,11 @@ export default new Router({
       path: '/XhMorePage',
       name: 'XhMorePage',
       component: XhMorePage
+    },
+    {
+      path: '/XhMyEvaluation',
+      name: 'XhMyEvaluation',
+      component: XhMyEvaluation
     }
   ]
 

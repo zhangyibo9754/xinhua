@@ -2,7 +2,10 @@
     <ul class="index-list-box flex">
       <li class="index-list-each" v-for="(item,index) in each.indexListBrach" :key="index">
         <a href="">
+<<<<<<< HEAD
 <!--          图片反向代理-->
+=======
+>>>>>>> 67d493a0e5af44a2451ae3921fd45a5340ae9409
           <img :src="'http://api.hll666.xyz/api/xinhua/img?imgUrl='+urlEncode(item.src)" alt="图片加载失败">
           <p>{{item.tltle}}</p>
           <span>￥{{item.price1}}</span>
@@ -24,9 +27,15 @@
           }else{
             return encodeURI(str)
           }
+<<<<<<< HEAD
           // return encodeURI(str)
         }
       }
+=======
+        }
+      }
+
+>>>>>>> 67d493a0e5af44a2451ae3921fd45a5340ae9409
     }
 </script>
 
