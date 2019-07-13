@@ -1,11 +1,11 @@
 <template>
 	<div>
-		<div class="XhMyOrder-header">
+		<div class="XhMember-header">
 			<img src="../../static/images/mine/xhimg/jtz.png" @click="$router.back(-1)">
 			<span>评价中心</span>
-			<router-link to="/XhRule"><span class="XhMyOrder-header-span">积分规则</span></router-link>
+			<router-link to="/XhRule"><span class="XhMember-header-span">积分规则</span></router-link>
 		</div>
-		<div class="XhMyOrder-Bigbox">
+		<div class="XhMember-Bigbox">
 			<div class="XhMember-one">
 				<span>普通会员</span>
 				<div class="XhMember-one-one">
@@ -30,30 +30,30 @@
 </script>
 
 <style scoped>
-	.XhMyOrder-header{
+	.XhMember-header{
 		width: 100%;
 		height: 1.31rem;
 		background: #f7f7f7;
 	}
-	.XhMyOrder-header img{
+	.XhMember-header img{
 		float: left;
-		width: .5rem;
-		height: .7rem;
-		margin-top: .3rem;
+		width: .3rem;
+		height: .5rem;
+		margin-top: .4rem;
 		margin-left: .2rem;
 	}
-	.XhMyOrder-header span{
-		font-size: 20px;
+	.XhMember-header span{
+		font-size: 16px;
 		line-height: 1.31rem;
 		color: #000;
 		text-align: center;
 	}
-	.XhMyOrder-header-span{
+	.XhMember-header-span{
 		float: right;
 		font-size: 15px !important;
 		margin-right: .2rem;
 	}
-	.XhMyOrder-Bigbox{
+	.XhMember-Bigbox{
 		width: 100%;
 	}
 	.XhMember-one{

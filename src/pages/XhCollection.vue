@@ -69,8 +69,8 @@
 		margin-right: .2rem;
 	}
 	.XhMyOrder-header-one span{
-		font-size: 18px !important;
-		line-height: 1rem;
+		font-size: 16px !important;
+		line-height: .8rem;
 	}
   .XhCollection-cs{
     background-color: #f7f7f7;

@@ -3,7 +3,6 @@
 		<div class="XhMyOrder-header" >
 			<img src="../../static/images/mine/xhimg/jtz.png" @click="$router.back(-1)">
 			<a href=""><span>浏览记录</span></a>
-			<!-- <button>清空</button> -->
 		<div class="XhMyOrder-header-one" @click="exitCs">
 			 <span >
 			 清空
@@ -67,18 +66,18 @@
 	margin-right: .2rem;
 }
 .XhMyOrder-header-one span{
-	font-size: 18px !important;
+	font-size: 16px !important;
 	line-height: 1rem;
 }
 .XhMyOrder-header img{
 	float: left;
-	width: .5rem;
-	height: .7rem;
-	margin-top: .3rem;
+	width: .3rem;
+	height: .5rem;
+	margin-top: .4rem;
 	margin-left: .2rem;
 }
 .XhMyOrder-header span{
-	font-size: 20px;
+	font-size: 16px;
 	line-height: 1.31rem;
 	color: #717171;
 	text-align: center;

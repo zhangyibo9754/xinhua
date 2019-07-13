@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<div class="XhMyOrder-header">
+		<div class="XhRule-header">
 			<img src="../../static/images/mine/xhimg/jtz.png" @click="$router.back(-1)">
 			<span>积分规则</span>
 		</div>
@@ -58,20 +58,20 @@
 			overflow-y:auto;
 			
 				}
-	.XhMyOrder-header{
+	.XhRule-header{
 		width: 100%;
 		height: 1.31rem;
 		background: #f7f7f7;
 	}
-	.XhMyOrder-header img{
+	.XhRule-header img{
 		float: left;
-		width: .5rem;
-		height: .7rem;
-		margin-top: .3rem;
+		width: .3rem;
+		height: .5rem;
+		margin-top: .4rem;
 		margin-left: .2rem;
 	}
-	.XhMyOrder-header span{
-		font-size: 20px;
+	.XhRule-header span{
+		font-size: 16px;
 		line-height: 1.31rem;
 		color: #000;
 		text-align: center;

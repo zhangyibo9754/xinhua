@@ -29,10 +29,6 @@
         </div>
         <div class="XHheader-tree">
           <div class="XHheader-tree-one">
-
-
-
-
             <router-link to="/XhMyOrder/1">
               <span class="icon iconfont">&#xe607;</span>
               <span>待付款</span>
@@ -210,6 +206,7 @@
     width: .3rem;
     height: .3rem;
     margin-left: .1rem;
+		margin-top: .05rem;
     vertical-align: middle;
   }
   .XHheader-tow-tow-tow span{

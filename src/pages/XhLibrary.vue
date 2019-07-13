@@ -14,8 +14,7 @@
 			<span style="float: left;margin-left: .2rem;">共0本</span>
 			<img src="../../static/images/mine/xhimg/sc.png" />
 			<van-icon name="add" class="XhLibrary-van" @click="showPopup"/>
-			<van-popup v-model="show" position="bottom" 
-  :style="{ height: '30%' }" >
+ <van-popup v-model="show" position="bottom" :style="{ height: '30%' }" >
   <div class="Xhfooter-one"><a href=""><span>扫条形码</span></a></div>
   <div class="Xhfooter-one"><a href=""><span>搜素书籍</span></a></div>
   <div class="Xhfooter-one"><a href=""><span>手动录入</span></a></div>
@@ -58,13 +57,13 @@
 }
 .XhMyOrder-header img{
 	float: left;
-	width: .4rem;
-	height: .7rem;
-	margin-top: .3rem;
+	width: .2rem;
+	height: .4rem;
+	margin-top: .4rem;
 	margin-left: .2rem;
 }
 .XhMyOrder-header span{
-	font-size: 20px;
+	font-size: 16px;
 	line-height: 1.31rem;
 	color: #717171;
 	text-align: center;

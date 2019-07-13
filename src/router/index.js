@@ -43,7 +43,10 @@ import XhMyStudy from '../pages/XhMyStudy'
 import XhClassify from '.././pages/XhClassify'
 import XhMorePage from '../pages/XhMorePage'
 import XhNavPages from '../pages/XhNavPages'
-
+import XhHistory from '../pages/XhHistory'
+import XhMember from '../pages/XhMember'
+import XhRule from '../pages/XhRule'
+import XhService from '../pages/XhService'
 Vue.use(Router)
 
 export default new Router({
@@ -259,7 +262,27 @@ export default new Router({
       path: '/XhMorePage',
       name: 'XhMorePage',
       component: XhMorePage
-    }
+    },
+	{
+	  path: '/XhHistory',
+	  name: 'XhHistory',
+	  component: XhHistory
+	},
+	{
+	  path: '/XhMember',
+	  name: 'XhMember',
+	  component: XhMember
+	},
+	{
+	  path: '/XhRule',
+	  name: 'XhRule',
+	  component: XhRule
+	},
+	{
+	  path: '/XhService',
+	  name: 'XhService',
+	  component:XhService
+	}
   ]
 
 })
