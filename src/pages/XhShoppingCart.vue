@@ -19,6 +19,37 @@
     import XhFooter from '../components/commons/XhFooter'
     export default {
         name: "XhShoppingCart",
+        data(){
+          return{
+            checked:true,
+            shopCart:[
+              {
+                id:1,
+                name:"第四只手",
+                price:"￥39.20",
+                count:1,
+                checked:true,
+                dec:"　　这是一个不断失去自我的人，重新找回自我的故事。"
+              },
+              {
+                id:2,
+                name:"第四只手",
+                price:"￥39.20",
+                count:1,
+                checked:true,
+                dec:"　　这是一个不断失去自我的人，重新找回自我的故事。"
+              },
+              {
+                id:1,
+                name:"第四只手",
+                price:"￥39.20",
+                count:1,
+                checked:true,
+                dec:"　　这是一个不断失去自我的人，重新找回自我的故事。"
+              }
+            ]
+          }
+        },
         components:{
           XhShoppingCartHeader,
           XhShoppingCartProduct,
