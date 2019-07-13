@@ -2,9 +2,12 @@ import axios from 'axios/index'
 import qs from 'qs'
 
 
-axios.defaults.timeout = 5000;                        //响应时间
+axios.defaults.timeout = 5000;                        //响应时
 axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=UTF-8'; //配置请求头
 axios.defaults.baseURL = 'http://api.hll666.xyz';   //配置接口地址
+
+// 允许携带cookie
+// axios.defaults.withCredentials=true
 
 //返回状态判断(添加响应拦截器)
 axios.interceptors.response.use((res) =>{
