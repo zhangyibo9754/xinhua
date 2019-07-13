@@ -10,13 +10,13 @@
     <!--主体内容start-->
     <ul class="addressList">
       <li class="addressItem" v-for="(item,index) in list" :key="index" @click="selectSelf(index)">
-          <van-checkbox class="margin-size" v-model="item.checked" checked-color="#c62f2e" icon-size="0.35rem">
-            <p class="customerInfo">
-              <span class="customer-name">{{item.name}}</span>
-              <span class="customer-telPhone">{{item.tel}}</span>
-              <span class="default-address" ref="address">默认地址</span>
-            </p>
-          </van-checkbox>
+        <van-checkbox class="margin-size" v-model="item.checked" checked-color="#c62f2e" icon-size="0.35rem">
+          <p class="customerInfo">
+            <span class="customer-name">{{item.name}}</span>
+            <span class="customer-telPhone">{{item.tel}}</span>
+            <span class="default-address" ref="address">默认地址</span>
+          </p>
+        </van-checkbox>
         <p class="customer-address">{{item.address}}</p>
       </li>
 
@@ -95,79 +95,5 @@
 </script>
 
 <style scoped>
-  /*页面背景*/
-  .xhSelectAddress {
-    height: 100%;
-    overflow: hidden;
-    background-color: #f7f7f7;
-  }
-
-  /*头部样式*/
-  .bannered-head {
-    height: 1rem;
-    line-height: 1rem;
-    display: flex;
-    justify-content: space-between;
-    padding: 0 0.2rem;
-  }
-
-  .icon-fanhui {
-    font-size: 0.3rem;
-    color: #c62f2e;
-  }
-
-  .head-name {
-    font-size: 0.32rem;
-  }
-
-  .management-words {
-    font-size: 0.3rem;
-    color: #363433;
-  }
-
-  /*主体内容样式*/
-  .addressList {
-    padding: 0.3rem 0.2rem;
-  }
-
-  .addressItem {
-    /*height: 1.6rem;*/
-    background: #fff;
-    margin-bottom: 0.3rem;
-    padding-bottom: 0.3rem;
-  }
-
-  .margin-size {
-    margin: 0 0.2rem;
-  }
-
-  .customerInfo {
-    width: 6.1rem;
-    height: 1rem;
-    line-height: 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 0.26rem;
-  }
-
-  span.default-address {
-    width: 1.6rem;
-    height: 0.5rem;
-    line-height: 0.5rem;
-    background-color: #ffffff;
-    border-radius: 0.1rem;
-    color: #fff;
-  }
-
-  span.default-address:nth-child(1) {
-    background-color: #c62f2e;
-  }
-
-  .customer-address {
-    font-size: 0.26rem;
-    text-align: left;
-    margin-left: 0.74rem;
-
-  }
+  @import "../assets/css/XhSelectAddress.css";
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="xhCashierDesk-bg">
+  <div class="xhCashierDesk-bg xhCashierDesk">
     <!--  头部-->
     <div class="bannered-head">
       <i class="iconfont icon-fanhui" @click="$router.back()"></i>
@@ -59,83 +59,5 @@
 </script>
 
 <style scoped>
-  /*页面背景*/
-  .xhCashierDesk-bg {
-    height: 100%;
-    overflow: hidden;
-    background-color: #f7f7f7;
-  }
-
-  /*头部样式*/
-  .bannered-head {
-    height: 1rem;
-    line-height: 1rem;
-    display: flex;
-    justify-content: space-between;
-    padding: 0 0.2rem;
-  }
-
-  .icon-fanhui {
-    font-size: 0.3rem;
-    color: #c62f2e;
-  }
-
-  .head-name {
-    font-size: 0.3rem;
-  }
-
-  /*主体内容样式*/
-  .paylist {
-    background-color: #fff;
-  }
-
-  .payItem {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 1rem;
-    padding: 0 0.3rem;
-  }
-
-  .payItem-size {
-    font-size: 0.26rem;
-    color: #7a7a7a;
-  }
-
-  .icon-jiantouyou {
-    font-size: 0.24rem;
-    color: #f5f5f5;
-  }
-
-  .payable {
-    border-bottom: 1px solid #ddd;
-  }
-
-  .pay-money {
-    color: #c62f2e;
-  }
-
-  .payways {
-    background-color: #f7f7f7;
-    align-self: flex-end;
-  }
-
-  .pay-way-logo {
-    width: 0.5rem;
-    height: 0.5rem;
-    margin-right: 0.1rem;
-  }
-
-  .payways-words {
-    color: #000;
-  }
-
-  .Alipay {
-    border-bottom: 1px solid #e9e9e9;
-  }
-
-  div[class$="vertical"] {
-    display: flex;
-    align-items: center;
-  }
+  @import "../assets/css/XhCashierDesk.css";
 </style>

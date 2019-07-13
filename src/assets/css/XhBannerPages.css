@@ -1,0 +1,90 @@
+/*点击轮播图后的页面*/
+/*头部样式*/
+.xhBannerPages .banner-head {
+  height: 1rem;
+  line-height: 1rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0.2rem;
+}
+
+.xhBannerPages .icon-fanhui, .icon-fenxiang {
+  font-size: 0.3rem;
+  color: #c62f2e;
+}
+
+.xhBannerPages .head-name {
+  font-size: 0.34rem;
+}
+
+/*popularInfo样式*/
+.xhBannerPages .content {
+  min-height: 5rem;
+  max-height: 15.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  position: relative;
+  overflow-y: auto;
+}
+
+.xhBannerPages .titleBg {
+  width: 100%;
+  height: 100%;
+}
+
+.xhBannerPages .popular-titlePic {
+  width: 1.28rem;
+  height: 0.34rem;
+}
+
+.xhBannerPages .title-wrap {
+  height: 1rem;
+  line-height: 1rem;
+  text-align: left;
+  padding-left: 0.25rem;
+}
+
+.xhBannerPages .swiper-slide {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.xhBannerPages .itemList {
+  width: 31%;
+  margin-bottom: 0.2rem;
+}
+
+.xhBannerPages .item-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.xhBannerPages .book-pic {
+  width: 1.48rem;
+  height: 2rem;
+}
+
+.xhBannerPages .smallItem-name {
+  height: 0.6rem;
+  display: -webkit-box !important;
+  overflow: hidden;
+  -ms-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  -ms-word-wrap: break-word;
+  word-wrap: break-word;
+  color: #363433;
+  margin: 0.04rem;
+}
+
+.xhBannerPages .book-price {
+  color: #c62f2e;
+}

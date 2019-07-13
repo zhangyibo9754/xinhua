@@ -1,0 +1,75 @@
+/*页面背景*/
+.xhSelectAddress {
+  height: 100%;
+  overflow: hidden;
+  background-color: #f7f7f7;
+}
+
+/*头部样式*/
+.xhSelectAddress .bannered-head {
+  height: 1rem;
+  line-height: 1rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0.2rem;
+}
+
+.xhSelectAddress .icon-fanhui {
+  font-size: 0.3rem;
+  color: #c62f2e;
+}
+
+.xhSelectAddress .head-name {
+  font-size: 0.32rem;
+}
+
+.xhSelectAddress .management-words {
+  font-size: 0.3rem;
+  color: #363433;
+}
+
+/*主体内容样式*/
+.xhSelectAddress .addressList {
+  padding: 0.3rem 0.2rem;
+}
+
+.xhSelectAddress .addressItem {
+  /*height: 1.6rem;*/
+  background: #fff;
+  margin-bottom: 0.3rem;
+  padding-bottom: 0.3rem;
+}
+
+.xhSelectAddress .margin-size {
+  margin: 0 0.2rem;
+}
+
+.xhSelectAddress .customerInfo {
+  width: 6.1rem;
+  height: 1rem;
+  line-height: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.26rem;
+}
+
+.xhSelectAddress span.default-address {
+  width: 1.6rem;
+  height: 0.5rem;
+  line-height: 0.5rem;
+  background-color: #ffffff;
+  border-radius: 0.1rem;
+  color: #fff;
+}
+
+.xhSelectAddress span.default-address:nth-child(1) {
+  background-color: #c62f2e;
+}
+
+.xhSelectAddress .customer-address {
+  font-size: 0.26rem;
+  text-align: left;
+  margin-left: 0.74rem;
+
+}

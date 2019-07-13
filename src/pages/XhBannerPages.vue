@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="xhBannerPages">
     <!--  头部-->
     <div class="banner-head">
       <router-link to="/">
@@ -17,24 +17,7 @@
       </div>
       <!-- 具体分类-->
       <div class="popular" v-for="(item,index) in popularInfo" :key="index">
-        <div class="title-wrap">
-          <img class="popular-titlePic" :src="item.titlePic" alt="">
-        </div>
-        <div class="swiper-container intoBannerSwiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide" v-for="(v,vId) in item.swiperSlide">
-              <div class="itemList" v-for="(l,lID) in v.itemList">
-                <div class="item-wrap">
-                  <img class="book-pic" :src="l.img" alt="">
-                  <span class="smallItem-name">{{l.name}}</span>
-                  <span class="book-price">{{l.price}}</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- 如果需要分页器 -->
-          <div class="swiper-pagination intoBanner-pagination"></div>
-        </div>
+        <xh-into-banner-swiper :item="item"></xh-into-banner-swiper>
       </div>
       <!-- 主体内容结束-->
     </div>
@@ -43,9 +26,12 @@
 </template>
 
 <script>
-  import Swiper from "swiper/dist/js/swiper";
+  import XhIntoBannerSwiper from "../components/commons/XhIntoBannerSwiper"
   export default {
     name: "XhBannerPages",
+    components:{
+      "xh-into-banner-swiper":XhIntoBannerSwiper
+    },
     data() {
       return {
         pic: 'https://img1.xinhuashudian.com/images/2018/12/17/336e6e6b-f011-42dd-8f90-724b3d4edff0.jpg?x-oss-process=image/resize,m_lfit,limit_0,h_300',
@@ -268,126 +254,11 @@
         ]
       }
     },
-    mounted() {
-      //在获取完数据后，将swiper放在$nextTick下一个UI帧再初始化。
-      this.$nextTick(() => { // 下一个UI帧再初始化swiper
-        this._initSwiper();
-      });
-    },
-    methods: {
-      _initSwiper() {
-        // banner部分的轮播图
-        new Swiper(".intoBannerSwiper", {
-          direction: "horizontal",//水平
-          loop: true, //循环
-          observer: true, //动态获取资源时，需要加上这一句
-          observeParents: true,
-          // 分页器
-          pagination: {
-            el: ".intoBanner-pagination",
-            // type: 'custom', //自定义分页样式
-          },
-        });
-      }
-    }
 
   }
 
 </script>
 
 <style scoped>
-  /*点击轮播图后的页面*/
-  /*头部样式*/
-  .banner-head {
-    height: 1rem;
-    line-height: 1rem;
-    display: flex;
-    justify-content: space-between;
-    padding: 0 0.2rem;
-  }
-
-  .icon-fanhui, .icon-fenxiang {
-    font-size: 0.3rem;
-    color: #c62f2e;
-  }
-
-  .head-name {
-    font-size: 0.34rem;
-  }
-
-  /*popularInfo样式*/
-  .content {
-    min-height: 5rem;
-    max-height: 15.5rem;
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    position: relative;
-    overflow-y: auto;
-  }
-
-  .titleBg {
-    width: 100%;
-    height: 100%;
-  }
-
-  .popular-titlePic {
-    width: 1.28rem;
-    height: 0.34rem;
-  }
-
-  .title-wrap {
-    height: 1rem;
-    line-height: 1rem;
-    text-align: left;
-    padding-left: 0.25rem;
-  }
-
-  .swiper-pagination-bullet {
-    width: 15px;
-    height: 15px;
-  }
-
-  .swiper-slide {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .itemList {
-    width: 31%;
-    margin-bottom: 0.2rem;
-  }
-
-  .item-wrap {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-  }
-
-  .book-pic {
-    width: 1.48rem;
-    height: 2rem;
-  }
-
-  .smallItem-name {
-    height: 0.6rem;
-    display: -webkit-box !important;
-    overflow: hidden;
-    -ms-text-overflow: ellipsis;
-    text-overflow: ellipsis;
-    word-break: break-all;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-    -ms-word-wrap: break-word;
-    word-wrap: break-word;
-    color: #363433;
-    margin: 0.04rem;
-  }
-  .book-price {
-    color: #c62f2e;
-  }
+  @import "../assets/css/XhBannerPages.css";
 </style>
