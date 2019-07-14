@@ -3,15 +3,13 @@
     <header>
       <xh-classify-header :defaultKey="defaultKey"/>
     </header>
-    <main class="flex" v-if="navList.length">
-      <classify-nav :navList="navList" @changeList="changeList" />
-      <div class="nav-right">
-        <classify-list :bookList="bookList"/>
-      </div>
-    </main>
-    <footer>
-        <xh-footer />
-    </footer>
+      <main class="flex">
+        <classify-nav :navList="navList" @changeList="changeList" />
+        <div class="nav-right">
+          <classify-list :bookList="bookList"/>
+        </div>
+      </main>
+    <xh-footer />
   </div>
 </template>
 
