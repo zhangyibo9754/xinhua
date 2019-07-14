@@ -5,8 +5,8 @@
     </div>
     <div class="swiper-container " id="intoBannerSwiper">
       <div class="swiper-wrapper">
-        <div class="swiper-slide" v-for="(v,vId) in item.swiperSlide">
-          <div class="itemList" v-for="(l,lID) in v.itemList">
+        <div class="swiper-slide" v-for="(v,vId) in item.swiperSlide" :key="vId">
+          <div class="itemList" v-for="(l,lId) in v.itemList" :key="lId">
             <div class="item-wrap">
               <img class="book-pic" :src="l.img" alt="">
               <span class="smallItem-name">{{l.name}}</span>
@@ -44,7 +44,7 @@
           // 分页器
           pagination: {
             el: ".swiper-pagination",
-            bulletClass: "my-bullet",
+            bullettClass: "my-bullet",
             bulletActiveClass: "my-bullet-active"
           },
         });
