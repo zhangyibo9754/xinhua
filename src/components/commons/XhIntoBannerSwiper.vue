@@ -44,7 +44,7 @@
           // 分页器
           pagination: {
             el: ".swiper-pagination",
-            bullettClass: "my-bullet",
+            bulletClass: "my-bullet",
             bulletActiveClass: "my-bullet-active"
           },
         });
