@@ -1,5 +1,12 @@
 	<template>
   <div class="XhSearch">
+<<<<<<< HEAD
+    <xh-search-header @changeTitle="changeTitle"></xh-search-header>
+    <xh-search-list :pendingData="pendingData" :title="title" @changeTitle="Clear"></xh-search-list>
+    <div class="XhSearchFooter" v-if="!title">
+      <xh-search-lately></xh-search-lately>
+      <xh-search-popular :searchBefore="searchBefore"></xh-search-popular>
+=======
     <div class="XhSearchHeader">
       <div class="SearchHeaderCenter">
         <input v-model="title" class="SearchHeaderCenter-input"    type="text" placeholder="应物兄">
@@ -37,21 +44,32 @@
           </ul>
         </div>
       </div>
+>>>>>>> b4d2ca8c917ba2aaac4711b5234c6ec31e63e02a
     </div>
   </div>
 </template>
 
 <script>
   import api from '../XinHuaApi'
+  import XhSearchHeader from "../components/index/XhSearchHeader";
+  import XhSearchList from "../components/index/XhSearchList";
+  import XhSearchLately from "../components/index/XhSearchLately";
+  import XhSearchPopular from "../components/index/XhSearchPopular";
   export default {
     name: "XhSearch",
+    components: {
+      XhSearchHeader,
+      XhSearchList,
+      XhSearchLately,
+      XhSearchPopular
+
+    },
     data() {
       return {
         title:"",
         flag:2,
         defaultKey:"",
         searchBefore: [],
-        history:true,
         pendingData:[]
       }
     },
@@ -64,6 +82,9 @@
     methods:{
       Clear(){
         this.title=""
+      },
+      changeTitle(title){
+        this.title=title
       },
       SearchBefore(){
         api.get('/api/xinhua/search/find/words').then(data=>{
@@ -87,15 +108,8 @@
           console.log(err)
         })
       },
-      search(){
-        console.log(1);
-      },
-      delKey(){
-        this.title=""
-      },
-      delHistory(){
-        this.history=false;
-      },
+
+
       SearchPending(){
         // var a=this;
         if(this.title){
@@ -131,6 +145,10 @@
     display: flex;
     flex-direction: column;
   }
+<<<<<<< HEAD
+
+  .XhSearchFooter{
+=======
 	.SearchHeaderCenter-input{
 		display: block;
 		width: 5.5rem;
@@ -221,24 +239,10 @@
     font-size: .3rem  !important;
   }
   .XhSearch .XhSearchFooter .SearchFooterFooter .XhSearchLately ul{
+>>>>>>> b4d2ca8c917ba2aaac4711b5234c6ec31e63e02a
     width: 100%;
     float: left;
-    margin-top: .22rem;
-    display: flex;
-    flex-wrap: wrap;
+    padding: 0 .2rem;
   }
-  .XhSearch .XhSearchFooter .SearchFooterFooter .XhSearchLately ul li{
-    background: #eaebed;
-    font-size: .29rem;
-    margin-right: .23rem;
-    margin-bottom: .23rem;
-    height: .56rem;
-    border-radius: .1rem;
-  }
-  .XhSearch .XhSearchFooter .SearchFooterFooter .XhSearchLately ul li a{
-    line-height: .56rem;
-    margin:0 .23rem 0 .23rem;
-    font-size: .3rem;
-    color: #999999;
-  }
-  </style>
+
+</style>
