@@ -3,6 +3,9 @@
 }
 
 /*头部样式*/
+.classify header{
+  height: 0.9rem;
+}
 .classify .xinhua-header{
   height: 0.9rem;
   width: 100%;
@@ -48,11 +51,8 @@
   font-size:0.3rem;
 }
 
-
-
-
 /*主体部分*/
-.classify main {
+.classify main{
   overflow-y: auto;
   flex: 1;
   background-color: #fff;
