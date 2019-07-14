@@ -5,7 +5,7 @@ import qs from 'qs'
 axios.defaults.timeout = 5000;                        //响应时
 axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=UTF-8'; //配置请求头
 // axios.defaults.baseURL = 'http://api.hll666.xyz';   //配置接口地址
-axios.defaults.baseURL = 'http://10.35.161.99:7777';   //配置接口地址
+axios.defaults.baseURL = 'http://39.107.253.13:7777';   //配置接口地址
 // 允许携带cookie
 axios.defaults.withCredentials=true
 
