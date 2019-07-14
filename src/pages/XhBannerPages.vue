@@ -13,362 +13,109 @@
     <!--  主体内容-->
     <div class="content">
       <div class="section-title">
-        <img class="titleBg" :src="pic" alt="">
+        <img class="titleBg" :src="pic" alt />
       </div>
       <!-- 具体分类-->
-      <div class="popular" v-if="popularInfo">
-        <xh-into-banner-swiper :item="popularInfo[0]"></xh-into-banner-swiper>
-        <xh-into-banner-swiper :item="popularInfo[1]"></xh-into-banner-swiper>
-        <xh-into-banner-swiper :item="popularInfo[2]"></xh-into-banner-swiper>
+      <div class="popular" v-for="(popularInfoItem,vId) in popularInfo" :key="vId">
+        <xh-into-banner-swiper :item="popularInfoItem"></xh-into-banner-swiper>
       </div>
-
       <!-- 主体内容结束-->
     </div>
   </div>
-
 </template>
 
 <script>
-  import XhIntoBannerSwiper from "../components/commons/XhIntoBannerSwiper"
-  export default {
-    name: "XhBannerPages",
-    components:{
-      "xh-into-banner-swiper":XhIntoBannerSwiper
-    },
-    data() {
-      return {
-        pic: 'https://img1.xinhuashudian.com/images/2018/12/17/336e6e6b-f011-42dd-8f90-724b3d4edff0.jpg?x-oss-process=image/resize,m_lfit,limit_0,h_300',
-        popularInfo: [
-          {
-            titlePic: "https://img1.xinhuashudian.com/images/2018/11/08/97c0b5f4-ff88-4f42-81ab-9e9b0bccd7e0.jpg?x-oss-process=image/resize,m_lfit,limit_0,w_136,h_34",
-
-            swiperSlide: [
-              {
-                itemList: [
-                  {
-                    img: "https://img1.xinhuashudian.com/bookbasepic/C/02542/3995872-fm.jpg?x-oss-process=image/resize,m_lfit,limit_0,w_200,h_200",
-                    name: "中国共产党章程",
-                    price: "￥3.80"
-                  },
-                  {
-                    img: "https://img1.xinhuashudian.com/bookbasepic/C/02542/3995872-fm.jpg?x-oss-process=image/resize,m_lfit,limit_0,w_200,h_200",
-                    name: "习近平新时代中国特色社会主义思想学习纲要 32开小字本（2019）",
-                    price: "￥15.00"
-                  },
-                  {
-                    img: "https://img1.xinhuashudian.com/bookbasepic/C/02542/3995872-fm.jpg?x-oss-process=image/resize,m_lfit,limit_0,w_200,h_200",
-                    name: "习近平新时代中国特色社会主义思想学习纲要 16开大字本（2019版烫金版）",
-                    price: "￥28.00"
-                  },
-                  {
-                    img: "https://img1.xinhuashudian.com/bookbasepic/C/02542/3995872-fm.jpg?x-oss-process=image/resize,m_lfit,limit_0,w_200,h_200",
-                    name: "习近平谈治国理政第一卷（2018再版",
-                    price: "￥76.00"
-                  },
-                  {
-                    img: "https://img1.xinhuashudian.com/bookbasepic/C/02542/3995872-fm.jpg?x-oss-process=image/resize,m_lfit,limit_0,w_200,h_200",
-                    name: "习近平谈治国理政(第2卷)",
-                    price: "￥76.00"
-                  },
-                  {
-                    img: "https://img3.xinhuashudian.com/bookbasepic/C/01682/2691429-fm.jpg?x-oss-process=image/resize,m_lfit,limit_0,w_200,h_200",
-                    name: "干在实处走在前列(推进浙江新发展的思考与实践)",
-                    price: "￥62.70"
-                  }
-                ]
-              },
-              {
-                itemList: [
-                  {
-                    img: "https://img1.xinhuashudian.com/bookbasepic/C/02542/3995872-fm.jpg?x-oss-process=image/resize,m_lfit,limit_0,w_200,h_200",
-                    name: "中国共产党章程",
-                    price: "￥3.80"
-                  },
-                  {
-                    img: "https://img1.xinhuashudian.com/bookbasepic/C/02542/3995872-fm.jpg?x-oss-process=image/resize,m_lfit,limit_0,w_200,h_200",
-                    name: "习近平新时代中国特色社会主义思想学习纲要 32开小字本（2019）",
-                    price: "￥15.00"
-                  },
-                  {
-                    img: "https://img1.xinhuashudian.com/bookbasepic/C/02542/3995872-fm.jpg?x-oss-process=image/resize,m_lfit,limit_0,w_200,h_200",
-                    name: "习近平新时代中国特色社会主义思想学习纲要 16开大字本（2019版烫金版）",
-                    price: "￥28.00"
-                  },
-                  {
-                    img: "https://img1.xinhuashudian.com/bookbasepic/C/02542/3995872-fm.jpg?x-oss-process=image/resize,m_lfit,limit_0,w_200,h_200",
-                    name: "习近平谈治国理政第一卷（2018再版",
-                    price: "￥76.00"
-                  },
-                  {
-                    img: "https://img1.xinhuashudian.com/bookbasepic/C/02542/3995872-fm.jpg?x-oss-process=image/resize,m_lfit,limit_0,w_200,h_200",
-                    name: "习近平谈治国理政(第2卷)",
-                    price: "￥76.00"
-                  },
-                  {
-                    img: "https://img3.xinhuashudian.com/bookbasepic/C/01682/2691429-fm.jpg?x-oss-process=image/resize,m_lfit,limit_0,w_200,h_200",
-                    name: "干在实处走在前列(推进浙江新发展的思考与实践)",
-                    price: "￥62.70"
-                  }
-                ]
-              },
-              {
-                itemList: [
-                  {
-                    img: "https://img1.xinhuashudian.com/bookbasepic/C/02542/3995872-fm.jpg?x-oss-process=image/resize,m_lfit,limit_0,w_200,h_200",
-                    name: "中国共产党章程",
-                    price: "￥3.80"
-                  },
-                  {
-                    img: "https://img1.xinhuashudian.com/bookbasepic/C/02542/3995872-fm.jpg?x-oss-process=image/resize,m_lfit,limit_0,w_200,h_200",
-                    name: "习近平新时代中国特色社会主义思想学习纲要 32开小字本（2019）",
-                    price: "￥15.00"
-                  },
-                  {
-                    img: "https://img1.xinhuashudian.com/bookbasepic/C/02542/3995872-fm.jpg?x-oss-process=image/resize,m_lfit,limit_0,w_200,h_200",
-                    name: "习近平新时代中国特色社会主义思想学习纲要 16开大字本（2019版烫金版）",
-                    price: "￥28.00"
-                  },
-                  {
-                    img: "https://img1.xinhuashudian.com/bookbasepic/C/02542/3995872-fm.jpg?x-oss-process=image/resize,m_lfit,limit_0,w_200,h_200",
-                    name: "习近平谈治国理政第一卷（2018再版",
-                    price: "￥76.00"
-                  },
-                  {
-                    img: "https://img1.xinhuashudian.com/bookbasepic/C/02542/3995872-fm.jpg?x-oss-process=image/resize,m_lfit,limit_0,w_200,h_200",
-                    name: "习近平谈治国理政(第2卷)",
-                    price: "￥76.00"
-                  },
-                  {
-                    img: "https://img3.xinhuashudian.com/bookbasepic/C/01682/2691429-fm.jpg?x-oss-process=image/resize,m_lfit,limit_0,w_200,h_200",
-                    name: "干在实处走在前列(推进浙江新发展的思考与实践)",
-                    price: "￥62.70"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            titlePic: "https://img1.xinhuashudian.com/images/2018/11/08/165b0422-6df7-4be9-8e37-0d2433dd9702.jpg?x-oss-process=image/resize,m_lfit,limit_0,w_136,h_34",
-            swiperSlide: [
-              {
-                itemList: [
-                  {
-                    img: "https://img1.xinhuashudian.com/bookbasepic/C/02542/3995872-fm.jpg?x-oss-process=image/resize,m_lfit,limit_0,w_200,h_200",
-                    name: "中国共产党章程",
-                    price: "￥3.80"
-                  },
-                  {
-                    img: "https://img1.xinhuashudian.com/bookbasepic/C/02542/3995872-fm.jpg?x-oss-process=image/resize,m_lfit,limit_0,w_200,h_200",
-                    name: "习近平新时代中国特色社会主义思想",
-                    price: "￥15.00"
-                  },
-                  {
-                    img: "https://img1.xinhuashudian.com/bookbasepic/C/02542/3995872-fm.jpg?x-oss-process=image/resize,m_lfit,limit_0,w_200,h_200",
-                    name: "习近平新时代中国特色社会主义思想",
-                    price: "￥28.00"
-                  },
-                  {
-                    img: "https://img1.xinhuashudian.com/bookbasepic/C/02542/3995872-fm.jpg?x-oss-process=image/resize,m_lfit,limit_0,w_200,h_200",
-                    name: "习近平谈治国理政第一卷(2018再)",
-                    price: "￥76.00"
-                  },
-                  {
-                    img: "https://img1.xinhuashudian.com/bookbasepic/C/02542/3995872-fm.jpg?x-oss-process=image/resize,m_lfit,limit_0,w_200,h_200",
-                    name: "习近平谈治国理政(第2卷)",
-                    price: "￥76.00"
-                  },
-                  {
-                    img: "https://img3.xinhuashudian.com/bookbasepic/C/01682/2691429-fm.jpg?x-oss-process=image/resize,m_lfit,limit_0,w_200,h_200",
-                    name: "干在实处走在前列(推进浙江新发展的)",
-                    price: "￥62.70"
-                  }
-                ]
-              },
-              {
-                itemList: [
-                  {
-                    img: "https://img1.xinhuashudian.com/bookbasepic/C/02542/3995872-fm.jpg?x-oss-process=image/resize,m_lfit,limit_0,w_200,h_200",
-                    name: "中国共产党章程",
-                    price: "￥3.80"
-                  },
-                  {
-                    img: "https://img1.xinhuashudian.com/bookbasepic/C/02542/3995872-fm.jpg?x-oss-process=image/resize,m_lfit,limit_0,w_200,h_200",
-                    name: "习近平新时代中国特色社会主义思想",
-                    price: "￥15.00"
-                  },
-                  {
-                    img: "https://img1.xinhuashudian.com/bookbasepic/C/02542/3995872-fm.jpg?x-oss-process=image/resize,m_lfit,limit_0,w_200,h_200",
-                    name: "习近平新时代中国特色社会主义思想",
-                    price: "￥28.00"
-                  },
-                  {
-                    img: "https://img1.xinhuashudian.com/bookbasepic/C/02542/3995872-fm.jpg?x-oss-process=image/resize,m_lfit,limit_0,w_200,h_200",
-                    name: "习近平谈治国理政第一卷(2018再)",
-                    price: "￥76.00"
-                  },
-                  {
-                    img: "https://img1.xinhuashudian.com/bookbasepic/C/02542/3995872-fm.jpg?x-oss-process=image/resize,m_lfit,limit_0,w_200,h_200",
-                    name: "习近平谈治国理政(第2卷)",
-                    price: "￥76.00"
-                  },
-                  {
-                    img: "https://img3.xinhuashudian.com/bookbasepic/C/01682/2691429-fm.jpg?x-oss-process=image/resize,m_lfit,limit_0,w_200,h_200",
-                    name: "干在实处走在前列(推进浙江新发展的)",
-                    price: "￥62.70"
-                  }
-                ]
-              },
-              {
-                itemList: [
-                  {
-                    img: "https://img1.xinhuashudian.com/bookbasepic/C/02542/3995872-fm.jpg?x-oss-process=image/resize,m_lfit,limit_0,w_200,h_200",
-                    name: "中国共产党章程",
-                    price: "￥3.80"
-                  },
-                  {
-                    img: "https://img1.xinhuashudian.com/bookbasepic/C/02542/3995872-fm.jpg?x-oss-process=image/resize,m_lfit,limit_0,w_200,h_200",
-                    name: "习近平新时代中国特色社会主义思想",
-                    price: "￥15.00"
-                  },
-                  {
-                    img: "https://img1.xinhuashudian.com/bookbasepic/C/02542/3995872-fm.jpg?x-oss-process=image/resize,m_lfit,limit_0,w_200,h_200",
-                    name: "习近平新时代中国特色社会主义思想",
-                    price: "￥28.00"
-                  },
-                  {
-                    img: "https://img1.xinhuashudian.com/bookbasepic/C/02542/3995872-fm.jpg?x-oss-process=image/resize,m_lfit,limit_0,w_200,h_200",
-                    name: "习近平谈治国理政第一卷(2018再)",
-                    price: "￥76.00"
-                  },
-                  {
-                    img: "https://img1.xinhuashudian.com/bookbasepic/C/02542/3995872-fm.jpg?x-oss-process=image/resize,m_lfit,limit_0,w_200,h_200",
-                    name: "习近平谈治国理政(第2卷)",
-                    price: "￥76.00"
-                  },
-                  {
-                    img: "https://img3.xinhuashudian.com/bookbasepic/C/01682/2691429-fm.jpg?x-oss-process=image/resize,m_lfit,limit_0,w_200,h_200",
-                    name: "干在实处走在前列(推进浙江新发展的)",
-                    price: "￥62.70"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            titlePic: "https://img1.xinhuashudian.com/images/2018/11/08/165b0422-6df7-4be9-8e37-0d2433dd9702.jpg?x-oss-process=image/resize,m_lfit,limit_0,w_136,h_34",
-            swiperSlide: [
-              {
-                itemList: [
-                  {
-                    img: "https://img1.xinhuashudian.com/bookbasepic/C/02542/3995872-fm.jpg?x-oss-process=image/resize,m_lfit,limit_0,w_200,h_200",
-                    name: "中国共产党章程",
-                    price: "￥3.80"
-                  },
-                  {
-                    img: "https://img1.xinhuashudian.com/bookbasepic/C/02542/3995872-fm.jpg?x-oss-process=image/resize,m_lfit,limit_0,w_200,h_200",
-                    name: "习近平新时代中国特色社会主义思想",
-                    price: "￥15.00"
-                  },
-                  {
-                    img: "https://img1.xinhuashudian.com/bookbasepic/C/02542/3995872-fm.jpg?x-oss-process=image/resize,m_lfit,limit_0,w_200,h_200",
-                    name: "习近平新时代中国特色社会主义思想",
-                    price: "￥28.00"
-                  },
-                  {
-                    img: "https://img1.xinhuashudian.com/bookbasepic/C/02542/3995872-fm.jpg?x-oss-process=image/resize,m_lfit,limit_0,w_200,h_200",
-                    name: "习近平谈治国理政第一卷(2018再)",
-                    price: "￥76.00"
-                  },
-                  {
-                    img: "https://img1.xinhuashudian.com/bookbasepic/C/02542/3995872-fm.jpg?x-oss-process=image/resize,m_lfit,limit_0,w_200,h_200",
-                    name: "习近平谈治国理政(第2卷)",
-                    price: "￥76.00"
-                  },
-                  {
-                    img: "https://img3.xinhuashudian.com/bookbasepic/C/01682/2691429-fm.jpg?x-oss-process=image/resize,m_lfit,limit_0,w_200,h_200",
-                    name: "干在实处走在前列(推进浙江新发展的)",
-                    price: "￥62.70"
-                  }
-                ]
-              },
-              {
-                itemList: [
-                  {
-                    img: "https://img1.xinhuashudian.com/bookbasepic/C/02542/3995872-fm.jpg?x-oss-process=image/resize,m_lfit,limit_0,w_200,h_200",
-                    name: "中国共产党章程",
-                    price: "￥3.80"
-                  },
-                  {
-                    img: "https://img1.xinhuashudian.com/bookbasepic/C/02542/3995872-fm.jpg?x-oss-process=image/resize,m_lfit,limit_0,w_200,h_200",
-                    name: "习近平新时代中国特色社会主义思想",
-                    price: "￥15.00"
-                  },
-                  {
-                    img: "https://img1.xinhuashudian.com/bookbasepic/C/02542/3995872-fm.jpg?x-oss-process=image/resize,m_lfit,limit_0,w_200,h_200",
-                    name: "习近平新时代中国特色社会主义思想",
-                    price: "￥28.00"
-                  },
-                  {
-                    img: "https://img1.xinhuashudian.com/bookbasepic/C/02542/3995872-fm.jpg?x-oss-process=image/resize,m_lfit,limit_0,w_200,h_200",
-                    name: "习近平谈治国理政第一卷(2018再)",
-                    price: "￥76.00"
-                  },
-                  {
-                    img: "https://img1.xinhuashudian.com/bookbasepic/C/02542/3995872-fm.jpg?x-oss-process=image/resize,m_lfit,limit_0,w_200,h_200",
-                    name: "习近平谈治国理政(第2卷)",
-                    price: "￥76.00"
-                  },
-                  {
-                    img: "https://img3.xinhuashudian.com/bookbasepic/C/01682/2691429-fm.jpg?x-oss-process=image/resize,m_lfit,limit_0,w_200,h_200",
-                    name: "干在实处走在前列(推进浙江新发展的)",
-                    price: "￥62.70"
-                  }
-                ]
-              },
-              {
-                itemList: [
-                  {
-                    img: "https://img1.xinhuashudian.com/bookbasepic/C/02542/3995872-fm.jpg?x-oss-process=image/resize,m_lfit,limit_0,w_200,h_200",
-                    name: "中国共产党章程",
-                    price: "￥3.80"
-                  },
-                  {
-                    img: "https://img1.xinhuashudian.com/bookbasepic/C/02542/3995872-fm.jpg?x-oss-process=image/resize,m_lfit,limit_0,w_200,h_200",
-                    name: "习近平新时代中国特色社会主义思想",
-                    price: "￥15.00"
-                  },
-                  {
-                    img: "https://img1.xinhuashudian.com/bookbasepic/C/02542/3995872-fm.jpg?x-oss-process=image/resize,m_lfit,limit_0,w_200,h_200",
-                    name: "习近平新时代中国特色社会主义思想",
-                    price: "￥28.00"
-                  },
-                  {
-                    img: "https://img1.xinhuashudian.com/bookbasepic/C/02542/3995872-fm.jpg?x-oss-process=image/resize,m_lfit,limit_0,w_200,h_200",
-                    name: "习近平谈治国理政第一卷(2018再)",
-                    price: "￥76.00"
-                  },
-                  {
-                    img: "https://img1.xinhuashudian.com/bookbasepic/C/02542/3995872-fm.jpg?x-oss-process=image/resize,m_lfit,limit_0,w_200,h_200",
-                    name: "习近平谈治国理政(第2卷)",
-                    price: "￥76.00"
-                  },
-                  {
-                    img: "https://img3.xinhuashudian.com/bookbasepic/C/01682/2691429-fm.jpg?x-oss-process=image/resize,m_lfit,limit_0,w_200,h_200",
-                    name: "干在实处走在前列(推进浙江新发展的)",
-                    price: "￥62.70"
-                  }
-                ]
-              }
-            ]
-          }
-        ]
+import api from "../XinHuaApi";
+import XhIntoBannerSwiper from "../components/commons/XhIntoBannerSwiper";
+export default {
+  name: "XhBannerPages",
+  components: {
+    "xh-into-banner-swiper": XhIntoBannerSwiper
+  },
+  methods: {
+    // 从this.serviceData里面查找groupId是body_3，并且id是1010000103205007的item
+    findItemById(groudId, id) {
+      // item的格式是：{img:'', name: '', price: ''}
+      var item = { img: "", name: "", price: "" };
+      for (let dataItem of this.serviceData[groudId]._DATA_) {
+        if (dataItem.itemId == id) {
+          var rawUrl =  (dataItem.mainImage.indexOf("https:") == 0)
+                      ? dataItem.mainImage
+                      : "https:" + dataItem.mainImage;
+          item.img = "http://api.hll666.xyz/api/xinhua/img?imgUrl=" + rawUrl;
+          item.name = dataItem.itemName;
+          item.price = "￥" + (dataItem.lowPrice / 100).toFixed(2);
+          break;
+        }
       }
-    },
+      return item;
+    }
+  },
+  created() {
+    let me = this;
+    api
+      .get("/api/xinhua/carousel/info", { name: "zhuanti-xuexiqiangguoban" })
+      .then(responseData => {
+        // 判断http请求状态码,200为请求成功
+        if (responseData.status === 200 && responseData.data.status === 0) {
+          // responseData.datas
 
+          me.page = responseData.data.datas.page;
+
+          me.designData = JSON.parse(responseData.data.datas.designData.body);
+
+          me.serviceData = responseData.data.datas.serviceData;
+
+          //获取head图片
+          me.designData.forEach(designItem => {
+            if (designItem.path == "design/image") {
+              me.pic = designItem.config.image.src;
+            } else if (designItem.path == "design/sectionspopular") {
+              me.popularInfo.push({
+                titlePic: designItem.config.sectionTitle.src,
+                ids: designItem.config.ids.split(","),
+                swiperSlide: [],
+                groupId: designItem.id // groupId就是id=body_3
+              });
+            }
+          });
+
+          me.popularInfo.forEach(popularItem => {
+            var newItem;
+
+            for (var i = 0; i < popularItem.ids.length; i++) {
+              if (i % 6 == 0) {
+                newItem = { itemList: [] };
+                popularItem.swiperSlide.push(newItem);
+              }
+
+              // 查找item，item格式是{img:'', name: '', price: ''}
+              var item = me.findItemById(
+                popularItem.groupId,
+                popularItem.ids[i]
+              );
+              newItem.itemList.push(item);
+            }
+          });
+        }
+      })
+      .catch(err => {
+        // 请求错误返回错误信息
+        console.log(err);
+      });
+  },
+  data() {
+    return {
+      pic: "",
+      popularInfo: [],
+      page: {},
+      designData: {},
+      serviceData: {}
+    };
   }
-
+};
 </script>
 
 <style scoped>
-  @import "../assets/css/XhBannerPages.css";
+@import "../assets/css/XhBannerPages.css";
 </style>
