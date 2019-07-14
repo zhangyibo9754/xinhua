@@ -3,15 +3,13 @@
     <header>
       <xh-classify-header :defaultKey="defaultKey"/>
     </header>
-    <main class="flex" v-if="navList.length">
-      <classify-nav :navList="navList" @changeList="changeList" />
-      <div class="nav-right">
-        <classify-list :bookList="bookList"/>
-      </div>
-    </main>
-    <footer>
-        <xh-footer />
-    </footer>
+      <main class="flex">
+        <classify-nav :navList="navList" @changeList="changeList" />
+        <div class="nav-right">
+          <classify-list :bookList="bookList"/>
+        </div>
+      </main>
+    <xh-footer />
   </div>
 </template>
 
@@ -49,7 +47,9 @@
             // 判断接口请求是否成功 0为成功
             if (data.data.status === 0) {
               // 成功时接收数据
-                  this.navList=data.data.datas.serviceData.body_2._DATA_;
+              console.log(data.data.datas);
+              this.navList=data.data.datas.serviceData.body_2._DATA_;
+                  //默认请求第一个
                   this.changeList('0')
             } else {
               // 失败时打印错误信息
