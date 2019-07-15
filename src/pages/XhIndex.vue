@@ -185,7 +185,8 @@
                         "src":a.mainImage,
                         "tltle":a.name,
                         "price1":(a.lowPrice/100*0.75).toFixed(2),
-                        "price2":(a.highPrice/100).toFixed(2)
+                        "price2":(a.highPrice/100).toFixed(2),
+                        "goodsId":a.id
                       })
                     })
                     indexSelect_cs_per.pic=pic1
@@ -222,6 +223,8 @@
                         "price1":(a.lowPrice/100).toFixed(2),
                         "tltle":a.name,
                         "price1":a.lowPrice/100,
+                        "goodsId":item=="body_15"?a.itemId:a.id
+
                         // "price2":a.highPrice
                       })
                       // this.indexSelect_cs.push(indexSelect_cs_per)
