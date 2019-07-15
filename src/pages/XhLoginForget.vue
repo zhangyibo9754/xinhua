@@ -1,6 +1,5 @@
 <template>
 	<div class="LoginForget">
-		<p class="XhLoginPhoneMsg" >{{PhoneMsg}}</p>
 		<div class="LoginHeader">
 			<div class="LoginHeaderCenter">
 				<router-link to="/XhLogin"><van-icon  name="arrow-left" /></router-link>
@@ -13,12 +12,15 @@
 					<div class="FooterBoxInput-post">
 						<div></div>
 						<div></div>
+						<div></div>
 						<input @blur="phoneCheck()" v-model="userPhone" type="text" placeholder="请输入手机号">
 						<input v-model="checkCoad"  type="text" placeholder="图片验证码">
-						<img @click="PicCheck()" src="../assets/xhimg/piccoad.png" class="picCode" >
-						<input ref="Account" type="text" placeholder="短信验证码">
-						<button class="MessageCoad">发送验证码</button>
-						<input class="FooterBoxSign" @click="LoginPhonePost()" type="button" value="下一步">
+						<img @click="checkCode()" :src="base64Str" class="picCode" >
+						<input v-model="noteCoad" type="text" placeholder="短信验证码">
+						<button  @click="MessageCoad()" class="MessageCoad">发送验证码</button>
+						<h1 v-if="flag" class="TimeCoad">{{Time}}后重新发送</h1>
+						<input  v-model="userPass"  @blur="passCheck()" type="password" placeholder="请设置新密码">
+						<input class="FooterBoxSign" @click="LoginPhonePost()" type="button" value="修改密码">
 					</div>
 				</div>
 			</div>
@@ -31,36 +33,85 @@
 		name:"XhLoginForget",
 		data(){
 			return{
+				flag:'',
 				userPhone:'',
-				PhoneMsg:'',
 				phone:'',
-				checkCoad:''
+				checkCoad:'',
+				base64Str:'',
+				noteCoad:'',
+				Time:'',
+				userPass:'',
+				pass:''
 			}
 			
 		},
+		created() {
+			this.checkCode()
+		},
 		methods:{
-			phoneCheck(){
-				var regPhone=/^1\d{10}$/;
+		phoneCheck(){
+				var regPhone=/^((13[0-9])|(14[5,7,9])|(15([0-3]|[5-9]))|(166)|(17[0,1,3,5,6,7,8])|(18[0-9])|(19[8|9]))\d{8}$/;
 				if(regPhone.test(this.userPhone)==true){
-					this.PhoneMsg=''
 					this.phone=1;
 				}else{
 					this.$toast("手机号格式错误！")
 				}
 			},
-			PicCheck(){
-// 				var newcode='';
-// 				var Array=["A","B","C","D","E","F","G","H","I","J","K","O","P"];
-// 				
-// 				for(var i=0;i<4;i++){
-// 					var index=Math.floor(Math.random()*10);
-// 					newcode+=Array[index]
-// 				}
-// 				this.picCode=newcode
-			},
-			LoginPhonePost(){
-				if(this.phone==1&&this.picCode==this.checkCoad){
-					this.PhoneMsg=''
+		checkCode(){
+			this.$axios.get("/api/xinhua/verification/code").then((res)=>{
+					if(res.status==200){
+						if(res.data.status==0){
+							this.base64Str=res.data.datas.base64Str
+						}
+					}
+			}).catch((err)=>{
+					this.$toast("请求发送失败！")
+			})
+		},
+		MessageCoad(){
+			if(this.phone==1){
+				var url='/api/xinhua/verification/update'
+				this.$axios.post(url).then((res)=>{
+					if(res.status==200){
+						console.log(res)
+						if(res.data.status==0){
+							this.$toast(res.data.err)
+							this.Time=60;
+							this.flag=true
+							let time= setInterval(()=>{
+								this.Time--;
+								if(this.Time==0){
+									clearInterval(time)
+									this.flag=false
+								}
+							},1000)
+						}else if(res.data.status==101){
+							this.$toast(res.data.err)
+						}
+					}
+				}).catch((err)=>{
+					this.$toast("请求发送失败！")
+				})
+			}else{
+				this.$toast("请输入正确的手机格式")
+			}
+		},
+		passCheck(){
+				this.pass=1;
+		},
+		LoginPhonePost(){
+				if(this.phone==1&&this.pass==1){
+					var url='/api/xinhua/user/updatepass?code='+this.noteCoad+'&&pass='+this.userPass
+					this.$axios.put(url).then((res)=>{
+						if(res.status==200){
+							if(res.data.status==0){
+								this.$toast(res.data.err)
+								this.$router.push("/XhLogin")
+							}else if(res.data.status==2){
+								this.$toast(res.data.err)
+							}
+						}
+					})
 				}else{
 					this.$toast('请输入正确格式');
 				}
@@ -86,21 +137,33 @@
 		font-weight: 900;
 	}
 	.picCode{
-		 height: 1rem;
+		 width: 2rem;
+		 height: .9rem;
 		 position: absolute;
-		 top: 1.1rem; 
-		 left: 5rem;
+		 top: 1.2rem; 
+		 right: .2rem;
 	}
 	.MessageCoad{
-		height: .9rem;
-		line-height: .9rem;
-		font-size: .1rem; 
+		height: .7rem;
 		width: 2rem;
-		color: blue; 
 		position: absolute;
-		top: 2.3rem; 
-		left: 4.9rem;
+		top: 2.4rem;
+		right: .1rem;
 		background: red;
+		color: #FFFFFF;
+		font-size: .2rem;
+		line-height: .7rem;
+	}
+	.TimeCoad{
+		height: .7rem;
+	  width: 2.5rem;
+	  position: absolute;
+	  top: 2.4rem;
+	  right: .1rem;
+	  background: gainsboro;
+	  color: #FFFFFF;
+	  font-size: .2rem;
+	  line-height: .7rem;
 	}
 	.LoginForget .LoginHeader{
 		width: 100%;
