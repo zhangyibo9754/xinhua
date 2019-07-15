@@ -1,9 +1,7 @@
 <template>
-    <div class="XhProductDetail"  >
-<!--      <h1 id="searchBar" style="z-index: 999;height: 1rem;position: fixed">2134324</h1>-->
+    <div class="XhProductDetail" >
 <!--      首部-->
       <XhProductDetail-top></XhProductDetail-top>
-
 <!--      轮播图-->
       <XhProductDetail-top-swipe></XhProductDetail-top-swipe>
 <!--     收藏-->
@@ -18,6 +16,7 @@
 </template>
 
 <script>
+  import api from '../XinHuaApi'
   import XhProductDetailtop from "../components/productDetail/XhProductDetailtop"
   import XhProductDetailtopswipe from "../components/productDetail/XhProductDetailtopswipe"
   import XhProductDetailCollection from "../components/productDetail/XhProductDetailCollection"
@@ -29,23 +28,34 @@
 
     data(){
       return{
-        // arr: [1, 2, 3, 4, 5],
-        // pos: 0,
-
-
-        // active: 0,
+        product:{},
         show: false
       }
     },
-    methods: {
-      // scroll(event) {
-      //   this.pos = event.target.scrollTop;
-      //   // if(event.target.scrollTop===200){
-      //   //   this.border='red'
-      //   // }
-      //   console.log('scroll', event.target.scrollTop)
-      // },
+    created(){
+      var itemId="";
+      itemId=this.$route.params.goodsId;
+      console.log(itemId);
+      api.get("/api/xinhua/product/"+itemId).then(data=>{
+            // 判断http请求状态码,200为请求成功
+            if(data.status===200){
+                // 判断接口请求是否成功 0为成功
+                if(data.data.status===0){
+                  // 成功时接收数据
+                 this.product=data.data.datas;
+                  console.log(this.product);
+                }else{
+                  // 失败时打印错误信息
+                  console.log(data.data.err)
+                }
+              }
+            }).catch(err=>{
+              // 请求错误返回错误信息
+              console.log(err)
+            })
 
+    },
+    methods: {
       showPopup() {
         this.show = true;
       }
