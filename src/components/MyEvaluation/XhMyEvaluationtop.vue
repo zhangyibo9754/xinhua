@@ -1,7 +1,7 @@
 <template>
     <div>
       <div class="XhProductDetailtop">
-        <router-link to="/XhProductDetail">
+        <router-link to="this.$router.back">
           <van-icon name="arrow-left" class="topiconXhProductDetailtop"/>
         </router-link>
         <span>评价</span>

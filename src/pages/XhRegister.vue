@@ -78,10 +78,9 @@
 			// 验证码
     	MessageCoad(){
 				if(this.phone==1){
-					this.$axios.post("/api/xinhua/registered/code",{
-						verificationCode:this.checkCoad,
-						mobile:this.userPhone
-					}).then((res)=>{
+					var url='/api/xinhua/registered/code?verificationCode='+this.checkCoad+'&&mobile='+this.userPhone
+					console.log(url)
+					this.$axios.post(url).then((res)=>{
 						if(res.status==200){
 							console.log(res)
 							if(res.data.status==0){
@@ -97,7 +96,6 @@
 								},1000)
 							}else if(res.data.status==2){
 								this.$toast(res.data.err)
-								console.log(res)
 							}
 						}
 					}).catch((err)=>{
@@ -109,34 +107,24 @@
 			},
 			// 密码验证
 			passCheck(){
-				var regPass=/^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{8,20}$/;
-				if(regPass.test(this.userPass)==true){
-					this.PhoneMsg='';
 					this.pass=1;
-				}else{
-					this.$toast("密码格式错误！")
-				}
 			},
 			// 总验证
 			LoginPhonePost(){
 				if(this.pass==1&&this.phone==1){
-					this.$axios.post("/api/xinhua/registered",{
-						mobile:this.userPhone,
-						pass:this.userPass,
-						mobileCode:this.noteCoad
-					}).then((res)=>{
+					var url1='/api/xinhua/registered?mobile='+this.userPhone+'&&pass='+this.userPass+'&&mobileCode='+this.noteCoad
+					this.$axios.post(url1).then((res)=>{
 						if(res.status==200){
 							console.log(res)
 							if(res.data.status==0){
 								this.$toast(res.data.err)
-								this.saveCookie("userPhone","userPass",{expires: 7})
+								// this.saveCookie("userPhone","userPass",{expires: 7})
 								this.$router.push("/XhLogin")
+								console.log(res)
 							}else if(res.data.status==2){
 								this.$toast(res.data.err)
-								// this.saveCookie("mobile","pass",{expires: 7})
 							}
 						}
-						console.log(res)
 					}).catch((err)=>{
 						this.$toast("请求发送失败")
 					})
