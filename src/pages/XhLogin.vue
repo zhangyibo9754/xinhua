@@ -19,10 +19,9 @@
 				<div  class="FooterBoxInput">
 					<div class="XhLoginPost">
 						<div></div>
-						<!-- <p ref="account" @click="ChangeAccount()">账号</p>
-						<p ref="pass" @click="Changepass()">密码</p> -->
-						<!-- <input  v-model="userphone" @input="phoneCheck()" type="text" placeholder="账号"> -->
-						<input v-model="userId" @blur="idCheck()"  type="text" placeholder="账号">
+						<!-- <h2 >账号</h2>
+						<h2 >密码</h2> -->
+						<input  v-model="userId" @blur="idCheck()"  type="text" placeholder="账号">
 						<input  v-model="userPass"  @blur="passCheck()" type="password" placeholder="密码">
 						<p class="FooterBoxPost" >
 							<router-link tag="span" to="/XhRegisterProtocol">注册</router-link>
@@ -53,9 +52,6 @@
 			</div>
 			
 			<div v-show="flag==2" class="LoginFooterBox">
-				
-				
-				
 				<div class="FooterBoxInput">
 					<div class="XhLoginPost">
 						<div></div>
@@ -111,7 +107,7 @@
 				base64Str:'',
 				show:'',
 				Time:'',
-				noteCoad:''
+				noteCoad:'',
 			}
 		},
 		created() {
@@ -127,6 +123,9 @@
 				this.$refs.Login.style.fontSize=".38rem";
 				this.$refs.QuestLogin.style.fontSize=".48rem";
 			},
+			// 效果字体
+			
+			
 			
 			idCheck(){
 				    var regid=/^((13[0-9])|(14[5,7,9])|(15([0-3]|[5-9]))|(166)|(17[0,1,3,5,6,7,8])|(18[0-9])|(19[8|9]))\d{8}$/;
@@ -254,6 +253,11 @@
 </script>
 
 <style scoped>
+	.active{
+		font-size:.2rem !important;
+		line-height:.2rem !important;
+		transition:all 1s !important;
+	}
 	.Login{
 		width: 100%;
 		height: 100%;
@@ -278,7 +282,7 @@
 		height: .87rem;
 	}
 	.TimeCoad{
-		height: .7rem;
+	  height: .7rem;
 	  width: 2.5rem;
 	  position: absolute;
 	  top: 2.4rem;
@@ -298,6 +302,9 @@
 		position: relative;
 		font-size:.38rem ;
 		color: #363433;
+	}
+	.LoginTitle .LoginTitleBox span:nth-child(1){
+		font-size: .48rem;
 	}
 	.LoginTitle .LoginTitleBox div{
 		width: .6rem;
@@ -351,21 +358,25 @@
 	.LoginFooter .LoginFooterBox .FooterBoxInput .XhLoginPost div:nth-child(2){
 		top: 2.1rem;
 	}
-/* 	.LoginFooter .LoginFooterBox .FooterBoxInput .XhLoginPost p{
+	/* 效果字体 */
+	.LoginFooter .LoginFooterBox .FooterBoxInput .XhLoginPost h2{
 		line-height: 1.1rem;
 		width: 100%;
 		text-align: left;
 		color:#bbbbbb ;
-		font-size:.3rem;
+		font-size:.35rem;
 		position: absolute;
-		z-index: 1111;
+		left: .3rem;
+		top: 1.1rem;
 	}
-	.LoginFooter .LoginFooterBox .FooterBoxInput .XhLoginPost p:nth-child(1){
+	.LoginFooter .LoginFooterBox .FooterBoxInput .XhLoginPost h2:nth-child(1){
+		top: 1.1rem;
+	}
+	.LoginFooter .LoginFooterBox .FooterBoxInput .XhLoginPost h2:nth-child(2){
 		top: 0rem;
 	}
-	.LoginFooter .LoginFooterBox .FooterBoxInput .XhLoginPost p:nth-child(2){
-		top: 1.1rem;
-	} */
+	
+	
 	.LoginFooter .LoginFooterBox .FooterBoxInput .XhLoginPost input{
 		display: block;
 		width: 100%;
